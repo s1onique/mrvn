@@ -1,0 +1,102 @@
+{
+  "act": "ACT-MRVN-QUALIFY04",
+  "law_book": "factory/qualify/ACT-MRVN-QUALIFY04/authority-kernel/LAWS.bend",
+  "canonical_proof": "factory/qualify/ACT-MRVN-QUALIFY04/authority-kernel/PROOF.bend",
+  "canonical_impl": "factory/qualify/ACT-MRVN-QUALIFY04/authority-kernel/main.bend",
+  "mutations": [
+    {
+      "id": "MUT-MRVN04-01",
+      "description": "Agent + Freeze + Active + Live -> Allow (allows Agent Freeze)",
+      "expected_class": "LAW_REFUTED",
+      "violated_law": "LAW-MRVN04-002 / LAW-MRVN04-004",
+      "counterexample_input": {
+        "actor": "Agent",
+        "capability": "Freeze",
+        "lifecycle": "Active",
+        "evidence": "Live"
+      }
+    },
+    {
+      "id": "MUT-MRVN04-02",
+      "description": "Reviewer + Close + Frozen + Replay -> Allow (allows Replay Close)",
+      "expected_class": "LAW_REFUTED",
+      "violated_law": "LAW-MRVN04-003 / LAW-MRVN04-005",
+      "counterexample_input": {
+        "actor": "Reviewer",
+        "capability": "Close",
+        "lifecycle": "Frozen",
+        "evidence": "Replay"
+      }
+    },
+    {
+      "id": "MUT-MRVN04-03",
+      "description": "Reviewer + Close + Active + Live -> Allow (skips Frozen)",
+      "expected_class": "LAW_REFUTED",
+      "violated_law": "LAW-MRVN04-005",
+      "counterexample_input": {
+        "actor": "Reviewer",
+        "capability": "Close",
+        "lifecycle": "Active",
+        "evidence": "Live"
+      }
+    },
+    {
+      "id": "MUT-MRVN04-04",
+      "description": "Automation + Work + Active + * -> Allow (allows Automation Work)",
+      "expected_class": "LAW_REFUTED",
+      "violated_law": "LAW-MRVN04-007",
+      "counterexample_input": {
+        "actor": "Automation",
+        "capability": "Work",
+        "lifecycle": "Active",
+        "evidence": "None"
+      }
+    },
+    {
+      "id": "MUT-MRVN04-05",
+      "description": "Structural refactor: extract capability helpers (proof-shape only mutation)",
+      "expected_class": "PROOF_TERM_INVALIDATED",
+      "violated_law": "n/a (semantically equivalent)",
+      "counterexample_input": null
+    },
+    {
+      "id": "MUT-MRVN04-06",
+      "description": "Semantically equivalent impl variation (canonical proof should still pass)",
+      "expected_class": "SURVIVED/EQUIVALENT",
+      "expected_survivor_kind": "EQUIVALENT",
+      "violated_law": "n/a",
+      "counterexample_input": null
+    },
+    {
+      "id": "MUT-MRVN04-07",
+      "description": "Reason-only: Agent+Halt+Active+Live -> Deny{InsufficientEvidence} instead of Deny{WrongActor}",
+      "expected_class": "LAW_REFUTED",
+      "violated_law": "LAW-MRVN04-011 / LAW-MRVN04-013 (halt_active_agent_yields_wrong_actor)",
+      "counterexample_input": {
+        "actor": "Agent",
+        "capability": "Halt",
+        "lifecycle": "Active",
+        "evidence": "Live"
+      }
+    },
+    {
+      "id": "MUT-MRVN04-08",
+      "description": "Unconstrained-reason probe: a denied cell whose reason is not in the mandatory laws (Close + Reviewer + Frozen + Replay -> Deny{Terminal} instead of InsufficientEvidence)",
+      "expected_class": "SURVIVED/NON_EQUIVALENT",
+      "violated_law": "potentially a spec gap",
+      "counterexample_input": {
+        "actor": "Reviewer",
+        "capability": "Close",
+        "lifecycle": "Frozen",
+        "evidence": "Replay"
+      }
+    },
+    {
+      "id": "MUT-MRVN04-NESTED",
+      "description": "Nested-import binding attack: COUNTEREXAMPLE.bend transitively imports a TAMPERED LAWS.bend through helper.bend.  Hash-binding check must flag this even though COUNTEREXAMPLE.bend itself only directly imports helper.bend.",
+      "expected_class": "AUTHORITY_BINDING_FAILURE",
+      "violated_law": "n/a (negative test of binding enforcement)",
+      "counterexample_input": null
+    }
+  ]
+}

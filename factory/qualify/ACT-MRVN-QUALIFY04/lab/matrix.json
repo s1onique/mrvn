@@ -1,0 +1,1273 @@
+{
+  "total_cells": 180,
+  "allow_count": 25,
+  "deny_count": 155,
+  "deny_by_reason": {
+    "Terminal": 36,
+    "WrongActor": 30,
+    "WrongLifecycle": 81,
+    "InsufficientEvidence": 8
+  },
+  "matrix": [
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "lifecycle": "Closed",
+      "evidence": "None",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "lifecycle": "Closed",
+      "evidence": "Replay",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "lifecycle": "Closed",
+      "evidence": "Live",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "lifecycle": "Active",
+      "evidence": "None",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "lifecycle": "Active",
+      "evidence": "Replay",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "lifecycle": "Active",
+      "evidence": "Live",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "lifecycle": "Halted",
+      "evidence": "None",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "lifecycle": "Halted",
+      "evidence": "Replay",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "lifecycle": "Halted",
+      "evidence": "Live",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "lifecycle": "Draft",
+      "evidence": "None",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "lifecycle": "Draft",
+      "evidence": "Replay",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "lifecycle": "Draft",
+      "evidence": "Live",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "lifecycle": "Frozen",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "lifecycle": "Frozen",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "lifecycle": "Frozen",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "lifecycle": "Closed",
+      "evidence": "None",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "lifecycle": "Closed",
+      "evidence": "Replay",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "lifecycle": "Closed",
+      "evidence": "Live",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "lifecycle": "Active",
+      "evidence": "None",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "lifecycle": "Active",
+      "evidence": "Replay",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "lifecycle": "Active",
+      "evidence": "Live",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "lifecycle": "Halted",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "lifecycle": "Halted",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "lifecycle": "Halted",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "lifecycle": "Draft",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "lifecycle": "Draft",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "lifecycle": "Draft",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "lifecycle": "Frozen",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "lifecycle": "Frozen",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "lifecycle": "Frozen",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "lifecycle": "Closed",
+      "evidence": "None",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "lifecycle": "Closed",
+      "evidence": "Replay",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "lifecycle": "Closed",
+      "evidence": "Live",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "lifecycle": "Active",
+      "evidence": "None",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "lifecycle": "Active",
+      "evidence": "Replay",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "lifecycle": "Active",
+      "evidence": "Live",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "lifecycle": "Halted",
+      "evidence": "None",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "lifecycle": "Halted",
+      "evidence": "Replay",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "lifecycle": "Halted",
+      "evidence": "Live",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "lifecycle": "Draft",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "lifecycle": "Draft",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "lifecycle": "Draft",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "lifecycle": "Frozen",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "lifecycle": "Frozen",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "lifecycle": "Frozen",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "lifecycle": "Closed",
+      "evidence": "None",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "lifecycle": "Closed",
+      "evidence": "Replay",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "lifecycle": "Closed",
+      "evidence": "Live",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "lifecycle": "Active",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "lifecycle": "Active",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "lifecycle": "Active",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "lifecycle": "Halted",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "lifecycle": "Halted",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "lifecycle": "Halted",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "lifecycle": "Draft",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "lifecycle": "Draft",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "lifecycle": "Draft",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "lifecycle": "Frozen",
+      "evidence": "None",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "lifecycle": "Frozen",
+      "evidence": "Replay",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "lifecycle": "Frozen",
+      "evidence": "Live",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "lifecycle": "Closed",
+      "evidence": "None",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "lifecycle": "Closed",
+      "evidence": "Replay",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "lifecycle": "Closed",
+      "evidence": "Live",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "lifecycle": "Active",
+      "evidence": "None",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "lifecycle": "Active",
+      "evidence": "Replay",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "lifecycle": "Active",
+      "evidence": "Live",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "lifecycle": "Halted",
+      "evidence": "None",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "lifecycle": "Halted",
+      "evidence": "Replay",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "lifecycle": "Halted",
+      "evidence": "Live",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "lifecycle": "Draft",
+      "evidence": "None",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "lifecycle": "Draft",
+      "evidence": "Replay",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "lifecycle": "Draft",
+      "evidence": "Live",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "lifecycle": "Frozen",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "lifecycle": "Frozen",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "lifecycle": "Frozen",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "lifecycle": "Closed",
+      "evidence": "None",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "lifecycle": "Closed",
+      "evidence": "Replay",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "lifecycle": "Closed",
+      "evidence": "Live",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "lifecycle": "Active",
+      "evidence": "None",
+      "decision": "Deny{InsufficientEvidence}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "lifecycle": "Active",
+      "evidence": "Replay",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "lifecycle": "Active",
+      "evidence": "Live",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "lifecycle": "Halted",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "lifecycle": "Halted",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "lifecycle": "Halted",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "lifecycle": "Draft",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "lifecycle": "Draft",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "lifecycle": "Draft",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "lifecycle": "Frozen",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "lifecycle": "Frozen",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "lifecycle": "Frozen",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "lifecycle": "Closed",
+      "evidence": "None",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "lifecycle": "Closed",
+      "evidence": "Replay",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "lifecycle": "Closed",
+      "evidence": "Live",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "lifecycle": "Active",
+      "evidence": "None",
+      "decision": "Deny{InsufficientEvidence}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "lifecycle": "Active",
+      "evidence": "Replay",
+      "decision": "Deny{InsufficientEvidence}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "lifecycle": "Active",
+      "evidence": "Live",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "lifecycle": "Halted",
+      "evidence": "None",
+      "decision": "Deny{InsufficientEvidence}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "lifecycle": "Halted",
+      "evidence": "Replay",
+      "decision": "Deny{InsufficientEvidence}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "lifecycle": "Halted",
+      "evidence": "Live",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "lifecycle": "Draft",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "lifecycle": "Draft",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "lifecycle": "Draft",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "lifecycle": "Frozen",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "lifecycle": "Frozen",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "lifecycle": "Frozen",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "lifecycle": "Closed",
+      "evidence": "None",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "lifecycle": "Closed",
+      "evidence": "Replay",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "lifecycle": "Closed",
+      "evidence": "Live",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "lifecycle": "Active",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "lifecycle": "Active",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "lifecycle": "Active",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "lifecycle": "Halted",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "lifecycle": "Halted",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "lifecycle": "Halted",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "lifecycle": "Draft",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "lifecycle": "Draft",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "lifecycle": "Draft",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "lifecycle": "Frozen",
+      "evidence": "None",
+      "decision": "Deny{InsufficientEvidence}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "lifecycle": "Frozen",
+      "evidence": "Replay",
+      "decision": "Deny{InsufficientEvidence}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "lifecycle": "Frozen",
+      "evidence": "Live",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "lifecycle": "Closed",
+      "evidence": "None",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "lifecycle": "Closed",
+      "evidence": "Replay",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "lifecycle": "Closed",
+      "evidence": "Live",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "lifecycle": "Active",
+      "evidence": "None",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "lifecycle": "Active",
+      "evidence": "Replay",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "lifecycle": "Active",
+      "evidence": "Live",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "lifecycle": "Halted",
+      "evidence": "None",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "lifecycle": "Halted",
+      "evidence": "Replay",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "lifecycle": "Halted",
+      "evidence": "Live",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "lifecycle": "Draft",
+      "evidence": "None",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "lifecycle": "Draft",
+      "evidence": "Replay",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "lifecycle": "Draft",
+      "evidence": "Live",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "lifecycle": "Frozen",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "lifecycle": "Frozen",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "lifecycle": "Frozen",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "lifecycle": "Closed",
+      "evidence": "None",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "lifecycle": "Closed",
+      "evidence": "Replay",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "lifecycle": "Closed",
+      "evidence": "Live",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "lifecycle": "Active",
+      "evidence": "None",
+      "decision": "Deny{InsufficientEvidence}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "lifecycle": "Active",
+      "evidence": "Replay",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "lifecycle": "Active",
+      "evidence": "Live",
+      "decision": "Allow"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "lifecycle": "Halted",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "lifecycle": "Halted",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "lifecycle": "Halted",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "lifecycle": "Draft",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "lifecycle": "Draft",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "lifecycle": "Draft",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "lifecycle": "Frozen",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "lifecycle": "Frozen",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "lifecycle": "Frozen",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "lifecycle": "Closed",
+      "evidence": "None",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "lifecycle": "Closed",
+      "evidence": "Replay",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "lifecycle": "Closed",
+      "evidence": "Live",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "lifecycle": "Active",
+      "evidence": "None",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "lifecycle": "Active",
+      "evidence": "Replay",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "lifecycle": "Active",
+      "evidence": "Live",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "lifecycle": "Halted",
+      "evidence": "None",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "lifecycle": "Halted",
+      "evidence": "Replay",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "lifecycle": "Halted",
+      "evidence": "Live",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "lifecycle": "Draft",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "lifecycle": "Draft",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "lifecycle": "Draft",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "lifecycle": "Frozen",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "lifecycle": "Frozen",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "lifecycle": "Frozen",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "lifecycle": "Closed",
+      "evidence": "None",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "lifecycle": "Closed",
+      "evidence": "Replay",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "lifecycle": "Closed",
+      "evidence": "Live",
+      "decision": "Deny{Terminal}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "lifecycle": "Active",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "lifecycle": "Active",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "lifecycle": "Active",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "lifecycle": "Halted",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "lifecycle": "Halted",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "lifecycle": "Halted",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "lifecycle": "Draft",
+      "evidence": "None",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "lifecycle": "Draft",
+      "evidence": "Replay",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "lifecycle": "Draft",
+      "evidence": "Live",
+      "decision": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "lifecycle": "Frozen",
+      "evidence": "None",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "lifecycle": "Frozen",
+      "evidence": "Replay",
+      "decision": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "lifecycle": "Frozen",
+      "evidence": "Live",
+      "decision": "Deny{WrongActor}"
+    }
+  ]
+}
