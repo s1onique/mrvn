@@ -1,0 +1,270 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "mrvn.proof-carrying-factory-artifact.v1.schema",
+  "title": "MRVN proof-carrying Factory artifact",
+  "description": "Bound artifact for transporting a verified Bend subject (implementation + specification + proof) and its claims through an independent consumer.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "artifact_type",
+    "subject",
+    "claims",
+    "payload",
+    "verification",
+    "evidence",
+    "provenance",
+    "artifact_id"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "description": "Schema version. Must be 1.",
+      "type": "integer",
+      "const": 1
+    },
+    "artifact_type": {
+      "description": "Stable artifact type identifier.",
+      "type": "string",
+      "const": "mrvn.proof-carrying-factory-artifact"
+    },
+    "subject": {
+      "type": "object",
+      "required": ["name", "kind", "entrypoint"],
+      "additionalProperties": true,
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "kind": {
+          "type": "string",
+          "enum": ["bend-module-set"]
+        },
+        "entrypoint": {
+          "type": "string",
+          "description": "Bundle-relative path of the implementation entrypoint.",
+          "pattern": "^[a-zA-Z0-9._/-]+\\.bend$"
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["claim_id", "kind", "statement", "scope", "binds"],
+        "additionalProperties": false,
+        "properties": {
+          "claim_id": { "type": "string", "minLength": 1 },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "FORMAL_LAW_SATISFACTION",
+              "OBSERVED_TOOL_EXECUTION",
+              "BEHAVIORAL_EQUIVALENCE",
+              "QUALIFICATION_RESULT"
+            ]
+          },
+          "statement": { "type": "string", "minLength": 1 },
+          "scope": {
+            "type": "object",
+            "required": ["establishes", "does_not_establish"],
+            "additionalProperties": false,
+            "properties": {
+              "establishes": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "does_not_establish": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          },
+          "binds": {
+            "type": "object",
+            "description": "Bound to exact hash identities, not paths.",
+            "additionalProperties": true
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "payload": {
+      "type": "object",
+      "required": ["files"],
+      "additionalProperties": false,
+      "properties": {
+        "files": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["path", "role", "sha256", "size"],
+            "additionalProperties": false,
+            "properties": {
+              "path": {
+                "type": "string",
+                "description": "Bundle-relative, normalized, no .., no absolute.",
+                "pattern": "^([a-zA-Z0-9._-]+/)*[a-zA-Z0-9._-]+$"
+              },
+              "role": {
+                "type": "string",
+                "enum": ["implementation", "specification", "proof", "supplemental-evidence"]
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "size": { "type": "integer", "minimum": 0 }
+            }
+          }
+        },
+        "dependency_closure": {
+          "type": "array",
+          "description": "All transitively reachable .bend files declared as bundled.",
+          "items": {
+            "type": "object",
+            "required": ["path", "sha256", "role"],
+            "additionalProperties": false,
+            "properties": {
+              "path": { "type": "string" },
+              "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+              "role": {
+                "type": "string",
+                "enum": ["implementation", "specification", "proof"]
+              }
+            }
+          }
+        },
+        "trusted_toolchain": {
+          "type": "array",
+          "description": "Explicit trusted toolchain dependencies (e.g. Base).",
+          "items": {
+            "type": "object",
+            "required": ["name", "kind"],
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "string" },
+              "kind": { "type": "string", "enum": ["bend-base"] },
+              "identity": { "type": "string" }
+            }
+          }
+        },
+        "law_inventory": {
+          "type": "object",
+          "required": ["count", "names"],
+          "additionalProperties": false,
+          "properties": {
+            "count": { "type": "integer", "minimum": 0 },
+            "names": {
+              "type": "array",
+              "items": { "type": "string", "pattern": "^[a-zA-Z0-9_]+$" },
+              "uniqueItems": true
+            },
+            "source_file": { "type": "string" }
+          }
+        },
+        "escape_hatch_inventory": {
+          "type": "object",
+          "required": ["todo_count", "named_holes", "unsafe_count", "foreign_count", "open_laws"],
+          "additionalProperties": false,
+          "properties": {
+            "todo_count": { "type": "integer", "minimum": 0 },
+            "named_holes": { "type": "integer", "minimum": 0 },
+            "unsafe_count": { "type": "integer", "minimum": 0 },
+            "foreign_count": { "type": "integer", "minimum": 0 },
+            "open_laws": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": ["contract_version", "modes", "phases", "canonical_json_algorithm", "artifact_id_algorithm"],
+      "additionalProperties": false,
+      "properties": {
+        "contract_version": { "type": "integer", "const": 1 },
+        "modes": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["integrity", "proof", "full"] }
+        },
+        "phases": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "schema",
+              "manifest_id",
+              "payload_hash",
+              "payload_size",
+              "dependency_closure",
+              "path_confinement",
+              "law_inventory",
+              "escape_hatch_inventory",
+              "toolchain_match",
+              "proof_replay",
+              "supplemental_evidence"
+            ]
+          }
+        },
+        "canonical_json_algorithm": {
+          "type": "string",
+          "enum": ["mrvn-canonical-json-v1"]
+        },
+        "artifact_id_algorithm": {
+          "type": "string",
+          "enum": ["sha256:canonical_manifest_minus_id:v1"]
+        },
+        "result_classifications": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["files"],
+      "additionalProperties": false,
+      "properties": {
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["path", "sha256", "size", "authority"],
+            "additionalProperties": false,
+            "properties": {
+              "path": { "type": "string" },
+              "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+              "size": { "type": "integer", "minimum": 0 },
+              "authority": {
+                "type": "string",
+                "enum": ["REPLAYABLE", "CAPTURED_ONLY", "DERIVED"]
+              },
+              "description": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["source_repo", "source_commit", "captured_at"],
+      "additionalProperties": true,
+      "properties": {
+        "source_repo": { "type": "string" },
+        "source_commit": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "captured_at": { "type": "string" },
+        "toolchain": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "build_command": { "type": "string" }
+      }
+    },
+    "artifact_id": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  }
+}

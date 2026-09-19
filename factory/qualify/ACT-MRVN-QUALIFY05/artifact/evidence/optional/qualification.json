@@ -1,0 +1,97 @@
+{
+  "act": "ACT-MRVN-QUALIFY04",
+  "canonical_impl_sha256": "eea5d84f80bf9bf3671fad7d47447539891debb010063402174c4c86f0cbf4eb",
+  "canonical_proof_sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+  "counts": {
+    "AUTHORITY_BINDING_FAILURE": 1,
+    "LAW_REFUTED": 5,
+    "PROOF_TERM_INVALIDATED": 1,
+    "SURVIVED_EQUIVALENT": 1,
+    "SURVIVED_NON_EQUIVALENT": 1,
+    "UNRESOLVED": 0,
+    "expected_match": 9,
+    "expected_mismatch": 0,
+    "unexpected_unresolved": 0
+  },
+  "gate_contract": {
+    "any_expected_unresolved": false,
+    "exit_1_if_any_of": ["AUTHORITY_BINDING_FAILURE > 0",
+      "expected_mismatch > 0",
+      "UNRESOLVED > 0 and no mutation has expected_class=UNRESOLVED"
+    ]
+  },
+  "law_book_sha256": "2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9",
+  "law_count": 15,
+  "matrix_cells": 180,
+  "matrix_diff_count": 0,
+  "mutation_results": [{
+      "description": "Agent + Freeze + Active + Live -> Allow (allows Agent Freeze)",
+      "expected_class": "LAW_REFUTED",
+      "id": "MUT-MRVN04-01",
+      "observed_class": "LAW_REFUTED",
+      "observed_matches_expected": true
+    },
+    {
+      "description": "Reviewer + Close + Frozen + Replay -> Allow (allows Replay Close)",
+      "expected_class": "LAW_REFUTED",
+      "id": "MUT-MRVN04-02",
+      "observed_class": "LAW_REFUTED",
+      "observed_matches_expected": true
+    },
+    {
+      "description": "Reviewer + Close + Active + Live -> Allow (skips Frozen)",
+      "expected_class": "LAW_REFUTED",
+      "id": "MUT-MRVN04-03",
+      "observed_class": "LAW_REFUTED",
+      "observed_matches_expected": true
+    },
+    {
+      "description": "Automation + Work + Active + * -> Allow (allows Automation Work)",
+      "expected_class": "LAW_REFUTED",
+      "id": "MUT-MRVN04-04",
+      "observed_class": "LAW_REFUTED",
+      "observed_matches_expected": true
+    },
+    {
+      "description": "Structural refactor: extract capability helpers (proof-shape only mutation)",
+      "expected_class": "PROOF_TERM_INVALIDATED",
+      "id": "MUT-MRVN04-05",
+      "observed_class": "PROOF_TERM_INVALIDATED",
+      "observed_matches_expected": true
+    },
+    {
+      "description": "Semantically equivalent impl variation (canonical proof should still pass)",
+      "expected_class": "SURVIVED/EQUIVALENT",
+      "id": "MUT-MRVN04-06",
+      "observed_class": "SURVIVED/EQUIVALENT",
+      "observed_matches_expected": true
+    },
+    {
+      "description": "Reason-only: Agent+Halt+Active+Live -> Deny{InsufficientEvidence} instead of Deny{WrongActor}",
+      "expected_class": "LAW_REFUTED",
+      "id": "MUT-MRVN04-07",
+      "observed_class": "LAW_REFUTED",
+      "observed_matches_expected": true
+    },
+    {
+      "description": "Unconstrained-reason probe: a denied cell whose reason is not in the mandatory laws (Close + Reviewer + Frozen + Replay -> Deny{Terminal} instead of InsufficientEvidence)",
+      "expected_class": "SURVIVED/NON_EQUIVALENT",
+      "id": "MUT-MRVN04-08",
+      "observed_class": "SURVIVED/NON_EQUIVALENT",
+      "observed_matches_expected": true
+    },
+    {
+      "description": "Nested-import binding attack: COUNTEREXAMPLE.bend transitively imports a TAMPERED LAWS.bend through helper.bend.  Hash-binding check must flag this even though COUNTEREXAMPLE.bend itself only directly imports helper.bend.",
+      "expected_class": "AUTHORITY_BINDING_FAILURE",
+      "id": "MUT-MRVN04-NESTED",
+      "observed_class": "AUTHORITY_BINDING_FAILURE",
+      "observed_matches_expected": true
+    }
+  ],
+  "schema": "mrvn.qualification.v1",
+  "toolchain": {
+    "bend_runner": "/Volumes/UserData/Users/chistyakov/Projects/SPbNIX/mrvn/bend2/main.ts",
+    "bend_runner_sha256": "34a8a791b02ce92f247bda4cabcd3ff4eabe500002fedbec4867b5db77ee1feb"
+  },
+  "verdict": "FULL_QUALIFICATION"
+}
