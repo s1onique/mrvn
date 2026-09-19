@@ -1,0 +1,9 @@
+Error:
+- expected : main.State.Draft{}
+- observed : main.State.Closed{}
+Location: LAWS.closed_is_replay_absorbing
+190 |   match events:
+191>|     case Nil{}: {==}
+192 |     case e <> rest:
+
+(Re-tested against ACT03-CORRECTION01 strengthened spec; still caught, EXIT=1.)

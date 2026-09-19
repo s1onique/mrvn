@@ -1,0 +1,9 @@
+Error:
+- expected : main.State.Closed{}
+- observed : main.State.Active{}
+Location: LAWS.close_requires_frozen
+82 |     case Gate.State.Draft{}:  {==}
+83>|     case Gate.State.Active{}: {==}
+84 |     case Gate.State.Halted{}: {==}
+
+(Re-tested against ACT03-CORRECTION01 strengthened spec; still caught, EXIT=1.)

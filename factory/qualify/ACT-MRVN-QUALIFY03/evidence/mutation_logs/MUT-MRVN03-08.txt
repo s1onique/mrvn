@@ -1,0 +1,127 @@
+MUT-MRVN03-08 -- illicit same-state Close acceptance
+======================================================
+
+Reviewer-suggested mutation (expert formal-methods review).
+Status: CAUGHT.
+
+Mutation
+--------
+Change step's Close arm from Rejected{s} to Accepted{s} for the
+three non-Frozen, non-Closed states:
+
+  Draft  + Close -> Accepted{Draft}   (was: Rejected{Draft})
+  Active + Close -> Accepted{Active}  (was: Rejected{Active})
+  Halted + Close -> Accepted{Halted}  (was: Rejected{Halted})
+
+The other 22 arms are unchanged.  result_state is preserved for
+all 25 arms; only the Transition constructor changes.
+
+Reviewer's expected verdict
+---------------------------
+Reviewer expected all 11 laws to still check, on the reasoning that
+LAW-004 only constrains result_state and rejection_preserves_state
+only constrains Rejected cases.
+
+Observed verdict
+----------------
+PROOF.bend FAILS with EXIT=1.
+
+Against the original 11-law spec, the failure was on
+LAW-001 (rejection_preserves_state), at the Draft+Close arm:
+
+    Error:
+    - expected : {main.Transition.Rejected{main.State.Draft{}} == main.Transition.Rejected{r} : main.Transition}
+    - observed : {main.Transition.Accepted{main.State.Draft{}} == main.Transition.Rejected{r} : main.Transition}
+    Context:
+    - r : main.State
+    - h : {main.Transition.Accepted{main.State.Draft{}} == main.Transition.Rejected{r} : main.Transition}
+    Location: LAWS.rejection_preserves_state
+
+Why the mutation IS caught (correcting the reviewer's analysis)
+--------------------------------------------------------------
+The reviewer claimed rejection_preserves_state would not catch this
+because the law is an implication "if rejected then r==s".  In
+Bend's WNF, the law proof is a structural function whose body
+unifies on the actual concrete Transition returned by step.
+For the Draft+Close arm the body is:
+
+    proj_rej_sym(Gate.State.Draft{}, r, h)
+
+which has expected input type {Rejected{Draft} == Rejected{r}} (the
+function is parameterized by a hypothetical witness h).  When
+applied to the mutated step's actual return value Accepted{Draft},
+the types do not unify, so the proof construction fails.
+
+This is, in effect, a stronger property than the law text
+suggests: not only is rejection_preserves_state proven for the
+canonical implementation, but the proof pattern-matches on the
+constructor in a way that rejects any implementation whose Close
+arm returns Accepted instead of Rejected for non-Frozen states.
+
+Strengthened spec (LAW-004b, see LAWS.bend and PROOF.bend)
+----------------------------------------------------------
+Per the reviewer's recommendation, the spec has been STRENGTHENED
+by adding two acceptance-authority laws that explicitly encode
+"Close is accepted iff state == Frozen":
+
+  close_accepted_from_frozen:
+    for +s: Gate.State
+    for h: {is_frozen(s) == True{} : Bool}
+    {is_accepted(Gate.step(s, Gate.LcEvent.Close{})) == True{} : Bool}
+
+  close_rejected_from_non_frozen:
+    for +s: Gate.State
+    for h: {is_frozen(s) == False{} : Bool}
+    {is_accepted(Gate.step(s, Gate.LcEvent.Close{})) == False{} : Bool}
+
+These use the spec-level `is_accepted` predicate (constructor-only)
+and `is_frozen` helper (added in this revision), keeping the spec
+independent of the implementation's `Gate.accepted` projection.
+
+The strengthened spec also catches MUT-08, but the failure point
+moves to the new law:
+
+    Error:
+    - expected : True{}
+    - observed : False{}
+    Location: LAWS.close_rejected_from_non_frozen
+    133 |       # step(Draft, Close) returns Rejected{Draft}; is_accepted returns False.
+    134>|       {==}
+
+This is the more semantically direct failure: the law explicitly
+asserts `is_accepted(step(Draft, Close)) == False`, and the
+mutation returns Accepted.  The error message now matches the
+reviewer's intended diagnostic.
+
+Spec-gap probe verdict (REVISED)
+--------------------------------
+NO_COUNTEREXAMPLE_FOUND (for the reviewer-suggested mutation).
+The 11-law spec is sufficient to catch the canonical illicit-
+acceptance mutation on Close via rejection_preserves_state's
+structural pattern-match.  The strengthened 13-law spec catches it
+via the dedicated acceptance-authority laws.
+
+What this means for the spec
+----------------------------
+The reviewer remains correct that a stronger LAW-004 would be
+better specification hygiene.  This ACT now implements that
+strengthening as LAW-004b.  The strengthened spec:
+
+  * makes the spec text match the proven behavior;
+  * gives a textual law that itself encodes the acceptance
+    authority (rather than relying on the structural
+    side-effect of rejection_preserves_state);
+  * fails on MUT-08 with a clear, semantic error message.
+
+Verdict for MRVN-03 (REVISED)
+-----------------------------
+The strengthened 13-law spec covers the reviewer's concern and
+fully specifies Close semantics.  All 8 mutations (MUT-01..08)
+are caught by the strengthened spec.
+
+Files
+-----
+mutations/MUT-MRVN03-08/main.bend   -- mutated implementation
+mutations/MUT-MRVN03-08/LAWS.bend   -- strengthened spec (LAW-004b)
+mutations/MUT-MRVN03-08/PROOF.bend  -- strengthened proof (LAW-004b)
+                                       (FAILS, EXIT=1)

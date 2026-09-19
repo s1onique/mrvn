@@ -1,0 +1,9 @@
+Error:
+- expected : main.State.Active{}
+- observed : main.State.Closed{}
+Location: LAWS.closed_is_locally_absorbing_state
+41 |   match e:
+42>|     case Gate.LcEvent.Activate{}: {==}
+43 |     case Gate.LcEvent.Halt{}:     {==}
+
+(Re-tested against ACT03-CORRECTION01 strengthened spec; still caught, EXIT=1.)

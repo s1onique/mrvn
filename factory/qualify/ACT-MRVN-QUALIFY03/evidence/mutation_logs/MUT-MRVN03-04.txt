@@ -1,0 +1,12 @@
+Error:
+- expected : {main.Transition.Rejected{main.State.Draft{}} == main.Transition.Rejected{r} : main.Transition}
+- observed : {main.Transition.Rejected{main.State.Active{}} == main.Transition.Rejected{r} : main.Transition}
+Context:
+- r : main.State
+- h : {main.Transition.Rejected{main.State.Active{}} == main.Transition.Rejected{r} : main.Transition}
+Location: LAWS.rejection_preserves_state
+120 |         case Gate.LcEvent.Resume{}:
+121>|           proj_rej_sym(Gate.State.Draft{}, r, h)
+122 |         case Gate.LcEvent.Close{}:
+
+(Re-tested against ACT03-CORRECTION01 strengthened spec; still caught, EXIT=1.)

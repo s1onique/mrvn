@@ -1,0 +1,9 @@
+Error:
+- expected : False{}
+- observed : True{}
+Location: LAWS.frozen_step_remains_post_freeze
+68 |     case Gate.LcEvent.Halt{}:     {==}
+69>|     case Gate.LcEvent.Resume{}:   {==}
+70 |     case Gate.LcEvent.Freeze{}:   {==}
+
+(Re-tested against ACT03-CORRECTION01 strengthened spec; still caught, EXIT=1.)

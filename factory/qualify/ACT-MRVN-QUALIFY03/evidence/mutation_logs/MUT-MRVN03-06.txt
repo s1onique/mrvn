@@ -1,0 +1,12 @@
+Error:
+- expected : {main.replay(e <> rest, main.State.Closed{}) == main.State.Closed{} : main.State}
+- observed : {main.replay(rest, main.result_state(main.step(main.State.Closed{}, e))) == main.State.Closed{} : main.State}
+Context:
+- e    : main.LcEvent
+- rest : List<&2, main.LcEvent>
+Location: LAWS.closed_is_replay_absorbing
+192 |     case e <> rest:
+193>|       Equal.trans(
+194 |         Gate.State,
+
+(Re-tested against ACT03-CORRECTION01 strengthened spec; still caught, EXIT=1.)
