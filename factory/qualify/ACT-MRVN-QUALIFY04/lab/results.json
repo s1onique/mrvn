@@ -1,6 +1,6 @@
 {
   "act": "ACT-MRVN-QUALIFY04-CORRECTION03",
-  "timestamp": "2026-09-19T15:38:04.671Z",
+  "timestamp": "2026-09-19T16:46:44.883Z",
   "law_book_sha256": "2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9",
   "canonical_proof_sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
   "canonical_impl_sha256": "eea5d84f80bf9bf3671fad7d47447539891debb010063402174c4c86f0cbf4eb",
@@ -512,7 +512,7 @@
           ],
           "hashes": {
             "/Volumes/UserData/Users/chistyakov/Projects/SPbNIX/mrvn/factory/qualify/ACT-MRVN-QUALIFY04/mutations/MUT-MRVN04-NESTED/COUNTEREXAMPLE.bend": "7642a32d7ebf673e4fb3473430918c6f6fea06e78db2c266fa0ebca100ba0181",
-            "/Volumes/UserData/Users/chistyakov/Projects/SPbNIX/mrvn/factory/qualify/ACT-MRVN-QUALIFY04/mutations/MUT-MRVN04-NESTED/helper.bend": "168ae021714ccfc3b43257680239347a7300196d73997714104b484831d86bbc",
+            "/Volumes/UserData/Users/chistyakov/Projects/SPbNIX/mrvn/factory/qualify/ACT-MRVN-QUALIFY04/mutations/MUT-MRVN04-NESTED/helper.bend": "9bc77be92fba8d008ae4f32ebbce306b6bd29f4c4d3106b06da17229ee16398f",
             "/Volumes/UserData/Users/chistyakov/Projects/SPbNIX/mrvn/factory/qualify/ACT-MRVN-QUALIFY04/mutations/MUT-MRVN04-NESTED/TAMPERED_LAWS.bend": "3352b92529bf6dc991391ebb4defc19c9e5900d49d46f8e14a83793662c59033",
             "/Volumes/UserData/Users/chistyakov/Projects/SPbNIX/mrvn/factory/qualify/ACT-MRVN-QUALIFY04/authority-kernel/main.bend": "eea5d84f80bf9bf3671fad7d47447539891debb010063402174c4c86f0cbf4eb"
           },
@@ -531,8 +531,8 @@
         "reproof": null,
         "counterexample": {
           "present": true,
-          "ok": true,
-          "exit": 0,
+          "ok": false,
+          "exit": 1,
           "emitted_bool": null
         },
         "equivalence": null
