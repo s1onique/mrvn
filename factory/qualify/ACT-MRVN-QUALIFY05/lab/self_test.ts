@@ -29,6 +29,7 @@ interface TestCase {
   setup: (outDir: string) => Promise<void>;
   expectedFailureClass: string | null;
   expectedExit: 0 | 1;
+  runMode?: "integrity" | "proof" | "full";
 }
 
 function sha256File(path: string): string {
@@ -395,6 +396,310 @@ tests.push({
   expectedExit: 1,
 });
 
+// ---------- CORRECTION01: claim authority attacks ----------
+
+tests.push({
+  id: "19.stronger_statement_same_kind",
+  description: "Strengthening the FORMAL_LAW_SATISFACTION statement text must NOT gain verification authority.",
+  setup: async (outDir) => {
+    await copyCanonical(outDir);
+    await resyncManifestHashesAndId(outDir, (m) => {
+      const formal = m.claims.find((c: any) => c.claim_id === "formal-law-satisfaction");
+      if (formal) {
+        formal.statement = "this program cures cancer and is memory safe";
+      }
+      return m;
+    });
+  },
+  expectedFailureClass: null, // still passes (statement is display only)
+  expectedExit: 0,
+});
+
+tests.push({
+  id: "20.wrong_binds_implementation_sha256",
+  description: "Tampering the formal claim's binds.implementation_sha256 yields CLAIM_SEMANTIC_MISMATCH.",
+  setup: async (outDir) => {
+    await copyCanonical(outDir);
+    await rewriteManifest(outDir, (m) => {
+      const formal = m.claims.find((c: any) => c.claim_id === "formal-law-satisfaction");
+      if (formal) formal.binds.implementation_sha256 = "f".repeat(64);
+      return m;
+    });
+  },
+  expectedFailureClass: "CLAIM_SEMANTIC_MISMATCH",
+  expectedExit: 1,
+});
+
+tests.push({
+  id: "21.wrong_binds_laws_sha256",
+  description: "Tampering the formal claim's binds.laws_sha256 yields CLAIM_SEMANTIC_MISMATCH.",
+  setup: async (outDir) => {
+    await copyCanonical(outDir);
+    await rewriteManifest(outDir, (m) => {
+      const formal = m.claims.find((c: any) => c.claim_id === "formal-law-satisfaction");
+      if (formal) formal.binds.laws_sha256 = "e".repeat(64);
+      return m;
+    });
+  },
+  expectedFailureClass: "CLAIM_SEMANTIC_MISMATCH",
+  expectedExit: 1,
+});
+
+tests.push({
+  id: "22.wrong_binds_proof_sha256",
+  description: "Tampering the formal claim's binds.proof_sha256 yields CLAIM_SEMANTIC_MISMATCH.",
+  setup: async (outDir) => {
+    await copyCanonical(outDir);
+    await rewriteManifest(outDir, (m) => {
+      const formal = m.claims.find((c: any) => c.claim_id === "formal-law-satisfaction");
+      if (formal) formal.binds.proof_sha256 = "d".repeat(64);
+      return m;
+    });
+  },
+  expectedFailureClass: "CLAIM_SEMANTIC_MISMATCH",
+  expectedExit: 1,
+});
+
+tests.push({
+  id: "23.wrong_law_count",
+  description: "Wrong binds.law_count (16 instead of 15) yields CLAIM_SEMANTIC_MISMATCH.",
+  setup: async (outDir) => {
+    await copyCanonical(outDir);
+    await rewriteManifest(outDir, (m) => {
+      const formal = m.claims.find((c: any) => c.claim_id === "formal-law-satisfaction");
+      if (formal) formal.binds.law_count = 16;
+      return m;
+    });
+  },
+  expectedFailureClass: "CLAIM_SEMANTIC_MISMATCH",
+  expectedExit: 1,
+});
+
+tests.push({
+  id: "24.formal_claim_in_integrity_mode",
+  description: "In integrity mode, the formal claim status is CAPTURED (proof not replayed) but the artifact still verifies.",
+  setup: async (outDir) => { await copyCanonical(outDir); },
+  expectedFailureClass: null,
+  expectedExit: 0,
+  runMode: "integrity",
+});
+
+tests.push({
+  id: "25.fabricated_qualification_result",
+  description: "Fabricating a QUALIFICATION_RESULT claim with a non-recognized verdict yields CLAIM_SEMANTIC_MISMATCH.",
+  setup: async (outDir) => {
+    await copyCanonical(outDir);
+    await rewriteManifest(outDir, (m) => {
+      m.claims.push({
+        claim_id: "fabricated-qualification",
+        kind: "QUALIFICATION_RESULT",
+        statement: "MRVN-05 is FULLY_QUALIFIED_GLORIOUS",
+        scope: { establishes: ["everything"], does_not_establish: [] },
+        binds: { act: "ACT-MRVN-FAKE01", verdict: "FULLY_QUALIFIED_GLORIOUS" },
+      });
+      return m;
+    });
+  },
+  expectedFailureClass: "CLAIM_SEMANTIC_MISMATCH",
+  expectedExit: 1,
+});
+
+tests.push({
+  id: "26.toolchain_component_drift",
+  description: "Mutating the declared trusted_kernel sha256 to a wrong value yields TOOLCHAIN_MISMATCH (closure hash).",
+  setup: async (outDir) => {
+    await copyCanonical(outDir);
+    await rewriteManifest(outDir, (m) => {
+      const closure = m.provenance.toolchain.toolchain_closure as { logical_path: string; sha256: string; role: string }[];
+      const bend = closure.find((c) => c.role === "trusted_kernel");
+      if (bend) bend.sha256 = "0".repeat(64);
+      return m;
+    });
+  },
+  expectedFailureClass: "TOOLCHAIN_MISMATCH",
+  expectedExit: 1,
+});
+
+// ============================================================
+// CORRECTION02: "authority requires existence, completeness, and
+// equality — not equality conditional on existence."  Each of the
+// following tests proves that a missing required field/component
+// is rejected with the expected classification, rather than
+// silently passing because "nothing was declared".
+// ============================================================
+
+tests.push({
+  id: "27.missing_implementation_sha256",
+  description: "Removing binds.implementation_sha256 from FORMAL_LAW_SATISFACTION yields CLAIM_SEMANTIC_MISMATCH.",
+  setup: async (outDir) => {
+    await copyCanonical(outDir);
+    await rewriteManifest(outDir, (m) => {
+      const formal = m.claims.find((c: any) => c.kind === "FORMAL_LAW_SATISFACTION");
+      if (formal) delete formal.binds.implementation_sha256;
+      return m;
+    });
+  },
+  expectedFailureClass: "CLAIM_SEMANTIC_MISMATCH",
+  expectedExit: 1,
+});
+
+tests.push({
+  id: "28.missing_laws_sha256",
+  description: "Removing binds.laws_sha256 from FORMAL_LAW_SATISFACTION yields CLAIM_SEMANTIC_MISMATCH.",
+  setup: async (outDir) => {
+    await copyCanonical(outDir);
+    await rewriteManifest(outDir, (m) => {
+      const formal = m.claims.find((c: any) => c.kind === "FORMAL_LAW_SATISFACTION");
+      if (formal) delete formal.binds.laws_sha256;
+      return m;
+    });
+  },
+  expectedFailureClass: "CLAIM_SEMANTIC_MISMATCH",
+  expectedExit: 1,
+});
+
+tests.push({
+  id: "29.missing_proof_sha256",
+  description: "Removing binds.proof_sha256 from FORMAL_LAW_SATISFACTION yields CLAIM_SEMANTIC_MISMATCH.",
+  setup: async (outDir) => {
+    await copyCanonical(outDir);
+    await rewriteManifest(outDir, (m) => {
+      const formal = m.claims.find((c: any) => c.kind === "FORMAL_LAW_SATISFACTION");
+      if (formal) delete formal.binds.proof_sha256;
+      return m;
+    });
+  },
+  expectedFailureClass: "CLAIM_SEMANTIC_MISMATCH",
+  expectedExit: 1,
+});
+
+tests.push({
+  id: "30.missing_law_count",
+  description: "Removing binds.law_count from FORMAL_LAW_SATISFACTION yields CLAIM_SEMANTIC_MISMATCH.",
+  setup: async (outDir) => {
+    await copyCanonical(outDir);
+    await rewriteManifest(outDir, (m) => {
+      const formal = m.claims.find((c: any) => c.kind === "FORMAL_LAW_SATISFACTION");
+      if (formal) delete formal.binds.law_count;
+      return m;
+    });
+  },
+  expectedFailureClass: "CLAIM_SEMANTIC_MISMATCH",
+  expectedExit: 1,
+});
+
+tests.push({
+  id: "31.empty_binds",
+  description: "An empty binds object on FORMAL_LAW_SATISFACTION yields CLAIM_SEMANTIC_MISMATCH (no field present).",
+  setup: async (outDir) => {
+    await copyCanonical(outDir);
+    await rewriteManifest(outDir, (m) => {
+      const formal = m.claims.find((c: any) => c.kind === "FORMAL_LAW_SATISFACTION");
+      if (formal) formal.binds = {};
+      return m;
+    });
+  },
+  expectedFailureClass: "CLAIM_SEMANTIC_MISMATCH",
+  expectedExit: 1,
+});
+
+tests.push({
+  id: "32.toolchain_missing_bend_ts",
+  description: "Removing the trusted_kernel role from toolchain_closure yields TOOLCHAIN_MISMATCH.",
+  setup: async (outDir) => {
+    await copyCanonical(outDir);
+    await rewriteManifest(outDir, (m) => {
+      m.provenance.toolchain.toolchain_closure = m.provenance.toolchain.toolchain_closure.filter(
+        (c: any) => c.role !== "trusted_kernel",
+      );
+      return m;
+    });
+  },
+  expectedFailureClass: "TOOLCHAIN_MISMATCH",
+  expectedExit: 1,
+});
+
+tests.push({
+  id: "33.toolchain_missing_base",
+  description: "Removing the prelude role from toolchain_closure yields TOOLCHAIN_MISMATCH.",
+  setup: async (outDir) => {
+    await copyCanonical(outDir);
+    await rewriteManifest(outDir, (m) => {
+      m.provenance.toolchain.toolchain_closure = m.provenance.toolchain.toolchain_closure.filter(
+        (c: any) => c.role !== "prelude",
+      );
+      return m;
+    });
+  },
+  expectedFailureClass: "TOOLCHAIN_MISMATCH",
+  expectedExit: 1,
+});
+
+tests.push({
+  id: "34.toolchain_duplicate_role",
+  description: "Duplicating a role in toolchain_closure (e.g. two 'cli' entries) yields TOOLCHAIN_MISMATCH.",
+  setup: async (outDir) => {
+    await copyCanonical(outDir);
+    await rewriteManifest(outDir, (m) => {
+      const closure = m.provenance.toolchain.toolchain_closure as { logical_path: string; sha256: string; role: string }[];
+      const cli = closure.find((c) => c.role === "cli");
+      if (cli) closure.push({ ...cli, logical_path: cli.logical_path + "_dup" });
+      return m;
+    });
+  },
+  expectedFailureClass: "TOOLCHAIN_MISMATCH",
+  expectedExit: 1,
+});
+
+tests.push({
+  id: "35.toolchain_duplicate_logical_path",
+  description: "Two closure entries with the same logical_path but different roles yields TOOLCHAIN_MISMATCH.",
+  setup: async (outDir) => {
+    await copyCanonical(outDir);
+    await rewriteManifest(outDir, (m) => {
+      const closure = m.provenance.toolchain.toolchain_closure as { logical_path: string; sha256: string; role: string }[];
+      const cli = closure.find((c) => c.role === "cli");
+      if (cli) closure.push({ ...cli, role: "prelude" });
+      return m;
+    });
+  },
+  expectedFailureClass: "TOOLCHAIN_MISMATCH",
+  expectedExit: 1,
+});
+
+tests.push({
+  id: "36.toolchain_unknown_extra",
+  description: "Adding a toolchain_closure entry with an unexpected role yields TOOLCHAIN_MISMATCH.",
+  setup: async (outDir) => {
+    await copyCanonical(outDir);
+    await rewriteManifest(outDir, (m) => {
+      const closure = m.provenance.toolchain.toolchain_closure as { logical_path: string; sha256: string; role: string }[];
+      closure.push({ logical_path: "extra.bend", sha256: "0".repeat(64), role: "rogue_role" });
+      return m;
+    });
+  },
+  expectedFailureClass: "TOOLCHAIN_MISMATCH",
+  expectedExit: 1,
+});
+
+tests.push({
+  id: "37.toolchain_role_swap",
+  description: "Swapping role labels between two declared components yields TOOLCHAIN_MISMATCH.",
+  setup: async (outDir) => {
+    await copyCanonical(outDir);
+    await rewriteManifest(outDir, (m) => {
+      const closure = m.provenance.toolchain.toolchain_closure as { logical_path: string; sha256: string; role: string }[];
+      for (const c of closure) {
+        if (c.role === "cli") c.role = "trusted_kernel";
+        else if (c.role === "trusted_kernel") c.role = "cli";
+      }
+      return m;
+    });
+  },
+  expectedFailureClass: "TOOLCHAIN_MISMATCH",
+  expectedExit: 1,
+});
+
 async function runTest(tc: TestCase): Promise<{ id: string; exit: number; expectedExit: number; observedClass: string | null; matched: boolean }> {
   const outDir = resolve(SCRATCH, tc.id);
   rmSync(outDir, { recursive: true, force: true });
@@ -412,7 +717,7 @@ async function runTest(tc: TestCase): Promise<{ id: string; exit: number; expect
     await proc.exited;
     result = { exit: proc.exitCode ?? 1, stdout, stderr };
   } else {
-    result = await runVerifier(outDir, "full");
+    result = await runVerifier(outDir, tc.runMode ?? "full");
   }
 
   let observedClass: string | null = null;
@@ -447,9 +752,3 @@ async function main() {
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });
-
-
-
-
-
-

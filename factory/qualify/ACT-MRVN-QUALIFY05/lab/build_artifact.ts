@@ -203,9 +203,29 @@ function buildClosure(payloadRoot: string, entrypoints: { path: string; role: "i
 
 // ---------- Toolchain identity ----------
 
-async function probeToolchain(bendRunner: string): Promise<{ bendRunner: string; bendRunnerSha256: string; }> {
+async function probeToolchain(bendRunner: string): Promise<{
+  bendRunner: string;
+  bendRunnerSha256: string;
+  closure: { logical_path: string; sha256: string; role: string }[];
+}> {
   const sha = sha256File(bendRunner);
-  return { bendRunner, bendRunnerSha256: sha };
+  // CORRECTION01: hash-bound the full proof-checker transitive
+  // closure (main.ts / bend.ts / comp.ts / base.bend).
+  // CORRECTION03: identity is by STABLE LOGICAL component name
+  // (logical_path, RELATIVE to the Bend CLI root, e.g. "main.ts" /
+  // "bend.ts" / "comp.ts" / "base.bend"), NOT by the producer's
+  // absolute pathname.  This makes the artifact portable: the
+  // verifier matches (role, logical_path, sha256) against the
+  // closure, deriving its own local paths from --bend-runner.
+  const runnerReal = realpathSync(bendRunner);
+  const dir = runnerReal.slice(0, runnerReal.lastIndexOf("/") + 1);
+  const closure: { logical_path: string; sha256: string; role: string }[] = [
+    { logical_path: "main.ts",   sha256: sha,                            role: "cli" },
+    { logical_path: "bend.ts",   sha256: sha256File(dir + "bend.ts"),    role: "trusted_kernel" },
+    { logical_path: "comp.ts",   sha256: sha256File(dir + "comp.ts"),    role: "compiler_runtime" },
+    { logical_path: "base.bend", sha256: sha256File(dir + "base.bend"),  role: "prelude" },
+  ];
+  return { bendRunner, bendRunnerSha256: sha, closure };
 }
 
 // ---------- Proof replay (recorded evidence) ----------
@@ -466,6 +486,7 @@ async function main() {
         "UNSUPPORTED_CLAIM",
         "TOOLCHAIN_MISMATCH",
         "TOOLCHAIN_UNAVAILABLE",
+        "CLAIM_SEMANTIC_MISMATCH",
       ],
     },
     evidence: {
@@ -497,6 +518,7 @@ async function main() {
         bend_version: "2.0.5",
         bun_version: process.versions.bun ?? "unknown",
         base_identity: "TOOLCHAIN_TRANSITIVE",
+        toolchain_closure: toolchain.closure,
       },
       build_command: args.buildCommand,
     },
@@ -521,5 +543,3 @@ main().catch((e) => {
   console.error(e);
   process.exit(1);
 });
-
-

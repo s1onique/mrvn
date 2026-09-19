@@ -34,10 +34,11 @@ interface CliArgs {
   bendRunner: string | null;
   resultOut: string | null;
   allowToolchainDrift: boolean;
+  offline: boolean;
 }
 
 function parseArgs(argv: string[]): CliArgs {
-  const out: Partial<CliArgs> & { allowToolchainDrift?: boolean } = { allowToolchainDrift: false };
+  const out: Partial<CliArgs> & { allowToolchainDrift?: boolean; offline?: boolean } = { allowToolchainDrift: false, offline: false };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     const next = (): string => {
@@ -51,6 +52,7 @@ function parseArgs(argv: string[]): CliArgs {
     else if (a === "--bend-runner") out.bendRunner = next();
     else if (a === "--result-out") out.resultOut = next();
     else if (a === "--allow-toolchain-drift") out.allowToolchainDrift = true;
+    else if (a === "--offline")   out.offline = true;
     else throw new Error("unknown flag: " + a);
   }
   if (out.artifact === undefined) throw new Error("missing required flag: --artifact");
@@ -122,6 +124,20 @@ function isSymlink(path: string): boolean {
 
 interface Failure { phase: string; classification: string; message: string; }
 
+// ---------- Claim semantics ----------
+//
+// CRITICAL (CORRECTION01): claim recognition by kind alone is NOT
+// sufficient.  For each recognized kind, the verifier validates the
+// claim's machine fields against recomputed reality.
+
+type ClaimStatus = "VERIFIED" | "CAPTURED" | "NOT_CHECKED" | "UNSUPPORTED" | "FAILED";
+
+interface ClaimCheckResult {
+  claim_id: string;
+  status: ClaimStatus;
+  reasons: string[];
+}
+
 interface Manifest {
   schema_version: number;
   artifact_type: string;
@@ -164,6 +180,108 @@ function loadManifest(artifactDir: string): { manifest: Manifest; rawBytes: Uint
   return { manifest: parsed as unknown as Manifest, rawBytes };
 }
 
+// Per-kind semantics.  Each kind has a fixed machine contract; the
+// `statement` text is display metadata derived from the contract, not
+// a free-text assertion that can override it.
+function checkClaim(
+  claim: any,
+  ctx: {
+    realArtDir: string;
+    recomputedPayload: Map<string, { sha256: string; size: number; role: string }>;
+    lawCountObserved: number;
+    proofReplayResult: "pass" | "fail" | "unavailable" | "not_checked";
+    mode: "integrity" | "proof" | "full";
+    toolchainMatch: boolean;
+  },
+): ClaimCheckResult {
+  if (typeof claim.claim_id !== "string" || claim.claim_id.length === 0) {
+    return { claim_id: String(claim.claim_id), status: "FAILED", reasons: ["claim_id missing or empty"] };
+  }
+  const id = claim.claim_id;
+  const kind = claim.kind;
+  const binds = (claim.binds ?? {}) as Record<string, unknown>;
+  const mainRec = ctx.recomputedPayload.get("payload/main.bend");
+  const lawsRec = ctx.recomputedPayload.get("payload/LAWS.bend");
+  const proofRec = ctx.recomputedPayload.get("payload/PROOF.bend");
+
+  if (kind === "FORMAL_LAW_SATISFACTION") {
+    if (!mainRec || !lawsRec || !proofRec) {
+      return { claim_id: id, status: "FAILED", reasons: ["missing bundled payload for FORMAL_LAW_SATISFACTION"] };
+    }
+    // CORRECTION02: authority requires existence, completeness, and
+    // equality — not equality conditional on existence.  Each required
+    // machine field MUST be present as the correct type; missing or
+    // wrong-typed values produce FAILED (CLAIM_SEMANTIC_MISMATCH).
+    const reasons: string[] = [];
+    function requireStr(field: string, actual: string): string | null {
+      const v = binds[field];
+      if (typeof v !== "string") {
+        reasons.push("binds." + field + " missing or wrong type (got " + typeof v + ")");
+        return null;
+      }
+      if (v !== actual) {
+        reasons.push("binds." + field + "=" + v + " != actual " + actual);
+        return null;
+      }
+      return v;
+    }
+    function requireNum(field: string, actual: number): number | null {
+      const v = binds[field];
+      if (typeof v !== "number" || !Number.isFinite(v) || !Number.isInteger(v)) {
+        reasons.push("binds." + field + " missing or wrong type (got " + typeof v + ")");
+        return null;
+      }
+      if (v !== actual) {
+        reasons.push("binds." + field + "=" + v + " != observed " + actual);
+        return null;
+      }
+      return v;
+    }
+    requireStr("implementation_sha256", mainRec.sha256);
+    requireStr("laws_sha256",          lawsRec.sha256);
+    requireStr("proof_sha256",         proofRec.sha256);
+    requireNum("law_count",            ctx.lawCountObserved);
+    if (reasons.length > 0) {
+      return { claim_id: id, status: "FAILED", reasons };
+    }
+    if (ctx.mode === "integrity" || ctx.proofReplayResult === "not_checked") {
+      return { claim_id: id, status: "CAPTURED", reasons: ["integrity mode: live proof replay not performed; status CAPTURED"] };
+    }
+    if (ctx.proofReplayResult !== "pass") {
+      reasons.push("proof replay result is " + ctx.proofReplayResult);
+    }
+    return reasons.length === 0
+      ? { claim_id: id, status: "VERIFIED", reasons: ["all machine fields present and equal to recomputed reality; live proof replay PASS"] }
+      : { claim_id: id, status: "FAILED", reasons };
+  }
+
+  if (kind === "OBSERVED_TOOL_EXECUTION") {
+    if (typeof binds.bend_runner !== "string" || (binds.bend_runner as string).length === 0) {
+      return { claim_id: id, status: "FAILED", reasons: ["OBSERVED_TOOL_EXECUTION binds.bend_runner missing"] };
+    }
+    return { claim_id: id, status: "CAPTURED", reasons: ["historical fact; recorded but not re-verifiable as a live check"] };
+  }
+
+  if (kind === "BEHAVIORAL_EQUIVALENCE") {
+    return { claim_id: id, status: "NOT_CHECKED", reasons: ["BEHAVIORAL_EQUIVALENCE not implemented in MRVN-05 baseline"] };
+  }
+
+  if (kind === "QUALIFICATION_RESULT") {
+    const known = new Set(["FULL_QUALIFICATION", "FULL_QUALIFICATION_WITH_TCB_WARNING", "PARTIAL_QUALIFICATION", "REJECTED"]);
+    const verdict = binds.verdict;
+    if (typeof verdict !== "string" || !known.has(verdict)) {
+      return { claim_id: id, status: "FAILED", reasons: ["QUALIFICATION_RESULT binds.verdict not recognized: " + String(verdict)] };
+    }
+    const act = binds.act;
+    if (typeof act !== "string" || !act.startsWith("ACT-MRVN-")) {
+      return { claim_id: id, status: "FAILED", reasons: ["QUALIFICATION_RESULT binds.act must start with ACT-MRVN-"] };
+    }
+    return { claim_id: id, status: "CAPTURED", reasons: ["historical qualification verdict; recorded but not re-exercised"] };
+  }
+
+  return { claim_id: id, status: "UNSUPPORTED", reasons: ["unrecognized kind: " + String(kind)] };
+}
+
 function checkRequiredFields(m: any, failures: Failure[]) {
   const required = ["schema_version", "artifact_type", "subject", "claims", "payload", "verification", "evidence", "provenance", "artifact_id"];
   for (const k of required) {
@@ -201,16 +319,36 @@ function checkRequiredFields(m: any, failures: Failure[]) {
   }
 }
 
-async function runBend(bendRunner: string, proofAbs: string, cwd: string): Promise<{ exit: number; stdout: string; stderr: string; }> {
+async function runBend(bendRunner: string, proofAbs: string, cwd: string, offline: boolean): Promise<{ exit: number; stdout: string; stderr: string }> {
   // We resolve bendRunner to an absolute path so the spawn does not
   // depend on the verifier's cwd; the artifact's payload is fully
   // self-contained.
   const bendAbs = resolve(bendRunner);
-  const proc = spawn({ cmd: ["bun", bendAbs, proofAbs], stdout: "pipe", stderr: "pipe", cwd });
+  // CORRECTION02: when --offline is requested we MUST propagate the
+  // offline probe into the spawned child Bun process.  CLI flags
+  // such as --preload are NOT inherited by spawned children, so we
+  // re-preload the same probe in the child's command array.  This
+  // fences the entire process tree (verifier + Bend checker +
+  // any module Bend dynamically loads) against network calls.
+  const cmd: string[] = offline
+    ? ["bun", "--preload=" + resolveOfflineProbePath(), bendAbs, proofAbs]
+    : ["bun", bendAbs, proofAbs];
+  const proc = spawn({ cmd, stdout: "pipe", stderr: "pipe", cwd });
   const out = await new Response(proc.stdout).text();
   const err = await new Response(proc.stderr).text();
   await proc.exited;
   return { exit: proc.exitCode ?? 1, stdout: out, stderr: err };
+}
+
+// Resolve the path to lab/offline_probe.ts relative to this verifier
+// file.  Cached at module load.  Used by runBend() when --offline.
+let _cachedProbePath: string | null = null;
+function resolveOfflineProbePath(): string {
+  if (_cachedProbePath !== null) return _cachedProbePath;
+  // import.meta.dirname points to lab/ at runtime.
+  const dir = (import.meta as any).dirname ?? new URL(".", import.meta.url).pathname;
+  _cachedProbePath = resolve(dir, "offline_probe.ts");
+  return _cachedProbePath;
 }
 
 // ---------- Phase checks ----------
@@ -475,6 +613,177 @@ function checkEscapeHatchInventory(manifest: Manifest, realArtDir: string, failu
   }
 }
 
+// ---------- Toolchain closure ----------
+//
+// CORRECTION01: hash-bound the full proof-checker transitive closure.
+// The actual proof-checker toolchain is the set of files that
+// `bend2/main.ts` loads during a checker invocation:
+//
+//   bend2/main.ts  -- CLI / loader
+//   bend2/bend.ts  -- parser / type checker / proof checker (trusted kernel)
+//   bend2/comp.ts  -- compiler/runtime (loaded by main.ts; book_run calls
+//                     Comp.io_type unconditionally)
+//   bend2/base.bend -- the prelude (resolved via realpath against main.ts)
+//
+// These four files together constitute the proof-checker TCB.  The
+// manifest's `provenance.toolchain.toolchain_closure[]` declares them
+// by STABLE LOGICAL identity (logical_path RELATIVE to the Bend CLI
+// root, e.g. "main.ts" / "bend.ts" / "comp.ts" / "base.bend") plus
+// sha256; the verifier derives the consumer's actual absolute paths
+// from `--bend-runner` and rejects any drift.  Producer absolute paths
+// are NOT part of the identity: an artifact built against
+// /Users/alex/src/mrvn/bend2 verifies identically against
+// /opt/bend/bend2 if and only if the four component sha256s match.
+
+function resolveToolchainClosure(bendRunnerPath: string): { logical_path: string; role: string; local_path: string }[] {
+  // bendRunner is the main.ts entry point; everything else is in its
+  // sibling directory.  On macOS /tmp -> /private/tmp may apply; main.ts does
+  //   const BASE = fs.realpathSync(path.join(import.meta.dirname, "base.bend"));
+  // so the source of truth is import.meta.dirname after realpath.
+  //
+  // The `local_path` returned here is the CONSUMER's actual absolute
+  // path; the verifier's identity comparison is on `logical_path`
+  // (relative) + sha256, not on local_path.  local_path is recorded
+  // only as audit info in the verifier output.
+  const runnerReal = realpathSync(bendRunnerPath);
+  const dir = runnerReal.slice(0, runnerReal.lastIndexOf("/") + 1);
+  return [
+    { logical_path: "main.ts",   role: "cli",               local_path: runnerReal },
+    { logical_path: "bend.ts",   role: "trusted_kernel",    local_path: dir + "bend.ts" },
+    { logical_path: "comp.ts",   role: "compiler_runtime",  local_path: dir + "comp.ts" },
+    { logical_path: "base.bend", role: "prelude",           local_path: dir + "base.bend" },
+  ];
+}
+
+function checkToolchainClosure(
+  bendRunnerPath: string,
+  declared: { logical_path?: string; path?: string; sha256: string; role: string }[] | undefined,
+  result: VerifyResult,
+  failures: Failure[],
+) {
+  // CORRECTION02: authority requires existence, completeness, and
+  // equality — not equality conditional on existence.  The closure
+  // membership must be exactly: {cli, trusted_kernel, compiler_runtime,
+  // prelude}.  Any missing component, duplicate role, duplicate path,
+  // or unexpected component is a TOOLCHAIN_MISMATCH failure.
+  //
+  // CORRECTION03: identity is by `logical_path` (relative component
+  // name, stable across installations) + `sha256`, NOT by the
+  // producer's absolute pathname.  Declared entries use logical_path;
+  // the verifier derives the consumer's local absolute paths from
+  // --bend-runner, then matches (role, logical_path, sha256).  An
+  // artifact built against /Users/alex/src/mrvn/bend2 verifies
+  // identically at /opt/bend/bend2 if and only if the four
+  // component sha256s match.  Old `path` fields in declared entries
+  // are tolerated only for the migration path (they are reported but
+  // NOT used for matching); new manifests MUST use logical_path.
+  const expectedRoles = new Set(["cli", "trusted_kernel", "compiler_runtime", "prelude"]);
+  const closure = resolveToolchainClosure(bendRunnerPath);
+
+  // 1. The manifest MUST declare toolchain_closure as an array.
+  if (!Array.isArray(declared)) {
+    failures.push({
+      phase: "toolchain_closure",
+      classification: "TOOLCHAIN_MISMATCH",
+      message: "manifest missing provenance.toolchain.toolchain_closure[]",
+    });
+    // Still report recomputed closure so the verifier output is
+    // complete; downstream code can still use it.
+    for (const c of closure) {
+      if (!existsSync(c.local_path)) {
+        result.verifier.toolchain_closure.push({ logical_path: c.logical_path, local_path: c.local_path, sha256: "MISSING", role: c.role });
+      } else {
+        result.verifier.toolchain_closure.push({ logical_path: c.logical_path, local_path: c.local_path, sha256: sha256File(c.local_path), role: c.role });
+      }
+    }
+    return;
+  }
+
+  // 2. Declared closure membership checks: no duplicates, only
+  //    expected roles, no extra unexpected roles, logical_path is
+  //    present and well-formed.
+  const seenRoles = new Set<string>();
+  const seenLogical = new Set<string>();
+  for (const d of declared) {
+    if (typeof d.role !== "string" || !expectedRoles.has(d.role)) {
+      failures.push({
+        phase: "toolchain_closure",
+        classification: "TOOLCHAIN_MISMATCH",
+        message: "declared toolchain closure has unexpected role: " + String(d.role),
+      });
+    } else if (seenRoles.has(d.role)) {
+      failures.push({
+        phase: "toolchain_closure",
+        classification: "TOOLCHAIN_MISMATCH",
+        message: "declared toolchain closure has duplicate role: " + d.role,
+      });
+    } else {
+      seenRoles.add(d.role);
+    }
+    if (typeof d.logical_path !== "string" || d.logical_path.length === 0) {
+      failures.push({
+        phase: "toolchain_closure",
+        classification: "TOOLCHAIN_MISMATCH",
+        message: "declared toolchain closure has empty/missing logical_path for role " + String(d.role),
+      });
+    } else if (seenLogical.has(d.logical_path)) {
+      failures.push({
+        phase: "toolchain_closure",
+        classification: "TOOLCHAIN_MISMATCH",
+        message: "declared toolchain closure has duplicate logical_path: " + d.logical_path,
+      });
+    } else {
+      seenLogical.add(d.logical_path);
+    }
+  }
+
+  // 3. Required roles must all be declared.
+  for (const role of expectedRoles) {
+    if (!seenRoles.has(role)) {
+      failures.push({
+        phase: "toolchain_closure",
+        classification: "TOOLCHAIN_MISMATCH",
+        message: "required toolchain component role missing from closure: " + role,
+      });
+    }
+  }
+
+  // 4. For each recomputed component, verify the corresponding
+  //    declared entry exists with matching role + logical_path + hash.
+  //    Match is by (role, logical_path), NOT by absolute path.
+  for (const c of closure) {
+    if (!existsSync(c.local_path)) {
+      result.verifier.toolchain_closure.push({ logical_path: c.logical_path, local_path: c.local_path, sha256: "MISSING", role: c.role });
+      failures.push({
+        phase: "toolchain_closure",
+        classification: "TOOLCHAIN_UNAVAILABLE",
+        message: "toolchain component missing at consumer-local path: " + c.local_path + " (logical " + c.logical_path + ")",
+      });
+      continue;
+    }
+    const sha = sha256File(c.local_path);
+    result.verifier.toolchain_closure.push({ logical_path: c.logical_path, local_path: c.local_path, sha256: sha, role: c.role });
+    // Find declared entry by (role, logical_path).  The match is
+    // identity-by-stable-name + hash; absolute paths are not used.
+    const d = declared.find((x) => x.role === c.role && x.logical_path === c.logical_path);
+    if (d === undefined) {
+      failures.push({
+        phase: "toolchain_closure",
+        classification: "TOOLCHAIN_MISMATCH",
+        message: "recomputed toolchain component " + c.role + " (logical " + c.logical_path + ", consumer-local " + c.local_path + ") not present in declared closure with matching role+logical_path",
+      });
+      continue;
+    }
+    if (d.sha256 !== sha) {
+      failures.push({
+        phase: "toolchain_closure",
+        classification: "TOOLCHAIN_MISMATCH",
+        message: "toolchain closure " + c.role + " (logical " + c.logical_path + ", consumer-local " + c.local_path + "): declared sha256=" + d.sha256 + " actual=" + sha,
+      });
+    }
+  }
+}
+
 // ---------- Main verification ----------
 
 interface VerifyResult {
@@ -483,13 +792,14 @@ interface VerifyResult {
   integrity: "pass" | "fail" | "not_checked";
   proof: "pass" | "fail" | "not_checked" | "unavailable";
   supplemental_evidence: "pass" | "fail" | "not_checked";
-  claims: { claim_id: string; status: "verified" | "unsupported" }[];
+  claims: { claim_id: string; status: ClaimStatus; reasons: string[] }[];
   failures: Failure[];
   verifier: {
     version: string;
     canonical_json_algorithm: string;
     artifact_id_algorithm: string;
     toolchain: { bend_runner_sha256: string | null; toolchain_match: boolean; toolchain_checked: boolean };
+    toolchain_closure: { logical_path: string; local_path: string; sha256: string; role: string }[];
   };
   timing_ms: { integrity: number; proof: number; supplemental: number };
 }
@@ -521,6 +831,7 @@ async function main() {
       canonical_json_algorithm: "mrvn-canonical-json-v1",
       artifact_id_algorithm: "sha256:canonical_manifest_minus_id:v1",
       toolchain: { bend_runner_sha256: null, toolchain_match: false, toolchain_checked: false },
+      toolchain_closure: [] as { logical_path: string; local_path: string; sha256: string; role: string }[],
     },
     timing_ms: { integrity: 0, proof: 0, supplemental: 0 },
   };
@@ -597,6 +908,11 @@ async function main() {
       } else {
         result.verifier.toolchain.toolchain_match = true;
       }
+      // CORRECTION01: also hash-bound the proof-checker transitive
+      // closure (main.ts / bend.ts / comp.ts / base.bend).  This is
+      // the actual TCB of `bend PROOF.bend`.
+      const declaredClosure = manifest.provenance.toolchain?.toolchain_closure;
+      checkToolchainClosure(args.bendRunner, declaredClosure, result, failures);
       if (!failures.some((f) => f.phase !== "toolchain_match" && f.phase !== "schema" && f.phase !== "manifest_id" && f.phase !== "payload_hash" && f.phase !== "payload_size" && f.phase !== "dependency_closure" && f.phase !== "path_confinement" && f.phase !== "law_inventory" && f.phase !== "escape_hatch_inventory")) {
         const proofAbs = resolve(realArtDir, "payload/PROOF.bend");
         if (!existsSync(proofAbs)) {
@@ -607,7 +923,7 @@ async function main() {
           });
           result.proof = "fail";
         } else {
-          const replay = await runBend(args.bendRunner, proofAbs, realArtDir);
+          const replay = await runBend(args.bendRunner, proofAbs, realArtDir, args.offline);
           if (replay.exit !== 0 || !replay.stdout.includes("All terms check.")) {
             failures.push({
               phase: "proof_replay",
@@ -669,19 +985,43 @@ async function main() {
     result.supplemental_evidence = failures.some((f) => f.phase === "supplemental_evidence") ? "fail" : "pass";
   }
 
-  // Build claim statuses.
+  // Build claim statuses (typed per-kind semantics).
   if (manifest !== null && Array.isArray(manifest.claims)) {
+    // Build the recomputedPayload map from on-disk evidence.
+    const recomputedPayload = new Map<string, { sha256: string; size: number; role: string }>();
+    for (const f of manifest.payload.files) {
+      const abs = resolve(realArtDir, f.path);
+      if (existsSync(abs)) {
+        recomputedPayload.set(f.path, { sha256: sha256File(abs), size: fileSize(abs), role: f.role });
+      }
+    }
+    // Observed law count.
+    let lawCountObserved = 0;
+    if (existsSync(resolve(realArtDir, "payload/LAWS.bend"))) {
+      lawCountObserved = extractLawNames(resolve(realArtDir, "payload/LAWS.bend")).length;
+    }
     for (const c of manifest.claims) {
-      const supportedKinds = new Set(["FORMAL_LAW_SATISFACTION", "OBSERVED_TOOL_EXECUTION", "BEHAVIORAL_EQUIVALENCE", "QUALIFICATION_RESULT"]);
-      if (!supportedKinds.has(c.kind)) {
+      const check = checkClaim(c, {
+        realArtDir,
+        recomputedPayload,
+        lawCountObserved,
+        proofReplayResult: result.proof,
+        mode: args.mode,
+        toolchainMatch: result.verifier.toolchain.toolchain_match,
+      });
+      result.claims.push({ claim_id: check.claim_id, status: check.status, reasons: check.reasons });
+      if (check.status === "UNSUPPORTED") {
         failures.push({
-          phase: "supplemental_evidence",
+          phase: "claim_authority",
           classification: "UNSUPPORTED_CLAIM",
-          message: "claim " + c.claim_id + " has unsupported kind: " + c.kind,
+          message: "claim " + check.claim_id + ": " + check.reasons.join("; "),
         });
-        result.claims.push({ claim_id: c.claim_id, status: "unsupported" });
-      } else {
-        result.claims.push({ claim_id: c.claim_id, status: "verified" });
+      } else if (check.status === "FAILED") {
+        failures.push({
+          phase: "claim_authority",
+          classification: "CLAIM_SEMANTIC_MISMATCH",
+          message: "claim " + check.claim_id + ": " + check.reasons.join("; "),
+        });
       }
     }
   }

@@ -250,7 +250,14 @@ def Laws.closed_denies_everything(a, c, e):
       m.payload.law_inventory.count = 1;
       m.payload.law_inventory.source_file = "payload/LAWS.bend";
       const formal = m.claims.find((c: any) => c.claim_id === "formal-law-satisfaction");
-      if (formal) formal.binds.law_count = 1;
+      // CORRECTION01: keep the formal claim's machine fields
+      // consistent with the new payload bytes so the typed claim
+      // check accepts it as a valid different specification.
+      if (formal) {
+        formal.binds.law_count = 1;
+        formal.binds.laws_sha256 = sha256File(lawsPath);
+        formal.binds.proof_sha256 = sha256File(proofPath);
+      }
       m.artifact_id = computeArtifactId(m);
       writeFileSync(manifestPath, canonicalJson(m as Json) + "\n");
       await resyncManifest(outDir);
@@ -410,6 +417,3 @@ async function main() {
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });
-
-
-

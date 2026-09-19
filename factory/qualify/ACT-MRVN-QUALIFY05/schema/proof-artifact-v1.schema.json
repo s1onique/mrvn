@@ -257,7 +257,42 @@
         "captured_at": { "type": "string" },
         "toolchain": {
           "type": "object",
-          "additionalProperties": true
+          "required": ["toolchain_closure"],
+          "additionalProperties": true,
+          "properties": {
+            "toolchain_closure": {
+              "type": "array",
+              "description": "Required: declares every component in the Bend proof-checker transitive closure by STABLE LOGICAL component identity, not by producer absolute path.  Each entry MUST include exactly {role, logical_path, sha256}.  The verifier derives the consumer-local absolute path from --bend-runner, then matches (role, logical_path, sha256) against this closure; producer absolute paths are NOT part of the identity.  The verifier rejects any artifact that does not declare exactly the four expected roles.",
+              "minItems": 4,
+              "maxItems": 4,
+              "uniqueItems": true,
+              "items": {
+                "type": "object",
+                "required": ["logical_path", "role", "sha256"],
+                "additionalProperties": false,
+                "properties": {
+                  "logical_path": {
+                    "type": "string",
+                    "description": "Stable logical component identity: a path RELATIVE to the Bend CLI root (the directory containing bend_runner / main.ts).  POSIX-style, no leading slash, no .., no .. traversal.  Conventions: 'main.ts' for the CLI, 'bend.ts' for the trusted kernel, 'comp.ts' for the compiler/runtime, 'base.bend' for the prelude.  An artifact is portable: a consumer with byte-identical Bend installed at any absolute path verifies it the same way, because the verifier matches by logical_path (relative component name) + sha256, never by producer's absolute pathname.",
+                    "pattern": "^[A-Za-z0-9._-]+(/[A-Za-z0-9._-]+)*$"
+                  },
+                  "role": {
+                    "type": "string",
+                    "enum": ["cli", "trusted_kernel", "compiler_runtime", "prelude"]
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  }
+                }
+              }
+            },
+            "bend_runner": { "type": "string" },
+            "bend_runner_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+            "bend_version": { "type": "string" },
+            "bun_version": { "type": "string" },
+            "base_identity": { "type": "string" }
+          }
         },
         "build_command": { "type": "string" }
       }
