@@ -1,0 +1,76 @@
+diff --git a/factory/qualify/ACT-MRVN-QUALIFY02/reference/main_act01.bend b/factory/qualify/ACT-MRVN-QUALIFY01/verdict-kernel/main.bend
+index 8d3367cd..714743c6 100644
+--- a/factory/qualify/ACT-MRVN-QUALIFY02/reference/main_act01.bend
++++ b/factory/qualify/ACT-MRVN-QUALIFY01/verdict-kernel/main.bend
+@@ -1,19 +1,18 @@
+-# ACT-MRVN-QUALIFY01 verdict kernel -- the implementation.
++# ACT-MRVN-QUALIFY02 verdict kernel -- the implementation (refactored).
+ #
+-# Models a simplified deployment gate. A `Check` is either a `Required`
+-# check (fail blocks rollout) or an `Advisory` check (must not influence
+-# rollout status). `Rollout` is the verdict: Pass or Fail.
+-#
+-# `rollout_status` is the function under test. Its intended semantics:
+-#   rollout_status(checks) == Rollout.Fail
+-#     iff there exists at least one Required(Fail) check in `checks`.
++# rollout_status semantics:
++#   rollout_status(checks) == Fail iff there exists at least one Required(Fail) check.
+ # Advisory checks must not influence the verdict.
++#
++# ACT02 implementation note: the body of rollout_status's h <> t arm
++# case-splits directly on ck (a constructor-pattern variable), not on
++# a computed value. This is the standard inline-match form; the WNF
++# unfolds the inner match because ck is a parameter bound by the
++# outer case pattern, and the four (Decision, Outcome) cases all
++# have constructor-headed match patterns.
+ 
+ import Base
+ 
+-# Decision classes
+-# ----------------
+-
+ type Decision is Data:
+   Decision.Required{}
+   Decision.Advisory{}
+@@ -29,8 +28,13 @@ type Rollout is Data:
+   Rollout.Pass{}
+   Rollout.Fail{}
+ 
+-# The function under proof
+-# ------------------------
++# Canonical classifier shared by implementation and proof (in LAWS.bend).
++def blocking_fail(c: Check) -> Bool:
++  match c:
++    case Decision_Outcome{Decision.Required{}, Outcome.Fail{}}:
++      True{}
++    case _:
++      False{}
+ 
+ def rollout_status(checks: List<&2, Check>) -> Rollout:
+   match checks:
+@@ -40,13 +44,11 @@ def rollout_status(checks: List<&2, Check>) -> Rollout:
+       match ck:
+         case Decision_Outcome{Decision.Required{}, Outcome.Fail{}}:
+           Rollout.Fail{}
+-        case _:
++        case Decision_Outcome{Decision.Required{}, Outcome.Pass{}}:
++          rollout_status(rest)
++        case Decision_Outcome{Decision.Advisory{}, _}:
+           rollout_status(rest)
+ 
+-# append two lists -- right-associative recursion. Auxiliary; not the
+-# function under proof, but its structural recursion makes
+-# proof-by-induction on its left argument reduce cleanly on both sides
+-# of an equation.
+ def append(xs: List<&2, Check>, ys: List<&2, Check>) -> List<&2, Check>:
+   match xs:
+     case Nil{}:
+@@ -54,8 +56,6 @@ def append(xs: List<&2, Check>, ys: List<&2, Check>) -> List<&2, Check>:
+     case h <> t:
+       h <> append(t, ys)
+ 
+-# append a single check at the end of a list -- convenience for the
+-# laws, derived from `append`.
+ def append_one(xs: List<&2, Check>, c: Check) -> List<&2, Check>:
+   append(xs, c <> Nil{})
+ 

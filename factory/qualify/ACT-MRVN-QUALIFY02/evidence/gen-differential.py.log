@@ -1,0 +1,2 @@
+Total cases: 25
+Last case: ('len3:RPAFAP', 'K.Decision_Outcome{K.Decision.Required{}, K.Outcome.Pass{}} <> K.Decision_Outcome{K.Decision.Advisory{}, K.Outcome.Fail{}} <> K.Decision_Outcome{K.Decision.Advisory{}, K.Outcome.Pass{}} <> Nil{}')

@@ -1,0 +1,7 @@
+ACT01 output (reference impl with case _ -> rollout_status(rest) catchall):
+PaFaPaPaPaFaFaPaPaFaFaFaFaFaFaFaFaPaPaPaFaFaFaPa
+
+ACT02 output (refactored impl with 3-arm explicit case split):
+PaFaPaPaPaFaFaPaPaFaFaFaFaFaFaFaFaPaPaPaFaFaFaPa
+
+Result: MATCH (24 cases, mismatches=0)
