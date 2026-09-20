@@ -1,0 +1,6 @@
+{
+  "candidate_id": "J-SYN-009-global-closed",
+  "family": "J-SYNTHETIC-GENERATOR",
+  "description": "ClineMM-synthetic: Closed check via global helper.",
+  "transformation": "global Closed check"
+}

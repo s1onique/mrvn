@@ -1,0 +1,6 @@
+{
+  "candidate_id": "C-005-capability-last",
+  "family": "C",
+  "description": "Capability-last dispatch.",
+  "transformation": "capability-last"
+}

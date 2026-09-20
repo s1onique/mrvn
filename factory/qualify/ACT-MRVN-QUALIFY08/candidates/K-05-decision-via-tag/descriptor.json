@@ -1,0 +1,6 @@
+{
+  "candidate_id": "K-05-decision-via-tag",
+  "family": "K",
+  "description": "Live ClineMM K-05: Work via DecisionTag -> Decision conversion helper.",
+  "transformation": "tag-then-decision"
+}

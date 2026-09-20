@@ -1,0 +1,6 @@
+{
+  "candidate_id": "D-005-Nat-bool",
+  "family": "D",
+  "description": "Deny reason keyed into Nat.",
+  "transformation": "reason via Nat"
+}

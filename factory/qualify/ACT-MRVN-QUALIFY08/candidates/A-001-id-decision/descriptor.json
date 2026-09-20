@@ -1,0 +1,6 @@
+{
+  "candidate_id": "A-001-id-decision",
+  "family": "A",
+  "description": "authorize returns id_decision(work_/halt_/freeze_/close_decision(...)). id_decision is an explicit deconstruction/reconstruction match on Decision.",
+  "transformation": "wrap authorize output through id_decision"
+}

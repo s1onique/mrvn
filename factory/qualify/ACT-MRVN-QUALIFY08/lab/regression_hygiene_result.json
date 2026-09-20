@@ -1,0 +1,29 @@
+{
+  "act": "ACT-MRVN-QUALIFY08",
+  "correction": "CORRECTION01",
+  "timestamp": "2026-09-20T21:48:55.130Z",
+  "prior_dirs": [
+    "factory/qualify/ACT-MRVN-QUALIFY04",
+    "factory/qualify/ACT-MRVN-QUALIFY05",
+    "factory/qualify/ACT-MRVN-QUALIFY06",
+    "factory/qualify/ACT-MRVN-QUALIFY07"
+  ],
+  "durable_file_count": 1337,
+  "regression_tasks": [
+    {
+      "name": "MRVN-04 verify --no-write",
+      "exit": 0
+    },
+    {
+      "name": "MRVN-06 classify (CTRL-IDENT, --results-out /tmp)",
+      "exit": 0
+    },
+    {
+      "name": "MRVN-07 frozen-evidence read",
+      "exit": 0
+    }
+  ],
+  "drift_count": 0,
+  "drifts": [],
+  "summary": "PASS: 0 drifts vs HEAD across 1337-file durable prior-ACT surface; all sandboxed regression tasks exited 0"
+}

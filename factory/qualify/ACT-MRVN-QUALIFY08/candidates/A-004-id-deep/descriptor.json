@@ -1,0 +1,6 @@
+{
+  "candidate_id": "A-004-id-deep",
+  "family": "A",
+  "description": "id_decision via 2-level indirection (id -> id_step2 -> match).",
+  "transformation": "id_decision via 2-level indirection"
+}

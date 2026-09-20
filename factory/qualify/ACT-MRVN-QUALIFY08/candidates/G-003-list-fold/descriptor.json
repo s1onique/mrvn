@@ -1,0 +1,6 @@
+{
+  "candidate_id": "G-003-list-fold",
+  "family": "G",
+  "description": "List.fold.",
+  "transformation": "List.fold over 180 cells"
+}

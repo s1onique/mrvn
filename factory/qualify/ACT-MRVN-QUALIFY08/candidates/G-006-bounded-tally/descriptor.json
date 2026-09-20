@@ -1,0 +1,6 @@
+{
+  "candidate_id": "G-006-bounded-tally",
+  "family": "G",
+  "description": "Bounded tail-recursion.",
+  "transformation": "Bounded tail-recursion"
+}

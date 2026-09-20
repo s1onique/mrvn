@@ -1,0 +1,6 @@
+{
+  "candidate_id": "G-002-nat-counter",
+  "family": "G",
+  "description": "Nat counter iteration.",
+  "transformation": "Nat counter iteration"
+}

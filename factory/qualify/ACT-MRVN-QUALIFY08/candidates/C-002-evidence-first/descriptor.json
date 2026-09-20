@@ -1,0 +1,6 @@
+{
+  "candidate_id": "C-002-evidence-first",
+  "family": "C",
+  "description": "Match evidence first.",
+  "transformation": "evidence-first ordering"
+}

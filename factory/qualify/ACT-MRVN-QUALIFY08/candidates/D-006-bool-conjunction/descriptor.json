@@ -1,0 +1,6 @@
+{
+  "candidate_id": "D-006-bool-conjunction",
+  "family": "D",
+  "description": "Reason computed as bool conjunctions.",
+  "transformation": "bool conjunctions"
+}

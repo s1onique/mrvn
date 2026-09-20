@@ -1,0 +1,6 @@
+{
+  "candidate_id": "E-003-bool-kind",
+  "family": "E",
+  "description": "(allow: Bool, kind: DenyReason) intermediate.",
+  "transformation": "Bool-kind intermediate"
+}

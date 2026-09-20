@@ -1,0 +1,6 @@
+{
+  "candidate_id": "I-001-recursive-180",
+  "family": "I",
+  "description": "Single recursive function over 180-cell encoding.",
+  "transformation": "single recursion over 180 cells"
+}

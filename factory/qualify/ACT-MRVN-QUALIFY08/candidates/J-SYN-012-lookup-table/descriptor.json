@@ -1,0 +1,6 @@
+{
+  "candidate_id": "J-SYN-012-lookup-table",
+  "family": "J-SYNTHETIC-GENERATOR",
+  "description": "ClineMM-synthetic: 5x3 lookup table per capability.",
+  "transformation": "5x3 lookup table per cap"
+}

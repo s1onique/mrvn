@@ -1,0 +1,6 @@
+{
+  "candidate_id": "J-SYN-007-evidence-first",
+  "family": "J-SYNTHETIC-GENERATOR",
+  "description": "ClineMM-synthetic: evidence-first then capability dispatch.",
+  "transformation": "evidence-first then capability"
+}

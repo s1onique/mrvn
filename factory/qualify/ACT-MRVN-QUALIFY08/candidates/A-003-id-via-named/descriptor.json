@@ -1,0 +1,6 @@
+{
+  "candidate_id": "A-003-id-via-named",
+  "family": "A",
+  "description": "id_decision is a 1-level named helper indirection.",
+  "transformation": "id_decision via one named helper"
+}

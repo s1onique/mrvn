@@ -1,0 +1,6 @@
+{
+  "candidate_id": "I-002-tail-rec",
+  "family": "I",
+  "description": "Tail-recursive authorize with accumulator.",
+  "transformation": "tail-recursive"
+}

@@ -1,0 +1,6 @@
+{
+  "candidate_id": "B-003-evidence-recode",
+  "family": "B",
+  "description": "Evidence recode before authorize (passthrough).",
+  "transformation": "Evidence recode (passthrough)"
+}

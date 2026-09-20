@@ -1,0 +1,6 @@
+{
+  "candidate_id": "H-004-wrapper-rewrite",
+  "family": "H",
+  "description": "Wrapper applies canonical lemmas as rewrites.",
+  "transformation": "wrapper applies canonical lemmas"
+}

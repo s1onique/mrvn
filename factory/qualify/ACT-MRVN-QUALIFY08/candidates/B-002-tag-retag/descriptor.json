@@ -1,0 +1,6 @@
+{
+  "candidate_id": "B-002-tag-retag",
+  "family": "B",
+  "description": "Decision retag through InternalDecision type (passthrough).",
+  "transformation": "InternalDecision retag (passthrough)"
+}

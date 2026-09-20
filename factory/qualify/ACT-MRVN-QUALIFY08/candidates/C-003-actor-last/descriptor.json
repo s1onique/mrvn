@@ -1,0 +1,6 @@
+{
+  "candidate_id": "C-003-actor-last",
+  "family": "C",
+  "description": "Actor-last match.",
+  "transformation": "actor-last ordering"
+}

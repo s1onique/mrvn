@@ -1,0 +1,59 @@
+{
+  "candidate_id": "B-NEG-drift-one-cell",
+  "family": "B",
+  "description": "Negative control: deliberate one-cell semantic drift.",
+  "implementation_sha256": "3b4f2f18efeb162343756877a68d3f6b4e13fd570976a298659f02d35437827b",
+  "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+  "intent_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+  "proof": {
+    "canonical": "absent",
+    "canonical_sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+    "canonical_failure_kind": null,
+    "canonical_failure_excerpt": null,
+    "reproof": "absent",
+    "reproof_sha256": null,
+    "reproof_attempts": 0,
+    "reproof_kind": null
+  },
+  "behavior": {
+    "cells": 180,
+    "diff_count": 3,
+    "diffs": [
+      {
+        "key": "Agent|Work|Active|None",
+        "expected": "Allow",
+        "observed": "Deny{WrongLifecycle}"
+      },
+      {
+        "key": "Agent|Work|Active|Replay",
+        "expected": "Allow",
+        "observed": "Deny{WrongLifecycle}"
+      },
+      {
+        "key": "Agent|Work|Active|Live",
+        "expected": "Allow",
+        "observed": "Deny{WrongLifecycle}"
+      }
+    ],
+    "run1_sha256": "f87a6c26911330ea6d405aa3bf66f7710706343da6f74b7174d32df0a372d753",
+    "run2_sha256": null
+  },
+  "intent_status": "SEMANTIC_DRIFT",
+  "artifact": {
+    "present": false,
+    "verify": "absent",
+    "artifact_id": null,
+    "failures": 0
+  },
+  "classification": "SEMANTIC_DRIFT",
+  "rationale": [
+    "behavior drift: 3/180 cells differ from oracle"
+  ],
+  "intended_classification": null,
+  "agent_provenance": {
+    "attempts": 0,
+    "files_edited": [],
+    "law_edit_attempts": 0,
+    "escape_hatch_attempts": 0
+  }
+}

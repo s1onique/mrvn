@@ -1,0 +1,6 @@
+{
+  "candidate_id": "B-001-involution-id",
+  "family": "B",
+  "description": "wrap authorize via explicit encode/decode involution (passthrough).",
+  "transformation": "encode/decode involution (passthrough)"
+}

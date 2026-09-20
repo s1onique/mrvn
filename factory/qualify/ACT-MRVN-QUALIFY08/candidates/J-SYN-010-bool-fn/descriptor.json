@@ -1,0 +1,6 @@
+{
+  "candidate_id": "J-SYN-010-bool-fn",
+  "family": "J-SYNTHETIC-GENERATOR",
+  "description": "ClineMM-synthetic: finite boolean function per axis.",
+  "transformation": "finite boolean function"
+}

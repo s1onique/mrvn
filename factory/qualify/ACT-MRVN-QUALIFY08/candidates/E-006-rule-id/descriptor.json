@@ -1,0 +1,6 @@
+{
+  "candidate_id": "E-006-rule-id",
+  "family": "E",
+  "description": "rule_id -> Decision lookup.",
+  "transformation": "rule-id lookup"
+}

@@ -1,0 +1,6 @@
+{
+  "candidate_id": "K-07-through-helper",
+  "family": "K",
+  "description": "Live ClineMM K-07: every decision round-tripped through through_helper (structural identity).",
+  "transformation": "through_helper round-trip"
+}

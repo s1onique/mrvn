@@ -1,0 +1,628 @@
+{
+  "act": "ACT-MRVN-QUALIFY08",
+  "corpus_size": 76,
+  "families": [
+    {
+      "letter": "A",
+      "name": "identity_reconstruction",
+      "minimum": 6,
+      "generated": 7,
+      "candidates": [
+        "A-001-id-decision",
+        "A-002-identity-via-named",
+        "A-003-id-via-named",
+        "A-004-id-deep",
+        "A-005-id-nat-tap",
+        "A-006-rename-work",
+        "A-007-all-rename"
+      ]
+    },
+    {
+      "letter": "B",
+      "name": "double_transformation",
+      "minimum": 6,
+      "generated": 7,
+      "candidates": [
+        "B-001-involution-id",
+        "B-002-tag-retag",
+        "B-003-evidence-recode",
+        "B-004-lifecycle-renorm",
+        "B-005-actor-mask",
+        "B-006-capability-encdec",
+        "B-NEG-drift-one-cell"
+      ]
+    },
+    {
+      "letter": "C",
+      "name": "alternative_eliminator_order",
+      "minimum": 6,
+      "generated": 6,
+      "candidates": [
+        "C-001-lifecycle-first",
+        "C-002-evidence-first",
+        "C-003-actor-last",
+        "C-004-alt-branch-flip",
+        "C-005-capability-last",
+        "C-006-mixed-flip"
+      ]
+    },
+    {
+      "letter": "D",
+      "name": "derived_predicates",
+      "minimum": 6,
+      "generated": 6,
+      "candidates": [
+        "D-001-is-X-predicates",
+        "D-002-is-allowed-bool",
+        "D-003-bool-sequence",
+        "D-004-reason-predicate",
+        "D-005-Nat-bool",
+        "D-006-bool-conjunction"
+      ]
+    },
+    {
+      "letter": "E",
+      "name": "intermediate_type",
+      "minimum": 6,
+      "generated": 6,
+      "candidates": [
+        "E-001-permit-reject",
+        "E-002-verdict-codes",
+        "E-003-bool-kind",
+        "E-004-permit-only",
+        "E-005-either",
+        "E-006-rule-id"
+      ]
+    },
+    {
+      "letter": "F",
+      "name": "table_index_representation",
+      "minimum": 4,
+      "generated": 4,
+      "candidates": [
+        "F-001-actor-index",
+        "F-002-lifecycle-index",
+        "F-003-decision-Nat-pair",
+        "F-004-capability-Nat"
+      ]
+    },
+    {
+      "letter": "G",
+      "name": "recursive_identity_helpers",
+      "minimum": 6,
+      "generated": 6,
+      "candidates": [
+        "G-001-list-iter",
+        "G-002-nat-counter",
+        "G-003-list-fold",
+        "G-004-stream",
+        "G-005-recursive-lookup",
+        "G-006-bounded-tally"
+      ]
+    },
+    {
+      "letter": "H",
+      "name": "propositional_wrapper",
+      "minimum": 6,
+      "generated": 6,
+      "candidates": [
+        "H-001-wrapper-with-lemma",
+        "H-002-wrapper-cong",
+        "H-003-wrapper-compose",
+        "H-004-wrapper-rewrite",
+        "H-005-wrapper-sym",
+        "H-006-wrapper-trans"
+      ]
+    },
+    {
+      "letter": "I",
+      "name": "alternative_recursive_def",
+      "minimum": 4,
+      "generated": 4,
+      "candidates": [
+        "I-001-recursive-180",
+        "I-002-tail-rec",
+        "I-003-mutual-rec",
+        "I-004-encoded-cell"
+      ]
+    },
+    {
+      "letter": "J-SYNTHETIC-GENERATOR",
+      "name": "synthetic_clinemm_passthrough",
+      "minimum": 12,
+      "generated": 12,
+      "candidates": [
+        "J-SYN-001-helper-rename",
+        "J-SYN-002-tag-encoding",
+        "J-SYN-003-single-tuple",
+        "J-SYN-004-depth-counter",
+        "J-SYN-005-match-bool",
+        "J-SYN-006-allow-tag-nat",
+        "J-SYN-007-evidence-first",
+        "J-SYN-008-nested-no-cap",
+        "J-SYN-009-global-closed",
+        "J-SYN-010-bool-fn",
+        "J-SYN-011-tuple-internal",
+        "J-SYN-012-lookup-table"
+      ]
+    },
+    {
+      "letter": "K",
+      "name": "live_same_agent_adversarial",
+      "minimum": 12,
+      "generated": 12,
+      "candidates": [
+        "K-01-thunked-work",
+        "K-02-actor-first-dispatch",
+        "K-03-recursive-evidence-helper",
+        "K-04-decision-identity-pipe",
+        "K-05-decision-via-tag",
+        "K-06-indirect-cap-match",
+        "K-07-through-helper",
+        "K-08-deeper-helper-chain",
+        "K-09-match-tag-only",
+        "K-10-cap-case-swap",
+        "K-11-non-closed-pullout",
+        "K-12-helper-pipeline"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "A-001-id-decision",
+      "family": "A",
+      "description": "authorize returns id_decision(work_/halt_/freeze_/close_decision(...)). id_decision is an explicit deconstruction/reconstruction match on Decision.",
+      "transformation": "wrap authorize output through id_decision"
+    },
+    {
+      "candidate_id": "A-002-identity-via-named",
+      "family": "A",
+      "description": "work_decision split into dispatch + 3 per-actor step helpers.",
+      "transformation": "split work_decision into dispatch + per-actor step helpers"
+    },
+    {
+      "candidate_id": "A-003-id-via-named",
+      "family": "A",
+      "description": "id_decision is a 1-level named helper indirection.",
+      "transformation": "id_decision via one named helper"
+    },
+    {
+      "candidate_id": "A-004-id-deep",
+      "family": "A",
+      "description": "id_decision via 2-level indirection (id -> id_step2 -> match).",
+      "transformation": "id_decision via 2-level indirection"
+    },
+    {
+      "candidate_id": "A-005-id-nat-tap",
+      "family": "A",
+      "description": "authorize output wrapped through a nat_tap counter that does no transformation.",
+      "transformation": "nat_tap wrapper around authorize output"
+    },
+    {
+      "candidate_id": "A-006-rename-work",
+      "family": "A",
+      "description": "Rename work_decision -> work_check; bodies unchanged.",
+      "transformation": "rename work_decision -> work_check"
+    },
+    {
+      "candidate_id": "A-007-all-rename",
+      "family": "A",
+      "description": "Rename all four capability helpers with _v2 suffix; bodies unchanged.",
+      "transformation": "rename all capability helpers with _v2 suffix"
+    },
+    {
+      "candidate_id": "B-001-involution-id",
+      "family": "B",
+      "description": "wrap authorize via explicit encode/decode involution (passthrough).",
+      "transformation": "encode/decode involution (passthrough)"
+    },
+    {
+      "candidate_id": "B-002-tag-retag",
+      "family": "B",
+      "description": "Decision retag through InternalDecision type (passthrough).",
+      "transformation": "InternalDecision retag (passthrough)"
+    },
+    {
+      "candidate_id": "B-003-evidence-recode",
+      "family": "B",
+      "description": "Evidence recode before authorize (passthrough).",
+      "transformation": "Evidence recode (passthrough)"
+    },
+    {
+      "candidate_id": "B-004-lifecycle-renorm",
+      "family": "B",
+      "description": "Lifecycle renorm before authorize (passthrough).",
+      "transformation": "Lifecycle renorm (passthrough)"
+    },
+    {
+      "candidate_id": "B-005-actor-mask",
+      "family": "B",
+      "description": "Actor mask before authorize (passthrough).",
+      "transformation": "Actor mask (passthrough)"
+    },
+    {
+      "candidate_id": "B-006-capability-encdec",
+      "family": "B",
+      "description": "Capability encode/decode wrapper (passthrough).",
+      "transformation": "capability encode/decode (passthrough)"
+    },
+    {
+      "candidate_id": "B-NEG-drift-one-cell",
+      "family": "B",
+      "description": "Negative control: deliberate one-cell semantic drift.",
+      "transformation": "deliberate one-cell drift"
+    },
+    {
+      "candidate_id": "C-001-lifecycle-first",
+      "family": "C",
+      "description": "Match lifecycle then actor.",
+      "transformation": "lifecycle-first ordering"
+    },
+    {
+      "candidate_id": "C-002-evidence-first",
+      "family": "C",
+      "description": "Match evidence first.",
+      "transformation": "evidence-first ordering"
+    },
+    {
+      "candidate_id": "C-003-actor-last",
+      "family": "C",
+      "description": "Actor-last match.",
+      "transformation": "actor-last ordering"
+    },
+    {
+      "candidate_id": "C-004-alt-branch-flip",
+      "family": "C",
+      "description": "Branch order flip.",
+      "transformation": "branch order flip"
+    },
+    {
+      "candidate_id": "C-005-capability-last",
+      "family": "C",
+      "description": "Capability-last dispatch.",
+      "transformation": "capability-last"
+    },
+    {
+      "candidate_id": "C-006-mixed-flip",
+      "family": "C",
+      "description": "Mixed ordering across helpers.",
+      "transformation": "mixed ordering"
+    },
+    {
+      "candidate_id": "D-001-is-X-predicates",
+      "family": "D",
+      "description": "Decision reconstructed from predicates.",
+      "transformation": "predicate dispatch"
+    },
+    {
+      "candidate_id": "D-002-is-allowed-bool",
+      "family": "D",
+      "description": "is_allowed bool check.",
+      "transformation": "is_allowed-bool-first"
+    },
+    {
+      "candidate_id": "D-003-bool-sequence",
+      "family": "D",
+      "description": "Bool-sequence encoding.",
+      "transformation": "bool-sequence encoding"
+    },
+    {
+      "candidate_id": "D-004-reason-predicate",
+      "family": "D",
+      "description": "Reason via predicate composition.",
+      "transformation": "predicate composition"
+    },
+    {
+      "candidate_id": "D-005-Nat-bool",
+      "family": "D",
+      "description": "Deny reason keyed into Nat.",
+      "transformation": "reason via Nat"
+    },
+    {
+      "candidate_id": "D-006-bool-conjunction",
+      "family": "D",
+      "description": "Reason computed as bool conjunctions.",
+      "transformation": "bool conjunctions"
+    },
+    {
+      "candidate_id": "E-001-permit-reject",
+      "family": "E",
+      "description": "Internal Permit/Reject type.",
+      "transformation": "Internal Permit/Reject type"
+    },
+    {
+      "candidate_id": "E-002-verdict-codes",
+      "family": "E",
+      "description": "Verdict with numeric codes.",
+      "transformation": "Verdict with numeric codes"
+    },
+    {
+      "candidate_id": "E-003-bool-kind",
+      "family": "E",
+      "description": "(allow: Bool, kind: DenyReason) intermediate.",
+      "transformation": "Bool-kind intermediate"
+    },
+    {
+      "candidate_id": "E-004-permit-only",
+      "family": "E",
+      "description": "Permit-only intermediate.",
+      "transformation": "permit-only internal"
+    },
+    {
+      "candidate_id": "E-005-either",
+      "family": "E",
+      "description": "Either-style intermediate.",
+      "transformation": "Either-style intermediate"
+    },
+    {
+      "candidate_id": "E-006-rule-id",
+      "family": "E",
+      "description": "rule_id -> Decision lookup.",
+      "transformation": "rule-id lookup"
+    },
+    {
+      "candidate_id": "F-001-actor-index",
+      "family": "F",
+      "description": "Actor -> Nat ordinal.",
+      "transformation": "Actor Nat index"
+    },
+    {
+      "candidate_id": "F-002-lifecycle-index",
+      "family": "F",
+      "description": "Lifecycle Nat table.",
+      "transformation": "Lifecycle Nat table"
+    },
+    {
+      "candidate_id": "F-003-decision-Nat-pair",
+      "family": "F",
+      "description": "Decision via Nat pair.",
+      "transformation": "Decision via Nat pair"
+    },
+    {
+      "candidate_id": "F-004-capability-Nat",
+      "family": "F",
+      "description": "Capability Nat; 4-arm table.",
+      "transformation": "Capability Nat; 4-arm table"
+    },
+    {
+      "candidate_id": "G-001-list-iter",
+      "family": "G",
+      "description": "Enumerate 180 cells as List.",
+      "transformation": "List iteration"
+    },
+    {
+      "candidate_id": "G-002-nat-counter",
+      "family": "G",
+      "description": "Nat counter iteration.",
+      "transformation": "Nat counter iteration"
+    },
+    {
+      "candidate_id": "G-003-list-fold",
+      "family": "G",
+      "description": "List.fold.",
+      "transformation": "List.fold over 180 cells"
+    },
+    {
+      "candidate_id": "G-004-stream",
+      "family": "G",
+      "description": "Stream-style iteration.",
+      "transformation": "Stream-style iteration"
+    },
+    {
+      "candidate_id": "G-005-recursive-lookup",
+      "family": "G",
+      "description": "Recursive lookup table.",
+      "transformation": "Recursive lookup table"
+    },
+    {
+      "candidate_id": "G-006-bounded-tally",
+      "family": "G",
+      "description": "Bounded tail-recursion.",
+      "transformation": "Bounded tail-recursion"
+    },
+    {
+      "candidate_id": "H-001-wrapper-with-lemma",
+      "family": "H",
+      "description": "wrapped_authorize + wrapper_equiv lemma.",
+      "transformation": "wrapped_authorize + lemma"
+    },
+    {
+      "candidate_id": "H-002-wrapper-cong",
+      "family": "H",
+      "description": "Wrapper via Equal.cong.",
+      "transformation": "wrapper via Equal.cong"
+    },
+    {
+      "candidate_id": "H-003-wrapper-compose",
+      "family": "H",
+      "description": "Wrapper as compose(id, authorize).",
+      "transformation": "wrapper via compose"
+    },
+    {
+      "candidate_id": "H-004-wrapper-rewrite",
+      "family": "H",
+      "description": "Wrapper applies canonical lemmas as rewrites.",
+      "transformation": "wrapper applies canonical lemmas"
+    },
+    {
+      "candidate_id": "H-005-wrapper-sym",
+      "family": "H",
+      "description": "Wrapper uses Equal.sym.",
+      "transformation": "wrapper via Equal.sym"
+    },
+    {
+      "candidate_id": "H-006-wrapper-trans",
+      "family": "H",
+      "description": "Wrapper uses Equal.trans.",
+      "transformation": "wrapper via Equal.trans"
+    },
+    {
+      "candidate_id": "I-001-recursive-180",
+      "family": "I",
+      "description": "Single recursive function over 180-cell encoding.",
+      "transformation": "single recursion over 180 cells"
+    },
+    {
+      "candidate_id": "I-002-tail-rec",
+      "family": "I",
+      "description": "Tail-recursive authorize with accumulator.",
+      "transformation": "tail-recursive"
+    },
+    {
+      "candidate_id": "I-003-mutual-rec",
+      "family": "I",
+      "description": "Mutual recursion per-actor/per-lifecycle.",
+      "transformation": "mutual recursion"
+    },
+    {
+      "candidate_id": "I-004-encoded-cell",
+      "family": "I",
+      "description": "Encoded cell + recursive lookup.",
+      "transformation": "encoded cell + recursive lookup"
+    },
+    {
+      "candidate_id": "J-SYN-001-helper-rename",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "description": "ClineMM-synthetic: helper signature rename.",
+      "transformation": "helper signatures rename"
+    },
+    {
+      "candidate_id": "J-SYN-002-tag-encoding",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "description": "ClineMM-synthetic: match-on-tag encoding.",
+      "transformation": "match-on-tag encoding"
+    },
+    {
+      "candidate_id": "J-SYN-003-single-tuple",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "description": "ClineMM-synthetic: single 4-tuple helper.",
+      "transformation": "single 4-tuple helper"
+    },
+    {
+      "candidate_id": "J-SYN-004-depth-counter",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "description": "ClineMM-synthetic: Nat recursion depth counter.",
+      "transformation": "Nat recursion depth"
+    },
+    {
+      "candidate_id": "J-SYN-005-match-bool",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "description": "ClineMM-synthetic: match-on-bool helper.",
+      "transformation": "match-on-bool"
+    },
+    {
+      "candidate_id": "J-SYN-006-allow-tag-nat",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "description": "ClineMM-synthetic: Allow tag as Nat.",
+      "transformation": "Allow tag as Nat"
+    },
+    {
+      "candidate_id": "J-SYN-007-evidence-first",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "description": "ClineMM-synthetic: evidence-first then capability dispatch.",
+      "transformation": "evidence-first then capability"
+    },
+    {
+      "candidate_id": "J-SYN-008-nested-no-cap",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "description": "ClineMM-synthetic: 3-level nested without capability boundaries.",
+      "transformation": "3-level nested without capability"
+    },
+    {
+      "candidate_id": "J-SYN-009-global-closed",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "description": "ClineMM-synthetic: Closed check via global helper.",
+      "transformation": "global Closed check"
+    },
+    {
+      "candidate_id": "J-SYN-010-bool-fn",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "description": "ClineMM-synthetic: finite boolean function per axis.",
+      "transformation": "finite boolean function"
+    },
+    {
+      "candidate_id": "J-SYN-011-tuple-internal",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "description": "ClineMM-synthetic: (allowflag, reason-tag) tuple.",
+      "transformation": "(allowflag, reason-tag) tuple"
+    },
+    {
+      "candidate_id": "J-SYN-012-lookup-table",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "description": "ClineMM-synthetic: 5x3 lookup table per capability.",
+      "transformation": "5x3 lookup table per cap"
+    },
+    {
+      "candidate_id": "K-01-thunked-work",
+      "family": "K",
+      "description": "Live ClineMM K-01: work_decision wrapped in a Unit-thunked helper.",
+      "transformation": "thunked Unit arg"
+    },
+    {
+      "candidate_id": "K-02-actor-first-dispatch",
+      "family": "K",
+      "description": "Live ClineMM K-02: dispatch on actor first, then capability.",
+      "transformation": "actor-first dispatch"
+    },
+    {
+      "candidate_id": "K-03-recursive-evidence-helper",
+      "family": "K",
+      "description": "Live ClineMM K-03: recursive helper indexed by Nat; base returns canonical answer.",
+      "transformation": "Nat recursion"
+    },
+    {
+      "candidate_id": "K-04-decision-identity-pipe",
+      "family": "K",
+      "description": "Live ClineMM K-04: every decision piped through decision_identity.",
+      "transformation": "identity pipe"
+    },
+    {
+      "candidate_id": "K-05-decision-via-tag",
+      "family": "K",
+      "description": "Live ClineMM K-05: Work via DecisionTag -> Decision conversion helper.",
+      "transformation": "tag-then-decision"
+    },
+    {
+      "candidate_id": "K-06-indirect-cap-match",
+      "family": "K",
+      "description": "Live ClineMM K-06: capability dispatch routed via dispatch_via_cap helper taking cap as parameter.",
+      "transformation": "indirect cap match"
+    },
+    {
+      "candidate_id": "K-07-through-helper",
+      "family": "K",
+      "description": "Live ClineMM K-07: every decision round-tripped through through_helper (structural identity).",
+      "transformation": "through_helper round-trip"
+    },
+    {
+      "candidate_id": "K-08-deeper-helper-chain",
+      "family": "K",
+      "description": "Live ClineMM K-08: 2-level helper chain (work_dispatch -> work_step_*).",
+      "transformation": "2-level indirection"
+    },
+    {
+      "candidate_id": "K-09-match-tag-only",
+      "family": "K",
+      "description": "Live ClineMM K-09: paren-wrap every case body to introduce parens-tree.",
+      "transformation": "paren-wrap match"
+    },
+    {
+      "candidate_id": "K-10-cap-case-swap",
+      "family": "K",
+      "description": "Live ClineMM K-10: reorder authorize() capability cases (Close first).",
+      "transformation": "cap-case order swap"
+    },
+    {
+      "candidate_id": "K-11-non-closed-pullout",
+      "family": "K",
+      "description": "Live ClineMM K-11: Closed case inlined in work_decision; remaining 4 cases delegated to non_closed_work.",
+      "transformation": "non-closed pullout"
+    },
+    {
+      "candidate_id": "K-12-helper-pipeline",
+      "family": "K",
+      "description": "Live ClineMM K-12: dispatch_cap pipeline through view_lifecycle identity.",
+      "transformation": "dispatch pipeline"
+    }
+  ]
+}

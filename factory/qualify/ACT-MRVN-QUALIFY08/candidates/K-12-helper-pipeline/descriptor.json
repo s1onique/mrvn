@@ -1,0 +1,6 @@
+{
+  "candidate_id": "K-12-helper-pipeline",
+  "family": "K",
+  "description": "Live ClineMM K-12: dispatch_cap pipeline through view_lifecycle identity.",
+  "transformation": "dispatch pipeline"
+}

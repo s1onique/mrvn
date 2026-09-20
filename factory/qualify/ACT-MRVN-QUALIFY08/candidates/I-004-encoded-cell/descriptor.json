@@ -1,0 +1,6 @@
+{
+  "candidate_id": "I-004-encoded-cell",
+  "family": "I",
+  "description": "Encoded cell + recursive lookup.",
+  "transformation": "encoded cell + recursive lookup"
+}

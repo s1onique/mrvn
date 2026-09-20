@@ -1,0 +1,6 @@
+{
+  "candidate_id": "A-006-rename-work",
+  "family": "A",
+  "description": "Rename work_decision -> work_check; bodies unchanged.",
+  "transformation": "rename work_decision -> work_check"
+}

@@ -1,0 +1,6 @@
+{
+  "candidate_id": "D-003-bool-sequence",
+  "family": "D",
+  "description": "Bool-sequence encoding.",
+  "transformation": "bool-sequence encoding"
+}

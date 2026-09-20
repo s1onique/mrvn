@@ -1,0 +1,76 @@
+{
+  "act": "ACT-MRVN-QUALIFY07",
+  "timestamp": "2026-09-20T20:06:37.172Z",
+  "tests": [
+    {
+      "name": "altered_laws",
+      "expected": "DIFFERENT_SPECIFICATION, exit=1",
+      "actual": "class=DIFFERENT_SPECIFICATION exit=1",
+      "pass": true
+    },
+    {
+      "name": "fake_behavior_regenerated",
+      "expected": "ROBUST (regenerated dump overrides fake)",
+      "actual": "class=ROBUST exit=0",
+      "pass": true
+    },
+    {
+      "name": "fake_proof_pass",
+      "expected": "classifier recomputes (ROBUST for byte-identical)",
+      "actual": "class=ROBUST on-disk=ROBUST",
+      "pass": true
+    },
+    {
+      "name": "artifact_absent_mandatory",
+      "expected": "NO_ROBUSTNESS_CLASSIFICATION (artifact gate mandatory by default), exit=1",
+      "actual": "class=NO_ROBUSTNESS_CLASSIFICATION exit=1",
+      "pass": true
+    },
+    {
+      "name": "artifact_absent_allow_optout",
+      "expected": "ROBUST (with --allow-no-artifact), exit=0",
+      "actual": "class=ROBUST exit=0",
+      "pass": true
+    },
+    {
+      "name": "toolchain_intact",
+      "expected": "ROBUST (live toolchain matches frozen closure)",
+      "actual": "class=ROBUST exit=0",
+      "pass": true
+    },
+    {
+      "name": "oracle_contamination",
+      "expected": "BEHAVIOR_EVIDENCE_MISMATCH (intent hash mismatch), exit=1",
+      "actual": "class=BEHAVIOR_EVIDENCE_MISMATCH exit=1",
+      "pass": true
+    },
+    {
+      "name": "semantic_regression",
+      "expected": "SEMANTIC_DRIFT (intent divergence detected), exit=1",
+      "actual": "class=SEMANTIC_DRIFT exit=1",
+      "pass": true
+    },
+    {
+      "name": "law_weakening",
+      "expected": "DIFFERENT_SPECIFICATION (weakened law hash mismatch), exit=1",
+      "actual": "class=DIFFERENT_SPECIFICATION exit=1",
+      "pass": true
+    },
+    {
+      "name": "artifact_payload_tamper",
+      "expected": "verify FAILED (tamper detected)",
+      "actual": "verify_exit=1",
+      "pass": true
+    },
+    {
+      "name": "toolchain_tamper",
+      "expected": "TOOLCHAIN_MISMATCH (toolchain byte changed), exit=1",
+      "actual": "class=TOOLCHAIN_MISMATCH exit=1",
+      "pass": true
+    }
+  ],
+  "summary": {
+    "pass": 11,
+    "fail": 0
+  }
+}

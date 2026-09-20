@@ -1,0 +1,6 @@
+{
+  "candidate_id": "G-004-stream",
+  "family": "G",
+  "description": "Stream-style iteration.",
+  "transformation": "Stream-style iteration"
+}

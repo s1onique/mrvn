@@ -1,0 +1,6 @@
+{
+  "candidate_id": "A-002-identity-via-named",
+  "family": "A",
+  "description": "work_decision split into dispatch + 3 per-actor step helpers.",
+  "transformation": "split work_decision into dispatch + per-actor step helpers"
+}

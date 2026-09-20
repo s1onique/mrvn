@@ -1,0 +1,6 @@
+{
+  "candidate_id": "J-SYN-004-depth-counter",
+  "family": "J-SYNTHETIC-GENERATOR",
+  "description": "ClineMM-synthetic: Nat recursion depth counter.",
+  "transformation": "Nat recursion depth"
+}

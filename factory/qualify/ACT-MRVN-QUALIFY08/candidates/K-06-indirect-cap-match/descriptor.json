@@ -1,0 +1,6 @@
+{
+  "candidate_id": "K-06-indirect-cap-match",
+  "family": "K",
+  "description": "Live ClineMM K-06: capability dispatch routed via dispatch_via_cap helper taking cap as parameter.",
+  "transformation": "indirect cap match"
+}

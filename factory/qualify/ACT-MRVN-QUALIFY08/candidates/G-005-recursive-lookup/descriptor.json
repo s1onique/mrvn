@@ -1,0 +1,6 @@
+{
+  "candidate_id": "G-005-recursive-lookup",
+  "family": "G",
+  "description": "Recursive lookup table.",
+  "transformation": "Recursive lookup table"
+}

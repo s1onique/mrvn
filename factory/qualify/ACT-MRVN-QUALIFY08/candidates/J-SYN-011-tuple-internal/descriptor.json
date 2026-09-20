@@ -1,0 +1,6 @@
+{
+  "candidate_id": "J-SYN-011-tuple-internal",
+  "family": "J-SYNTHETIC-GENERATOR",
+  "description": "ClineMM-synthetic: (allowflag, reason-tag) tuple.",
+  "transformation": "(allowflag, reason-tag) tuple"
+}

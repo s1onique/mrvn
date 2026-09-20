@@ -1,0 +1,6 @@
+{
+  "candidate_id": "A-007-all-rename",
+  "family": "A",
+  "description": "Rename all four capability helpers with _v2 suffix; bodies unchanged.",
+  "transformation": "rename all capability helpers with _v2 suffix"
+}

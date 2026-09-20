@@ -1,0 +1,6 @@
+{
+  "candidate_id": "B-004-lifecycle-renorm",
+  "family": "B",
+  "description": "Lifecycle renorm before authorize (passthrough).",
+  "transformation": "Lifecycle renorm (passthrough)"
+}

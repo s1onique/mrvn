@@ -1,0 +1,6 @@
+{
+  "candidate_id": "B-NEG-drift-one-cell",
+  "family": "B",
+  "description": "Negative control: deliberate one-cell semantic drift.",
+  "transformation": "deliberate one-cell drift"
+}

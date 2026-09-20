@@ -1,0 +1,905 @@
+{
+  "act": "ACT-MRVN-QUALIFY08",
+  "candidate_count": 76,
+  "classifications": {
+    "CANONICAL_PROOF_SURVIVED": 75,
+    "SEMANTIC_DRIFT": 1
+  },
+  "per_family": {
+    "A": {
+      "name": "identity_reconstruction",
+      "minimum": 6,
+      "generated": 7,
+      "classifications": {
+        "CANONICAL_PROOF_SURVIVED": 7
+      }
+    },
+    "B": {
+      "name": "double_transformation",
+      "minimum": 6,
+      "generated": 7,
+      "classifications": {
+        "CANONICAL_PROOF_SURVIVED": 6,
+        "SEMANTIC_DRIFT": 1
+      }
+    },
+    "C": {
+      "name": "alternative_eliminator_order",
+      "minimum": 6,
+      "generated": 6,
+      "classifications": {
+        "CANONICAL_PROOF_SURVIVED": 6
+      }
+    },
+    "D": {
+      "name": "derived_predicates",
+      "minimum": 6,
+      "generated": 6,
+      "classifications": {
+        "CANONICAL_PROOF_SURVIVED": 6
+      }
+    },
+    "E": {
+      "name": "intermediate_type",
+      "minimum": 6,
+      "generated": 6,
+      "classifications": {
+        "CANONICAL_PROOF_SURVIVED": 6
+      }
+    },
+    "F": {
+      "name": "table_index_representation",
+      "minimum": 4,
+      "generated": 4,
+      "classifications": {
+        "CANONICAL_PROOF_SURVIVED": 4
+      }
+    },
+    "G": {
+      "name": "recursive_identity_helpers",
+      "minimum": 6,
+      "generated": 6,
+      "classifications": {
+        "CANONICAL_PROOF_SURVIVED": 6
+      }
+    },
+    "H": {
+      "name": "propositional_wrapper",
+      "minimum": 6,
+      "generated": 6,
+      "classifications": {
+        "CANONICAL_PROOF_SURVIVED": 6
+      }
+    },
+    "I": {
+      "name": "alternative_recursive_def",
+      "minimum": 4,
+      "generated": 4,
+      "classifications": {
+        "CANONICAL_PROOF_SURVIVED": 4
+      }
+    },
+    "J-SYNTHETIC-GENERATOR": {
+      "name": "synthetic_clinemm_passthrough",
+      "minimum": 12,
+      "generated": 12,
+      "classifications": {
+        "CANONICAL_PROOF_SURVIVED": 12
+      }
+    },
+    "K": {
+      "name": "live_same_agent_adversarial",
+      "minimum": 12,
+      "generated": 12,
+      "classifications": {
+        "CANONICAL_PROOF_SURVIVED": 12
+      }
+    }
+  },
+  "candidates": [
+    {
+      "candidate_id": "A-001-id-decision",
+      "family": "A",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "A-002-identity-via-named",
+      "family": "A",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "A-003-id-via-named",
+      "family": "A",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "A-004-id-deep",
+      "family": "A",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "A-005-id-nat-tap",
+      "family": "A",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "A-006-rename-work",
+      "family": "A",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "A-007-all-rename",
+      "family": "A",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "B-001-involution-id",
+      "family": "B",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "B-002-tag-retag",
+      "family": "B",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "B-003-evidence-recode",
+      "family": "B",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "B-004-lifecycle-renorm",
+      "family": "B",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "B-005-actor-mask",
+      "family": "B",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "B-006-capability-encdec",
+      "family": "B",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "B-NEG-drift-one-cell",
+      "family": "B",
+      "classification": "SEMANTIC_DRIFT",
+      "diff_count": 3,
+      "canonical_proof_exit": "absent",
+      "reproof": "absent",
+      "artifact_verify": "absent"
+    },
+    {
+      "candidate_id": "C-001-lifecycle-first",
+      "family": "C",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "C-002-evidence-first",
+      "family": "C",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "C-003-actor-last",
+      "family": "C",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "C-004-alt-branch-flip",
+      "family": "C",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "C-005-capability-last",
+      "family": "C",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "C-006-mixed-flip",
+      "family": "C",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "D-001-is-X-predicates",
+      "family": "D",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "D-002-is-allowed-bool",
+      "family": "D",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "D-003-bool-sequence",
+      "family": "D",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "D-004-reason-predicate",
+      "family": "D",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "D-005-Nat-bool",
+      "family": "D",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "D-006-bool-conjunction",
+      "family": "D",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "E-001-permit-reject",
+      "family": "E",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "E-002-verdict-codes",
+      "family": "E",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "E-003-bool-kind",
+      "family": "E",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "E-004-permit-only",
+      "family": "E",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "E-005-either",
+      "family": "E",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "E-006-rule-id",
+      "family": "E",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "F-001-actor-index",
+      "family": "F",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "F-002-lifecycle-index",
+      "family": "F",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "F-003-decision-Nat-pair",
+      "family": "F",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "F-004-capability-Nat",
+      "family": "F",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "G-001-list-iter",
+      "family": "G",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "G-002-nat-counter",
+      "family": "G",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "G-003-list-fold",
+      "family": "G",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "G-004-stream",
+      "family": "G",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "G-005-recursive-lookup",
+      "family": "G",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "G-006-bounded-tally",
+      "family": "G",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "H-001-wrapper-with-lemma",
+      "family": "H",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "H-002-wrapper-cong",
+      "family": "H",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "H-003-wrapper-compose",
+      "family": "H",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "H-004-wrapper-rewrite",
+      "family": "H",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "H-005-wrapper-sym",
+      "family": "H",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "H-006-wrapper-trans",
+      "family": "H",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "I-001-recursive-180",
+      "family": "I",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "I-002-tail-rec",
+      "family": "I",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "I-003-mutual-rec",
+      "family": "I",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "I-004-encoded-cell",
+      "family": "I",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "J-SYN-001-helper-rename",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "J-SYN-002-tag-encoding",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "J-SYN-003-single-tuple",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "J-SYN-004-depth-counter",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "J-SYN-005-match-bool",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "J-SYN-006-allow-tag-nat",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "J-SYN-007-evidence-first",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "J-SYN-008-nested-no-cap",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "J-SYN-009-global-closed",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "J-SYN-010-bool-fn",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "J-SYN-011-tuple-internal",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "J-SYN-012-lookup-table",
+      "family": "J-SYNTHETIC-GENERATOR",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "K-01-thunked-work",
+      "family": "K",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "K-02-actor-first-dispatch",
+      "family": "K",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "K-03-recursive-evidence-helper",
+      "family": "K",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "K-04-decision-identity-pipe",
+      "family": "K",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "K-05-decision-via-tag",
+      "family": "K",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "K-06-indirect-cap-match",
+      "family": "K",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "K-07-through-helper",
+      "family": "K",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "K-08-deeper-helper-chain",
+      "family": "K",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "K-09-match-tag-only",
+      "family": "K",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "K-10-cap-case-swap",
+      "family": "K",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "K-11-non-closed-pullout",
+      "family": "K",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    },
+    {
+      "candidate_id": "K-12-helper-pipeline",
+      "family": "K",
+      "classification": "CANONICAL_PROOF_SURVIVED",
+      "diff_count": 0,
+      "canonical_proof_exit": "pass",
+      "reproof": "absent",
+      "artifact_verify": "pass"
+    }
+  ],
+  "canonical_proof": {
+    "survived": 75,
+    "genuine_failures": 0,
+    "interface_failures": 0,
+    "frontend_limits": 0
+  },
+  "family_metrics": {
+    "A": {
+      "attempts": 7,
+      "valid_bend": 7,
+      "semantic_equivalent": 7,
+      "canonical_proof_survived": 7,
+      "canonical_proof_failed": 0,
+      "reproof_passed": 0,
+      "proof_break_witnesses": 0,
+      "frontend_limits": 0
+    },
+    "B": {
+      "attempts": 7,
+      "valid_bend": 6,
+      "semantic_equivalent": 0,
+      "canonical_proof_survived": 6,
+      "canonical_proof_failed": 0,
+      "reproof_passed": 0,
+      "proof_break_witnesses": 0,
+      "frontend_limits": 0
+    },
+    "C": {
+      "attempts": 6,
+      "valid_bend": 6,
+      "semantic_equivalent": 6,
+      "canonical_proof_survived": 6,
+      "canonical_proof_failed": 0,
+      "reproof_passed": 0,
+      "proof_break_witnesses": 0,
+      "frontend_limits": 0
+    },
+    "D": {
+      "attempts": 6,
+      "valid_bend": 6,
+      "semantic_equivalent": 6,
+      "canonical_proof_survived": 6,
+      "canonical_proof_failed": 0,
+      "reproof_passed": 0,
+      "proof_break_witnesses": 0,
+      "frontend_limits": 0
+    },
+    "E": {
+      "attempts": 6,
+      "valid_bend": 6,
+      "semantic_equivalent": 6,
+      "canonical_proof_survived": 6,
+      "canonical_proof_failed": 0,
+      "reproof_passed": 0,
+      "proof_break_witnesses": 0,
+      "frontend_limits": 0
+    },
+    "F": {
+      "attempts": 4,
+      "valid_bend": 4,
+      "semantic_equivalent": 4,
+      "canonical_proof_survived": 4,
+      "canonical_proof_failed": 0,
+      "reproof_passed": 0,
+      "proof_break_witnesses": 0,
+      "frontend_limits": 0
+    },
+    "G": {
+      "attempts": 6,
+      "valid_bend": 6,
+      "semantic_equivalent": 6,
+      "canonical_proof_survived": 6,
+      "canonical_proof_failed": 0,
+      "reproof_passed": 0,
+      "proof_break_witnesses": 0,
+      "frontend_limits": 0
+    },
+    "H": {
+      "attempts": 6,
+      "valid_bend": 6,
+      "semantic_equivalent": 6,
+      "canonical_proof_survived": 6,
+      "canonical_proof_failed": 0,
+      "reproof_passed": 0,
+      "proof_break_witnesses": 0,
+      "frontend_limits": 0
+    },
+    "I": {
+      "attempts": 4,
+      "valid_bend": 4,
+      "semantic_equivalent": 4,
+      "canonical_proof_survived": 4,
+      "canonical_proof_failed": 0,
+      "reproof_passed": 0,
+      "proof_break_witnesses": 0,
+      "frontend_limits": 0
+    },
+    "J-SYNTHETIC-GENERATOR": {
+      "attempts": 12,
+      "valid_bend": 12,
+      "semantic_equivalent": 12,
+      "canonical_proof_survived": 12,
+      "canonical_proof_failed": 0,
+      "reproof_passed": 0,
+      "proof_break_witnesses": 0,
+      "frontend_limits": 0
+    },
+    "K": {
+      "attempts": 12,
+      "valid_bend": 12,
+      "semantic_equivalent": 12,
+      "canonical_proof_survived": 12,
+      "canonical_proof_failed": 0,
+      "reproof_passed": 0,
+      "proof_break_witnesses": 0,
+      "frontend_limits": 0
+    }
+  },
+  "started_at": "2026-09-20T21:42:43.951Z",
+  "finished_at": "2026-09-20T21:44:13.858Z"
+}

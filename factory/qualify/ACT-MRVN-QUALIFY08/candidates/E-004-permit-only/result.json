@@ -1,0 +1,41 @@
+{
+  "candidate_id": "E-004-permit-only",
+  "family": "E",
+  "description": "Permit-only intermediate.",
+  "implementation_sha256": "eea5d84f80bf9bf3671fad7d47447539891debb010063402174c4c86f0cbf4eb",
+  "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+  "intent_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+  "proof": {
+    "canonical": "pass",
+    "canonical_sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+    "canonical_failure_kind": null,
+    "canonical_failure_excerpt": null,
+    "reproof": "absent",
+    "reproof_sha256": null,
+    "reproof_attempts": 0,
+    "reproof_kind": null
+  },
+  "behavior": {
+    "cells": 180,
+    "diff_count": 0,
+    "diffs": [],
+    "run1_sha256": "5518a36001561d85c2476b62d745e146edbfdcf52041c43b6d41255bec8ee8e5",
+    "run2_sha256": "5518a36001561d85c2476b62d745e146edbfdcf52041c43b6d41255bec8ee8e5"
+  },
+  "intent_status": "PASS_180_OF_180",
+  "artifact": {
+    "present": true,
+    "verify": "pass",
+    "artifact_id": "sha256:0d249e6070a61a0e80555b632e2e45b0466a0dfd8e241f752d53b1516149890f",
+    "failures": 0
+  },
+  "classification": "CANONICAL_PROOF_SURVIVED",
+  "rationale": [],
+  "intended_classification": null,
+  "agent_provenance": {
+    "attempts": 0,
+    "files_edited": [],
+    "law_edit_attempts": 0,
+    "escape_hatch_attempts": 0
+  }
+}

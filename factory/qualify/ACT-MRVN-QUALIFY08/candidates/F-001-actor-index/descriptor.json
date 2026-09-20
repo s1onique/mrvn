@@ -1,0 +1,6 @@
+{
+  "candidate_id": "F-001-actor-index",
+  "family": "F",
+  "description": "Actor -> Nat ordinal.",
+  "transformation": "Actor Nat index"
+}

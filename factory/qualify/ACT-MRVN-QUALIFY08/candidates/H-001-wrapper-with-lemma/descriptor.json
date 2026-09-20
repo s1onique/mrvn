@@ -1,0 +1,6 @@
+{
+  "candidate_id": "H-001-wrapper-with-lemma",
+  "family": "H",
+  "description": "wrapped_authorize + wrapper_equiv lemma.",
+  "transformation": "wrapped_authorize + lemma"
+}

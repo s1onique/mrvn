@@ -1,0 +1,6 @@
+{
+  "candidate_id": "D-004-reason-predicate",
+  "family": "D",
+  "description": "Reason via predicate composition.",
+  "transformation": "predicate composition"
+}

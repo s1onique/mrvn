@@ -1,0 +1,6 @@
+{
+  "candidate_id": "J-SYN-002-tag-encoding",
+  "family": "J-SYNTHETIC-GENERATOR",
+  "description": "ClineMM-synthetic: match-on-tag encoding.",
+  "transformation": "match-on-tag encoding"
+}

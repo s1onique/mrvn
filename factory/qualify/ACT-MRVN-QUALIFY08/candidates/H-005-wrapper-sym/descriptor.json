@@ -1,0 +1,6 @@
+{
+  "candidate_id": "H-005-wrapper-sym",
+  "family": "H",
+  "description": "Wrapper uses Equal.sym.",
+  "transformation": "wrapper via Equal.sym"
+}

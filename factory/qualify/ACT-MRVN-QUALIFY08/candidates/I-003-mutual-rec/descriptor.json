@@ -1,0 +1,6 @@
+{
+  "candidate_id": "I-003-mutual-rec",
+  "family": "I",
+  "description": "Mutual recursion per-actor/per-lifecycle.",
+  "transformation": "mutual recursion"
+}

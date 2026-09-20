@@ -1,0 +1,6 @@
+{
+  "candidate_id": "J-SYN-008-nested-no-cap",
+  "family": "J-SYNTHETIC-GENERATOR",
+  "description": "ClineMM-synthetic: 3-level nested without capability boundaries.",
+  "transformation": "3-level nested without capability"
+}

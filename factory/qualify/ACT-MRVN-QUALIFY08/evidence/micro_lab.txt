@@ -1,0 +1,8 @@
+{
+  "micro_robust_01":         {"exit":0, "output":"{==}", "expected":"PASS", "actual":"PASS"},
+  "micro_pbreak_01_canon":  {"exit":0, "output":"{==}", "expected":"PASS", "actual":"PASS"},
+  "micro_pbreak_01_naive":  {"exit":1, "output":"Error: expected: f(p); observed: 0n", "expected":"FAIL (proof-break phenomenon)", "actual":"FAIL (proof-break phenomenon)"},
+  "micro_pbreak_01_reproof":{"exit":0, "output":"{==}", "expected":"PASS (repaired)", "actual":"PASS (repaired)"},
+  "micro_drift_01":         {"exit":0, "output":"{==}", "expected":"PASS", "actual":"PASS"},
+  "micro_drift_01_fail":    {"exit":1, "output":"Error: expected: {1n+canon_add(p,b) == b}; observed: {1n+canon_add(p,b) == 1n+b}", "expected":"FAIL (drift detected)", "actual":"FAIL (drift detected)"}
+}

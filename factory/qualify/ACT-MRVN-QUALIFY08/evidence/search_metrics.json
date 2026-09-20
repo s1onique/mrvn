@@ -1,0 +1,82 @@
+{
+  "act": "ACT-MRVN-QUALIFY08",
+  "correction": "CORRECTION02",
+  "classifications": {
+    "CANONICAL_PROOF_SURVIVED": 75,
+    "SEMANTIC_DRIFT": 1
+  },
+  "candidate_count": 76,
+  "per_family": {
+    "A": {
+      "total": 7,
+      "cps": 7,
+      "semantic_drift": 0,
+      "frontend_limit": 0
+    },
+    "B": {
+      "total": 7,
+      "cps": 6,
+      "semantic_drift": 1,
+      "frontend_limit": 0
+    },
+    "C": {
+      "total": 6,
+      "cps": 6,
+      "semantic_drift": 0,
+      "frontend_limit": 0
+    },
+    "D": {
+      "total": 6,
+      "cps": 6,
+      "semantic_drift": 0,
+      "frontend_limit": 0
+    },
+    "E": {
+      "total": 6,
+      "cps": 6,
+      "semantic_drift": 0,
+      "frontend_limit": 0
+    },
+    "F": {
+      "total": 4,
+      "cps": 4,
+      "semantic_drift": 0,
+      "frontend_limit": 0
+    },
+    "G": {
+      "total": 6,
+      "cps": 6,
+      "semantic_drift": 0,
+      "frontend_limit": 0
+    },
+    "H": {
+      "total": 6,
+      "cps": 6,
+      "semantic_drift": 0,
+      "frontend_limit": 0
+    },
+    "I": {
+      "total": 4,
+      "cps": 4,
+      "semantic_drift": 0,
+      "frontend_limit": 0
+    },
+    "J-SYNTHETIC-GENERATOR": {
+      "total": 12,
+      "cps": 12,
+      "semantic_drift": 0,
+      "frontend_limit": 0
+    },
+    "K-LIVE-SAME-AGENT": {
+      "total": 12,
+      "cps": 12,
+      "semantic_drift": 0,
+      "frontend_limit": 0
+    }
+  },
+  "durable_files_watched": 1337,
+  "durable_drift_count": 0,
+  "e2e_drift_self_test": "PASS",
+  "verdict": "PARTIAL_QUALIFICATION_NO_PROOF_BREAK_FOUND_WITHIN_SEARCH_BOUND / INDEPENDENT_AGENT_REPLICATION_REQUIRED",
+  "next_required": "K-LIVE-INDEPENDENT-AGENT (>= 12 attempts) \u2014 MRVN-09"
+}

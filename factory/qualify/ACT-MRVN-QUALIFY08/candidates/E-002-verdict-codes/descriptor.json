@@ -1,0 +1,6 @@
+{
+  "candidate_id": "E-002-verdict-codes",
+  "family": "E",
+  "description": "Verdict with numeric codes.",
+  "transformation": "Verdict with numeric codes"
+}

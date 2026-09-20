@@ -1,0 +1,6 @@
+{
+  "candidate_id": "H-003-wrapper-compose",
+  "family": "H",
+  "description": "Wrapper as compose(id, authorize).",
+  "transformation": "wrapper via compose"
+}

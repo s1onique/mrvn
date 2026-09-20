@@ -1,0 +1,6 @@
+{
+  "candidate_id": "J-SYN-001-helper-rename",
+  "family": "J-SYNTHETIC-GENERATOR",
+  "description": "ClineMM-synthetic: helper signature rename.",
+  "transformation": "helper signatures rename"
+}

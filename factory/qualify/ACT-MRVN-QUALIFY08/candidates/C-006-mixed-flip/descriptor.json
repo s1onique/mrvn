@@ -1,0 +1,6 @@
+{
+  "candidate_id": "C-006-mixed-flip",
+  "family": "C",
+  "description": "Mixed ordering across helpers.",
+  "transformation": "mixed ordering"
+}

@@ -1,0 +1,6 @@
+{
+  "candidate_id": "G-001-list-iter",
+  "family": "G",
+  "description": "Enumerate 180 cells as List.",
+  "transformation": "List iteration"
+}

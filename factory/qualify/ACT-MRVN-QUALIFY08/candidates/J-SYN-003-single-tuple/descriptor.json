@@ -1,0 +1,6 @@
+{
+  "candidate_id": "J-SYN-003-single-tuple",
+  "family": "J-SYNTHETIC-GENERATOR",
+  "description": "ClineMM-synthetic: single 4-tuple helper.",
+  "transformation": "single 4-tuple helper"
+}

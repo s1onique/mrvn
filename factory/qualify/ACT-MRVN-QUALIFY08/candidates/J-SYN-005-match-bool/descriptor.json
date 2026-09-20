@@ -1,0 +1,6 @@
+{
+  "candidate_id": "J-SYN-005-match-bool",
+  "family": "J-SYNTHETIC-GENERATOR",
+  "description": "ClineMM-synthetic: match-on-bool helper.",
+  "transformation": "match-on-bool"
+}

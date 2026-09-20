@@ -1,0 +1,6 @@
+{
+  "candidate_id": "B-006-capability-encdec",
+  "family": "B",
+  "description": "Capability encode/decode wrapper (passthrough).",
+  "transformation": "capability encode/decode (passthrough)"
+}

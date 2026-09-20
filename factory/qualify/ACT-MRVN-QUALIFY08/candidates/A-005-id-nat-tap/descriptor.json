@@ -1,0 +1,6 @@
+{
+  "candidate_id": "A-005-id-nat-tap",
+  "family": "A",
+  "description": "authorize output wrapped through a nat_tap counter that does no transformation.",
+  "transformation": "nat_tap wrapper around authorize output"
+}

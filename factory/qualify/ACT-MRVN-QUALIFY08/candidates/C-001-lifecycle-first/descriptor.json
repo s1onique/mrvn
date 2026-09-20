@@ -1,0 +1,6 @@
+{
+  "candidate_id": "C-001-lifecycle-first",
+  "family": "C",
+  "description": "Match lifecycle then actor.",
+  "transformation": "lifecycle-first ordering"
+}

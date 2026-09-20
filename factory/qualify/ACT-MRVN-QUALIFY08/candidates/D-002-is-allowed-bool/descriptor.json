@@ -1,0 +1,6 @@
+{
+  "candidate_id": "D-002-is-allowed-bool",
+  "family": "D",
+  "description": "is_allowed bool check.",
+  "transformation": "is_allowed-bool-first"
+}

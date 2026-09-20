@@ -1,0 +1,6 @@
+{
+  "candidate_id": "D-001-is-X-predicates",
+  "family": "D",
+  "description": "Decision reconstructed from predicates.",
+  "transformation": "predicate dispatch"
+}

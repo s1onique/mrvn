@@ -1,0 +1,6 @@
+{
+  "candidate_id": "E-004-permit-only",
+  "family": "E",
+  "description": "Permit-only intermediate.",
+  "transformation": "permit-only internal"
+}

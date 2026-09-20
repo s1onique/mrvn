@@ -1,0 +1,157 @@
+{
+  "act": "ACT-MRVN-QUALIFY08",
+  "timestamp": "2026-09-20T21:33:51.534Z",
+  "overall": {
+    "attempts": 76,
+    "valid_bend": 75,
+    "semantic_equivalent": 75,
+    "canonical_proof_survived": 75,
+    "canonical_proof_failed": 0,
+    "reproof_passed": 0,
+    "proof_break_witnesses": 0,
+    "semantic_drift": 1,
+    "frontend_limits": 0
+  },
+  "family_metrics": {
+    "A": {
+      "attempts": 7,
+      "valid_bend": 7,
+      "semantic_equivalent": 7,
+      "canonical_proof_survived": 7,
+      "canonical_proof_failed": 0,
+      "reproof_passed": 0,
+      "proof_break_witnesses": 0,
+      "semantic_drift": 0,
+      "frontend_limits": 0
+    },
+    "B": {
+      "attempts": 7,
+      "valid_bend": 6,
+      "semantic_equivalent": 6,
+      "canonical_proof_survived": 6,
+      "canonical_proof_failed": 0,
+      "reproof_passed": 0,
+      "proof_break_witnesses": 0,
+      "semantic_drift": 1,
+      "frontend_limits": 0
+    },
+    "C": {
+      "attempts": 6,
+      "valid_bend": 6,
+      "semantic_equivalent": 6,
+      "canonical_proof_survived": 6,
+      "canonical_proof_failed": 0,
+      "reproof_passed": 0,
+      "proof_break_witnesses": 0,
+      "semantic_drift": 0,
+      "frontend_limits": 0
+    },
+    "D": {
+      "attempts": 6,
+      "valid_bend": 6,
+      "semantic_equivalent": 6,
+      "canonical_proof_survived": 6,
+      "canonical_proof_failed": 0,
+      "reproof_passed": 0,
+      "proof_break_witnesses": 0,
+      "semantic_drift": 0,
+      "frontend_limits": 0
+    },
+    "E": {
+      "attempts": 6,
+      "valid_bend": 6,
+      "semantic_equivalent": 6,
+      "canonical_proof_survived": 6,
+      "canonical_proof_failed": 0,
+      "reproof_passed": 0,
+      "proof_break_witnesses": 0,
+      "semantic_drift": 0,
+      "frontend_limits": 0
+    },
+    "F": {
+      "attempts": 4,
+      "valid_bend": 4,
+      "semantic_equivalent": 4,
+      "canonical_proof_survived": 4,
+      "canonical_proof_failed": 0,
+      "reproof_passed": 0,
+      "proof_break_witnesses": 0,
+      "semantic_drift": 0,
+      "frontend_limits": 0
+    },
+    "G": {
+      "attempts": 6,
+      "valid_bend": 6,
+      "semantic_equivalent": 6,
+      "canonical_proof_survived": 6,
+      "canonical_proof_failed": 0,
+      "reproof_passed": 0,
+      "proof_break_witnesses": 0,
+      "semantic_drift": 0,
+      "frontend_limits": 0
+    },
+    "H": {
+      "attempts": 6,
+      "valid_bend": 6,
+      "semantic_equivalent": 6,
+      "canonical_proof_survived": 6,
+      "canonical_proof_failed": 0,
+      "reproof_passed": 0,
+      "proof_break_witnesses": 0,
+      "semantic_drift": 0,
+      "frontend_limits": 0
+    },
+    "I": {
+      "attempts": 4,
+      "valid_bend": 4,
+      "semantic_equivalent": 4,
+      "canonical_proof_survived": 4,
+      "canonical_proof_failed": 0,
+      "reproof_passed": 0,
+      "proof_break_witnesses": 0,
+      "semantic_drift": 0,
+      "frontend_limits": 0
+    },
+    "J-SYNTHETIC-GENERATOR": {
+      "attempts": 12,
+      "valid_bend": 12,
+      "semantic_equivalent": 12,
+      "canonical_proof_survived": 12,
+      "canonical_proof_failed": 0,
+      "reproof_passed": 0,
+      "proof_break_witnesses": 0,
+      "semantic_drift": 0,
+      "frontend_limits": 0
+    },
+    "K": {
+      "attempts": 12,
+      "valid_bend": 12,
+      "semantic_equivalent": 12,
+      "canonical_proof_survived": 12,
+      "canonical_proof_failed": 0,
+      "reproof_passed": 0,
+      "proof_break_witnesses": 0,
+      "semantic_drift": 0,
+      "frontend_limits": 0
+    }
+  },
+  "principal_question": "Can we preserve the exact law book and every observable result while changing the reduction structure enough that the old Bend proof no longer type-checks—but a new valid proof does?",
+  "proof_break_status": "NOT_OBSERVED: 0 EXTENSIONAL_PROOF_BREAK witnesses across 76 candidates",
+  "hypothesis_1": "Bend definitely permits extensional equality that is not immediately definitional equality. CONFIRMED by MICRO-PBREAK-01 micro-lab.",
+  "hypothesis_2": "The MRVN finite authority kernel's exhaustive proof may be unusually robust because complete constructor splitting exposes enough reduction for the old proof to survive. CORROBORATED: 63/63 valid semantic-equivalent candidates pass canonical proof.",
+  "hypothesis_3": "Recursive/intermediate encodings are the most promising routes to a genuine proof-break. TESTED via Family A-002..A-005; all CANONICAL_PROOF_SURVIVED.",
+  "hypothesis_4": "If a proof-break is found, reproof will likely require an explicit equivalence lemma / induction / rewrite rather than law changes. PRE-BUILT: MICRO-PBREAK-01-REPROOF demonstrates the rewrite form.",
+  "residual_risks": [
+    "Corpus size is bounded (62 candidates in 10 families, plus 12 ClineMM-style attempts in Family J as simulator passthroughs).",
+    "Bend's SNF is more aggressive than naive WhNF - multi-step call chains fully evaluate to constructor literals. This may make the canonical proof style robust against arbitrary refactorings.",
+    "Live ClineMM was not run; Family J uses synthetic transforms recorded in the simulator.",
+    "Reproof of MICRO-PBREAK-01-REPROOF was demonstrated in the micro-lab; no authority-kernel candidate has been engineered with the exact reproof-by-IH rewrite needed."
+  ],
+  "doctrine": [
+    "Extensional equality does not imply canonical-proof preservation IN GENERAL - MICRO-PBREAK-01 demonstrates this in micro.",
+    "Proof robustness depends on reduction shape, not merely program behavior.",
+    "A semantics-preserving refactor CAN require proof evolution without requiring specification evolution.",
+    "Absence of a witnessed proof-break in a finite corpus is BOUNDED evidence; we do not claim invariance.",
+    "Specification identity, semantic equivalence, proof validity, and artifact authority are independent axes."
+  ]
+}

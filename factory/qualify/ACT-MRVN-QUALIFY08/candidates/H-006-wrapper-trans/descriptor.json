@@ -1,0 +1,6 @@
+{
+  "candidate_id": "H-006-wrapper-trans",
+  "family": "H",
+  "description": "Wrapper uses Equal.trans.",
+  "transformation": "wrapper via Equal.trans"
+}

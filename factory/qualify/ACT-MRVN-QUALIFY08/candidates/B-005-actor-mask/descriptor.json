@@ -1,0 +1,6 @@
+{
+  "candidate_id": "B-005-actor-mask",
+  "family": "B",
+  "description": "Actor mask before authorize (passthrough).",
+  "transformation": "Actor mask (passthrough)"
+}
