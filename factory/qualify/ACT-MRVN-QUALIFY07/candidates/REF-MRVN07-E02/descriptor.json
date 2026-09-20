@@ -1,0 +1,8 @@
+{
+  "candidate_id": "REF-MRVN07-E02",
+  "family": "E",
+  "description": "E-wrap: introduce authorize_top wrapper; main() still calls authorize() directly (def-only).",
+  "parameters": {
+    "wrap": "top"
+  }
+}

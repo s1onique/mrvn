@@ -1,0 +1,13 @@
+{
+  "candidate_id": "REF-MRVN07-A03",
+  "family": "A",
+  "description": "Branch reorder: freeze_decision actor arms Reviewer, Agent, Automation.",
+  "parameters": {
+    "function": "freeze_decision",
+    "permutation": [
+      "Reviewer",
+      "Agent",
+      "Automation"
+    ]
+  }
+}

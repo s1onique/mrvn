@@ -1,0 +1,9 @@
+{
+  "candidate_id": "REF-MRVN07-F03",
+  "family": "F",
+  "description": "Decompose+Whole round-trip on work_decision.",
+  "parameters": {
+    "function": "work_decision",
+    "mode": "decompose_then_whole"
+  }
+}

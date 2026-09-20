@@ -1,0 +1,6 @@
+{
+  "candidate_id": "REF-MRVN07-CTRL-NEG",
+  "family": "NEGATIVE_SEMANTIC",
+  "description": "Negative semantic control: must classify SEMANTIC_DRIFT.",
+  "parameters": {}
+}

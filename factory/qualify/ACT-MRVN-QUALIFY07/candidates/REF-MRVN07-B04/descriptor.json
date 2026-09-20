@@ -1,0 +1,14 @@
+{
+  "candidate_id": "REF-MRVN07-B04",
+  "family": "B",
+  "description": "Catchall contract: halt_decision evidence Replay+Live -> case _: Allow{}.",
+  "parameters": {
+    "function": "halt_decision",
+    "axis": "evidence",
+    "target": "contract",
+    "target_arms": [
+      "Replay",
+      "Live"
+    ]
+  }
+}

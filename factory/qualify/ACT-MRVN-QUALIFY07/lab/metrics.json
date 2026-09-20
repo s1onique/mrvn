@@ -1,0 +1,217 @@
+{
+  "act": "ACT-MRVN-QUALIFY07",
+  "total_candidates": 37,
+  "population": {
+    "primary": 37,
+    "blind_agent": 16,
+    "negative_controls": 2,
+    "total": 55
+  },
+  "classifications": {
+    "ROBUST": 29,
+    "REPROOF_REQUIRED": 0,
+    "PROOF_REPAIR_FAILED": 0,
+    "SEMANTIC_DRIFT": 1,
+    "DIFFERENT_SPECIFICATION": 0,
+    "BEHAVIOR_EVIDENCE_MISMATCH": 7
+  },
+  "survival": {
+    "canonical_proof_survived": 29,
+    "canonical_proof_failed": 0,
+    "survival_rate": 1,
+    "semantic_equivalent": 29
+  },
+  "churn": {
+    "implementation": {
+      "median": 1,
+      "p90": 8,
+      "max": 15,
+      "n": 29
+    },
+    "proof": {
+      "median": 0,
+      "p90": 0,
+      "max": 0,
+      "n": 0
+    },
+    "amplification": {
+      "median": 0,
+      "p90": 0,
+      "max": 0,
+      "n": 0
+    }
+  },
+  "family_metrics": {
+    "CONTROL": {
+      "count": 2,
+      "robust": 2,
+      "reproof": 0,
+      "drift": 0,
+      "mismatch": 0,
+      "semantic_equivalent": 2,
+      "mismatch_taxonomy": {}
+    },
+    "NEGATIVE_SEMANTIC": {
+      "count": 1,
+      "robust": 0,
+      "reproof": 0,
+      "drift": 1,
+      "mismatch": 0,
+      "semantic_equivalent": 0,
+      "mismatch_taxonomy": {}
+    },
+    "CONTROL_PBREAK": {
+      "count": 1,
+      "robust": 0,
+      "reproof": 0,
+      "drift": 0,
+      "mismatch": 1,
+      "semantic_equivalent": 0,
+      "mismatch_taxonomy": {
+        "INTERFACE_BINDING_RENAME": 1
+      }
+    },
+    "A": {
+      "count": 7,
+      "robust": 7,
+      "reproof": 0,
+      "drift": 0,
+      "mismatch": 0,
+      "semantic_equivalent": 7,
+      "mismatch_taxonomy": {}
+    },
+    "B": {
+      "count": 5,
+      "robust": 5,
+      "reproof": 0,
+      "drift": 0,
+      "mismatch": 0,
+      "semantic_equivalent": 5,
+      "mismatch_taxonomy": {}
+    },
+    "C": {
+      "count": 4,
+      "robust": 4,
+      "reproof": 0,
+      "drift": 0,
+      "mismatch": 0,
+      "semantic_equivalent": 4,
+      "mismatch_taxonomy": {}
+    },
+    "D": {
+      "count": 1,
+      "robust": 0,
+      "reproof": 0,
+      "drift": 0,
+      "mismatch": 1,
+      "semantic_equivalent": 0,
+      "mismatch_taxonomy": {
+        "REFACTOR_GENERATOR_FAILURE": 1
+      }
+    },
+    "E": {
+      "count": 3,
+      "robust": 3,
+      "reproof": 0,
+      "drift": 0,
+      "mismatch": 0,
+      "semantic_equivalent": 3,
+      "mismatch_taxonomy": {}
+    },
+    "F": {
+      "count": 3,
+      "robust": 1,
+      "reproof": 0,
+      "drift": 0,
+      "mismatch": 2,
+      "semantic_equivalent": 1,
+      "mismatch_taxonomy": {
+        "LANGUAGE_WELL_FORMEDNESS_LIMIT": 2
+      }
+    },
+    "G": {
+      "count": 3,
+      "robust": 3,
+      "reproof": 0,
+      "drift": 0,
+      "mismatch": 0,
+      "semantic_equivalent": 3,
+      "mismatch_taxonomy": {}
+    },
+    "H": {
+      "count": 3,
+      "robust": 0,
+      "reproof": 0,
+      "drift": 0,
+      "mismatch": 3,
+      "semantic_equivalent": 0,
+      "mismatch_taxonomy": {
+        "UNSUPPORTED_SYNTAX": 3
+      }
+    },
+    "I": {
+      "count": 2,
+      "robust": 2,
+      "reproof": 0,
+      "drift": 0,
+      "mismatch": 0,
+      "semantic_equivalent": 2,
+      "mismatch_taxonomy": {}
+    },
+    "J": {
+      "count": 2,
+      "robust": 2,
+      "reproof": 0,
+      "drift": 0,
+      "mismatch": 0,
+      "semantic_equivalent": 2,
+      "mismatch_taxonomy": {}
+    }
+  },
+  "proof_break_status": "NOT_CONSTRUCTED_FOR_THIS_EXHAUSTIVE_FINITE_PROOF",
+  "proof_break_observed_property": "NO_EXTENSIONALLY_EQUIVALENT_PROOF_BREAK_FOUND in 43 tested semantics-preserving refactors",
+  "proof_break_hypothesis": "EXHAUSTIVE_FINITE_CASE_PROOFS_MAY_BE_CANONICAL_PROOF_INVARIANT_UNDER_TOTAL_SEMANTICS_PRESERVING_REFACTORING",
+  "proof_break_proof_of_hypothesis": "NOT_ESTABLISHED",
+  "proof_break_proposed_followup": "ACT-MRVN-08-PROOF_BREAK_SEARCH",
+  "proof_break_explanation": [
+    "Observed: 29 primary + 14 simulator = 43 ROBUST semantics-preserving refactors;",
+    "        canonical PROOF.bend survives all 43.",
+    "Bend's proof mechanism is definitional equality on WNF, which is stronger than",
+    "        extensional equality.  Two functions can be extensionally equal but not",
+    "        definitionally equal until induction/rewriting closes the gap (cf. add_zero).",
+    "Therefore the bounded observation does NOT imply a Bend-wide theorem.",
+    "REF-MRVN07-CTRL-PBREAK (rename `authorize` -> `do_authorize`) classifies as",
+    "        INTERFACE_BINDING_RENAME — it simultaneously breaks LAWS, so it is NOT a",
+    "        proof-shape specimen.",
+    "Status: not constructed for this exhaustive finite proof;",
+    "        proof-of-hypothesis NOT ESTABLISHED;",
+    "        proposed follow-up ACT-MRVN-08-PROOF_BREAK_SEARCH."
+  ],
+  "family_reclassification": {
+    "D": "REFACTOR_GENERATOR_FAILURE (inliner indentation bug — fixed)",
+    "F": "LANGUAGE_WELL_FORMEDNESS_LIMIT (Bend affine binder-order constraint)",
+    "H": "UNSUPPORTED_SYNTAX (Bend lacks disjunctive `case A{} | B{}` patterns)"
+  },
+  "minimal_proof_break": null,
+  "minimal_robust_witness": {
+    "candidate_id": "REF-MRVN07-CTRL-IDENT",
+    "family": "CONTROL",
+    "description": "Byte-identical control.",
+    "impl_loc_delta": 0
+  },
+  "blind_agent_summary": {
+    "total": 16,
+    "classifications": {
+      "ROBUST": 14,
+      "SEMANTIC_DRIFT": 1,
+      "AGENT_AUTHORITY_VIOLATION": 1
+    },
+    "violations": {
+      "law_edit_attempts": 1,
+      "semantic_drift_count": 1,
+      "escape_hatch_attempts": 1
+    }
+  },
+  "canonical_impl_loc": 221,
+  "canonical_proof_loc": 478
+}

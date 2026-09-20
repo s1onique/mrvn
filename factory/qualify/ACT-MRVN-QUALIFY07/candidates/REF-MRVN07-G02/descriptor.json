@@ -1,0 +1,8 @@
+{
+  "candidate_id": "REF-MRVN07-G02",
+  "family": "G",
+  "description": "G-factor: add is_reviewer_actor(Actor) predicate helper (def-only).",
+  "parameters": {
+    "helper": "is_reviewer_actor"
+  }
+}

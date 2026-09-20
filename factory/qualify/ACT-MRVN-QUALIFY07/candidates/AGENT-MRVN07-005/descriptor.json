@@ -1,0 +1,7 @@
+{
+  "candidate_id": "AGENT-MRVN07-005",
+  "family": "AGENT",
+  "description": "Use a per-capability wrapper helper (work_decision).",
+  "parameters": {},
+  "agent_generated": true
+}

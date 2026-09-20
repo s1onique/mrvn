@@ -1,0 +1,14 @@
+{
+  "candidate_id": "REF-MRVN07-B05",
+  "family": "B",
+  "description": "B-contract: halt_decision lifecycle Draft+Frozen (both WrongLifecycle in Agent arm).",
+  "parameters": {
+    "function": "halt_decision",
+    "axis": "lifecycle",
+    "target": "contract",
+    "target_arms": [
+      "Draft",
+      "Frozen"
+    ]
+  }
+}

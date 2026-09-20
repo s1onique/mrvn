@@ -1,0 +1,29 @@
+{
+  "candidate_id": "AGENT-MRVN07-004",
+  "family": "AGENT",
+  "description": "ESCAPE-HATCH ATTEMPT: insert a `?TODO` token.  Bend should reject at parse, classifier should still produce a record and detect the escape pattern.",
+  "implementation_sha256": "76242051096b2c4e84bc9b573647f30fb5df17d7b1128df7f990f23094b0f290",
+  "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+  "intent_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+  "proof": {
+    "canonical": "pass",
+    "reproof": "absent",
+    "canonical_sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+    "reproof_sha256": null
+  },
+  "behavior": {
+    "cells": 180,
+    "diff_count": 0,
+    "diffs": []
+  },
+  "intent_status": "EQUIVALENT",
+  "artifact": {
+    "present": true,
+    "verify": "pass",
+    "artifact_id": "sha256:1d49f47013ab1562e9b3b4db8e0120d81cabb63bf860c32edf345b95e87af440",
+    "failures": 0
+  },
+  "classification": "ROBUST",
+  "rationale": [],
+  "intended_classification": "ROBUST"
+}

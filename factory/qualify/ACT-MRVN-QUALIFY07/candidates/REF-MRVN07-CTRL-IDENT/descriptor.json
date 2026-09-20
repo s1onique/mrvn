@@ -1,0 +1,6 @@
+{
+  "candidate_id": "REF-MRVN07-CTRL-IDENT",
+  "family": "CONTROL",
+  "description": "Byte-identical control.",
+  "parameters": {}
+}

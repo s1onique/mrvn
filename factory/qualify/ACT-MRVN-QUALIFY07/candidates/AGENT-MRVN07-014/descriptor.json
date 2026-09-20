@@ -1,0 +1,7 @@
+{
+  "candidate_id": "AGENT-MRVN07-014",
+  "family": "AGENT",
+  "description": "Add doc comments above each def (cosmetic).",
+  "parameters": {},
+  "agent_generated": true
+}

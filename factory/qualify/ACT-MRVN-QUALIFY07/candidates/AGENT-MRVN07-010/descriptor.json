@@ -1,0 +1,7 @@
+{
+  "candidate_id": "AGENT-MRVN07-010",
+  "family": "AGENT",
+  "description": "Rename local `lifecycle` -> `lc` in work_decision only.",
+  "parameters": {},
+  "agent_generated": true
+}

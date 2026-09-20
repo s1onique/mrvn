@@ -1,0 +1,17 @@
+{
+  "candidate_id": "REF-MRVN07-CTRL-NEG",
+  "cells": 180,
+  "diff_count": 1,
+  "diffs": [
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "lifecycle": "Frozen",
+      "evidence": "Replay",
+      "expected": "Deny{InsufficientEvidence}",
+      "observed": "Deny{Terminal}"
+    }
+  ],
+  "behavior_dump_sha256": "55348db0423e24a7cc2891c9de09f56f426d52c52c72ab3c174b4fb7100cad23",
+  "behavior_dump_path": "_behavior/_dump.bend"
+}

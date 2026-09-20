@@ -1,0 +1,7 @@
+{
+  "candidate_id": "AGENT-MRVN07-015",
+  "family": "AGENT",
+  "description": "Add a docstring-like comment at the top of each function.",
+  "parameters": {},
+  "agent_generated": true
+}

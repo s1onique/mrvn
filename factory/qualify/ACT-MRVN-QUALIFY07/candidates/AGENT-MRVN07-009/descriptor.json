@@ -1,0 +1,7 @@
+{
+  "candidate_id": "AGENT-MRVN07-009",
+  "family": "AGENT",
+  "description": "Convert recursive last-call to a tail-call (not applicable to this finite kernel; no-op).",
+  "parameters": {},
+  "agent_generated": true
+}

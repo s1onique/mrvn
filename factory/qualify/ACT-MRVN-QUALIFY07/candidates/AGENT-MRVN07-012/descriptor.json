@@ -1,0 +1,7 @@
+{
+  "candidate_id": "AGENT-MRVN07-012",
+  "family": "AGENT",
+  "description": "Move Evidence match block above Lifecycle match block in halt_decision.",
+  "parameters": {},
+  "agent_generated": true
+}

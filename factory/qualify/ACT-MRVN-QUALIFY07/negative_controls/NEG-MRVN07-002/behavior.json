@@ -1,0 +1,33 @@
+{
+  "candidate_id": "NEG-MRVN07-002",
+  "cells": 180,
+  "diff_count": 3,
+  "diffs": [
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "lifecycle": "Draft",
+      "evidence": "None",
+      "expected": "Deny{WrongLifecycle}",
+      "observed": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "lifecycle": "Draft",
+      "evidence": "Replay",
+      "expected": "Deny{WrongLifecycle}",
+      "observed": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "lifecycle": "Draft",
+      "evidence": "Live",
+      "expected": "Deny{WrongLifecycle}",
+      "observed": "Deny{WrongActor}"
+    }
+  ],
+  "behavior_dump_sha256": "3bfd5902badf813ba075acf04d61484c1551f7f64fd8b8d6e5f342ffe80dde34",
+  "behavior_dump_path": "_behavior/_dump.bend"
+}

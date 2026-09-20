@@ -1,0 +1,8 @@
+{
+  "candidate_id": "REF-MRVN07-G03",
+  "family": "G",
+  "description": "G-factor: add is_live_evidence(Evidence) predicate helper (def-only).",
+  "parameters": {
+    "helper": "is_live_evidence"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "candidate_id": "REF-MRVN07-E02",
+  "family": "E",
+  "description": "E-wrap: introduce authorize_top wrapper; main() still calls authorize() directly (def-only).",
+  "implementation_sha256": "43b38ba6594d7a96c53e040559eb7ceb3d121eb67a60dfda8c58f34025b78216",
+  "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+  "intent_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+  "proof": {
+    "canonical": "pass",
+    "reproof": "absent",
+    "canonical_sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+    "reproof_sha256": null
+  },
+  "behavior": {
+    "cells": 180,
+    "diff_count": 0,
+    "diffs": []
+  },
+  "intent_status": "EQUIVALENT",
+  "artifact": {
+    "present": true,
+    "verify": "pass",
+    "artifact_id": "sha256:bd6deb3292c1d8a572336ac7a97fae50d8a0956dfc08bfff176fd54d5e1ab922",
+    "failures": 0
+  },
+  "classification": "ROBUST",
+  "rationale": [],
+  "intended_classification": "ROBUST"
+}

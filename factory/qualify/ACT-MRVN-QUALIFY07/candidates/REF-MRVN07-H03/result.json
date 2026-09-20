@@ -1,0 +1,30 @@
+{
+  "candidate_id": "REF-MRVN07-H03",
+  "family": "H",
+  "description": "Merge Lifecycle.Active | Halted in freeze_decision Agent arm (both WrongActor).",
+  "implementation_sha256": "f3664a9d455eae87eaaa337860b7335b72bac128be0903144f6a258d017e5458",
+  "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+  "intent_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+  "proof": {
+    "canonical": "absent",
+    "reproof": "absent",
+    "canonical_sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+    "reproof_sha256": null
+  },
+  "behavior": {
+    "cells": 0,
+    "diff_count": 0,
+    "diffs": []
+  },
+  "intent_status": "NOT_CHECKED",
+  "artifact": {
+    "present": false,
+    "verify": "absent",
+    "artifact_id": null,
+    "failures": 0
+  },
+  "classification": "BEHAVIOR_EVIDENCE_MISMATCH",
+  "rationale": [
+    "Bend dump failed: exit=1\nError:\n- expected : a pattern (a binder or a constructor)\n- observed : Or(/Volumes/UserData/Users/chistyakov/Projects/SPbNIX/mrvn/factory/qualify/ACT-MRVN-QUALIFY07/candidates/REF-MRVN07-H03/main.Lifecycle.Active{}, /Volumes/UserData/Users/chistyakov/Projects/SPbNIX/mrvn/factory/qualify/ACT-MRVN-QUALIFY07/candidates/REF-MRVN07-H03/main.Lifecycle.Halted{})\nLocation:\n151 |         case Lifecycle.Closed{}: Decision.Deny{DenyReason.Terminal{}}\n152>|         case Lifecycle.Active{} | Lifecycle.Halted{}: Decision.Deny{DenyReason.WrongActor{}}\n153 |         case Lifecycle.Draft{}:  Decision.Deny{DenyReason.WrongLifecycle{}}\n"
+  ]
+}

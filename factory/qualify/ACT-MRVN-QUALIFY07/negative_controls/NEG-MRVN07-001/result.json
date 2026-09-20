@@ -1,0 +1,55 @@
+{
+  "candidate_id": "NEG-MRVN07-001",
+  "family": "NEGATIVE_SEMANTIC",
+  "description": "Agent+Work+Active+None: change Allow to Deny{WrongActor}.",
+  "implementation_sha256": "0c2321185a1c89ba6c4e0d980a1b053beaff165e0246b91acd78ec28289ba163",
+  "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+  "intent_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+  "proof": {
+    "canonical": "absent",
+    "reproof": "absent",
+    "canonical_sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+    "reproof_sha256": null
+  },
+  "behavior": {
+    "cells": 180,
+    "diff_count": 3,
+    "diffs": [
+      {
+        "actor": "Agent",
+        "capability": "Work",
+        "lifecycle": "Active",
+        "evidence": "None",
+        "expected": "Allow",
+        "observed": "Deny{WrongActor}"
+      },
+      {
+        "actor": "Agent",
+        "capability": "Work",
+        "lifecycle": "Active",
+        "evidence": "Replay",
+        "expected": "Allow",
+        "observed": "Deny{WrongActor}"
+      },
+      {
+        "actor": "Agent",
+        "capability": "Work",
+        "lifecycle": "Active",
+        "evidence": "Live",
+        "expected": "Allow",
+        "observed": "Deny{WrongActor}"
+      }
+    ]
+  },
+  "intent_status": "DIVERGENT",
+  "artifact": {
+    "present": false,
+    "verify": "absent",
+    "artifact_id": null,
+    "failures": 0
+  },
+  "classification": "SEMANTIC_DRIFT",
+  "rationale": [
+    "behavior divergence: 3 cell(s)"
+  ]
+}

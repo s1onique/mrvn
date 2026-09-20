@@ -1,0 +1,8 @@
+{
+  "candidate_id": "REF-MRVN07-D01",
+  "family": "D",
+  "description": "Inline work_decision body into authorize.",
+  "parameters": {
+    "function": "work_decision"
+  }
+}

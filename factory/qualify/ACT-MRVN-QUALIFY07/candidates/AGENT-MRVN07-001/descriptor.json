@@ -1,0 +1,7 @@
+{
+  "candidate_id": "AGENT-MRVN07-001",
+  "family": "AGENT",
+  "description": "No-op (byte-identical): control for the simulator pipeline.",
+  "parameters": {},
+  "agent_generated": true
+}

@@ -1,0 +1,11 @@
+{
+  "candidate_id": "REF-MRVN07-I02",
+  "family": "I",
+  "description": "I-rename: rename work_decision -> compute_work (preserve semantics).",
+  "parameters": {
+    "rename": [
+      "work_decision",
+      "compute_work"
+    ]
+  }
+}

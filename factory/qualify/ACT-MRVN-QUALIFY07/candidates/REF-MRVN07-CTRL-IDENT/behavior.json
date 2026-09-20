@@ -1,0 +1,8 @@
+{
+  "candidate_id": "REF-MRVN07-CTRL-IDENT",
+  "cells": 180,
+  "diff_count": 0,
+  "diffs": [],
+  "behavior_dump_sha256": "4bfdbf2b580ba2454396c31d09fc4503655fe6cd95d1f33ddfd832879ecde665",
+  "behavior_dump_path": "_behavior/_dump.bend"
+}

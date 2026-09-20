@@ -1,0 +1,29 @@
+{
+  "candidate_id": "AGENT-MRVN07-005",
+  "family": "AGENT",
+  "description": "Use a per-capability wrapper helper (work_decision).",
+  "implementation_sha256": "bf777e380da2e0bab3affe6625519b8993f88285b83600427bf2da5697b2e8cd",
+  "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+  "intent_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+  "proof": {
+    "canonical": "pass",
+    "reproof": "absent",
+    "canonical_sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+    "reproof_sha256": null
+  },
+  "behavior": {
+    "cells": 180,
+    "diff_count": 0,
+    "diffs": []
+  },
+  "intent_status": "EQUIVALENT",
+  "artifact": {
+    "present": true,
+    "verify": "pass",
+    "artifact_id": "sha256:5c8171590aaa271919696b08afaf2c90f9268028b4b1d79f95a513e8704dc606",
+    "failures": 0
+  },
+  "classification": "ROBUST",
+  "rationale": [],
+  "intended_classification": "ROBUST"
+}

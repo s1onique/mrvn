@@ -1,0 +1,7 @@
+{
+  "candidate_id": "AGENT-MRVN07-004",
+  "family": "AGENT",
+  "description": "ESCAPE-HATCH ATTEMPT: insert a `?TODO` token.  Bend should reject at parse, classifier should still produce a record and detect the escape pattern.",
+  "parameters": {},
+  "agent_generated": true
+}

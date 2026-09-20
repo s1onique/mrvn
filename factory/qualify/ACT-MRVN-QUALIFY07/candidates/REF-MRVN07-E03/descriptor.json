@@ -1,0 +1,8 @@
+{
+  "candidate_id": "REF-MRVN07-E03",
+  "family": "E",
+  "description": "E-wrap: two-level wrapper chain authorize->authorize_v2->authorize.",
+  "parameters": {
+    "wrap": "chain"
+  }
+}

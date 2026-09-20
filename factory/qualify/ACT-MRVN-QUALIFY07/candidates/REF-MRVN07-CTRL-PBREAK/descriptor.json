@@ -1,0 +1,10 @@
+{
+  "candidate_id": "REF-MRVN07-CTRL-PBREAK",
+  "family": "CONTROL_PBREAK",
+  "description": "CONTROL-03 (interface-binding control): rename `authorize` -> `do_authorize`.  Per ACT-MRVN-07-CORRECTION02, this control demonstrates INTERFACE_BINDING_RENAME: LAWS.bend references the renamed symbol by name, so the refactor simultaneously breaks the LAWS.  It is NOT a proof-shape specimen.",
+  "parameters": {
+    "operation": "rename_public_symbol",
+    "from": "authorize",
+    "to": "do_authorize"
+  }
+}

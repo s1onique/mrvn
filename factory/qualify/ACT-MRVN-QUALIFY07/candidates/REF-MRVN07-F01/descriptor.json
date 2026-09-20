@@ -1,0 +1,9 @@
+{
+  "candidate_id": "REF-MRVN07-F01",
+  "family": "F",
+  "description": "Decompose: wrap work_decision in 'match capability: case Capability.Work{}'.",
+  "parameters": {
+    "function": "work_decision",
+    "mode": "decompose"
+  }
+}

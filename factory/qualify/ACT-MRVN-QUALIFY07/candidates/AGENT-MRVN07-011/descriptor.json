@@ -1,0 +1,7 @@
+{
+  "candidate_id": "AGENT-MRVN07-011",
+  "family": "AGENT",
+  "description": "Reorder work_decision's lifecycle arms: Closed, Active, Halted, Draft, Frozen (canonical).",
+  "parameters": {},
+  "agent_generated": true
+}

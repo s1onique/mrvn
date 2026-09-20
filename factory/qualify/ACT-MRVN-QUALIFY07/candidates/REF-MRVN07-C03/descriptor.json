@@ -1,0 +1,9 @@
+{
+  "candidate_id": "REF-MRVN07-C03",
+  "family": "C",
+  "description": "C-extract: introduce a wrapper that uses a different parameter name ordering (semantics identical).",
+  "parameters": {
+    "helper": "step",
+    "reorder_args": true
+  }
+}

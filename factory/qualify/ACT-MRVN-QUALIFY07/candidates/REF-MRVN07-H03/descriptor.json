@@ -1,0 +1,12 @@
+{
+  "candidate_id": "REF-MRVN07-H03",
+  "family": "H",
+  "description": "Merge Lifecycle.Active | Halted in freeze_decision Agent arm (both WrongActor).",
+  "parameters": {
+    "function": "freeze_decision",
+    "merge": [
+      "Active",
+      "Halted"
+    ]
+  }
+}

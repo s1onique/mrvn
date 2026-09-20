@@ -1,0 +1,6 @@
+{
+  "candidate_id": "REF-MRVN07-I01",
+  "family": "I",
+  "description": "Rename authorize -> step; reintroduce authorize as wrapper.",
+  "parameters": {}
+}

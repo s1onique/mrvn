@@ -1,0 +1,55 @@
+{
+  "candidate_id": "AGENT-MRVN07-003",
+  "family": "AGENT",
+  "description": "DELIBERATE DRIFT: change `Decision.Allow{}` -> `Decision.Deny{DenyReason.WrongLifecycle{}}` in work_decision for Agent/Active.  Should be classified SEMANTIC_DRIFT and counted as a violation.",
+  "implementation_sha256": "933a13782101cb1415229d19ddc4c35ed2e94878460ead45940a66820fe36e48",
+  "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+  "intent_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+  "proof": {
+    "canonical": "absent",
+    "reproof": "absent",
+    "canonical_sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+    "reproof_sha256": null
+  },
+  "behavior": {
+    "cells": 180,
+    "diff_count": 3,
+    "diffs": [
+      {
+        "actor": "Agent",
+        "capability": "Work",
+        "lifecycle": "Draft",
+        "evidence": "None",
+        "expected": "Allow",
+        "observed": "Deny{WrongLifecycle}"
+      },
+      {
+        "actor": "Agent",
+        "capability": "Work",
+        "lifecycle": "Draft",
+        "evidence": "Replay",
+        "expected": "Allow",
+        "observed": "Deny{WrongLifecycle}"
+      },
+      {
+        "actor": "Agent",
+        "capability": "Work",
+        "lifecycle": "Draft",
+        "evidence": "Live",
+        "expected": "Allow",
+        "observed": "Deny{WrongLifecycle}"
+      }
+    ]
+  },
+  "intent_status": "DIVERGENT",
+  "artifact": {
+    "present": false,
+    "verify": "absent",
+    "artifact_id": null,
+    "failures": 0
+  },
+  "classification": "SEMANTIC_DRIFT",
+  "rationale": [
+    "behavior divergence: 3 cell(s)"
+  ]
+}

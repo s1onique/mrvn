@@ -1,0 +1,14 @@
+{
+  "candidate_id": "REF-MRVN07-B02",
+  "family": "B",
+  "description": "Catchall contract: work_decision Reviewer Draft+Active+Halted -> case _: Allow{}.",
+  "parameters": {
+    "function": "work_decision",
+    "target": "contract",
+    "target_arms": [
+      "Draft",
+      "Active",
+      "Halted"
+    ]
+  }
+}

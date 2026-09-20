@@ -1,0 +1,6 @@
+{
+  "candidate_id": "NEG-MRVN07-002",
+  "family": "NEGATIVE_SEMANTIC",
+  "description": "Reviewer+Freeze+Draft: change Deny{WrongLifecycle} to Deny{WrongActor} (1 cell off).",
+  "negative_control": true
+}

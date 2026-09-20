@@ -1,0 +1,30 @@
+{
+  "candidate_id": "REF-MRVN07-F03",
+  "family": "F",
+  "description": "Decompose+Whole round-trip on work_decision.",
+  "implementation_sha256": "9c3fbb1ebeed6a241a0091447ab164191be108d739764e5b311f86056859eed2",
+  "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+  "intent_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+  "proof": {
+    "canonical": "absent",
+    "reproof": "absent",
+    "canonical_sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+    "reproof_sha256": null
+  },
+  "behavior": {
+    "cells": 0,
+    "diff_count": 0,
+    "diffs": []
+  },
+  "intent_status": "NOT_CHECKED",
+  "artifact": {
+    "present": false,
+    "verify": "absent",
+    "artifact_id": null,
+    "failures": 0
+  },
+  "classification": "BEHAVIOR_EVIDENCE_MISMATCH",
+  "rationale": [
+    "Bend dump failed: exit=1\nError:\n- expected : a match heading this case (this case is orphaned)\n- observed : ' '\nLocation:\n74 | def work_decision(actor: Actor, lifecycle: Lifecycle, evidence: Evidence) -> Decision:\n75>|   case Capability.Work{}:\n76 |     match actor:\n"
+  ]
+}

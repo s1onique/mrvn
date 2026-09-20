@@ -1,0 +1,33 @@
+{
+  "candidate_id": "NEG-MRVN07-001",
+  "cells": 180,
+  "diff_count": 3,
+  "diffs": [
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "lifecycle": "Active",
+      "evidence": "None",
+      "expected": "Allow",
+      "observed": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "lifecycle": "Active",
+      "evidence": "Replay",
+      "expected": "Allow",
+      "observed": "Deny{WrongActor}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "lifecycle": "Active",
+      "evidence": "Live",
+      "expected": "Allow",
+      "observed": "Deny{WrongActor}"
+    }
+  ],
+  "behavior_dump_sha256": "6c2f6cfc154cef256546e79548dd3afd90e03b6ab3394e0bbdc8847fe10e655c",
+  "behavior_dump_path": "_behavior/_dump.bend"
+}

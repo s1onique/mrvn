@@ -1,0 +1,7 @@
+{
+  "candidate_id": "AGENT-MRVN07-003",
+  "family": "AGENT",
+  "description": "DELIBERATE DRIFT: change `Decision.Allow{}` -> `Decision.Deny{DenyReason.WrongLifecycle{}}` in work_decision for Agent/Active.  Should be classified SEMANTIC_DRIFT and counted as a violation.",
+  "parameters": {},
+  "agent_generated": true
+}

@@ -1,0 +1,9 @@
+{
+  "candidate_id": "REF-MRVN07-F02",
+  "family": "F",
+  "description": "Whole-value: remove 'case Capability.Work{}' wrapper.",
+  "parameters": {
+    "function": "work_decision",
+    "mode": "whole"
+  }
+}

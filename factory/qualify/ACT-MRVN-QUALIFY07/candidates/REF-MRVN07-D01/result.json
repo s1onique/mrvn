@@ -1,0 +1,30 @@
+{
+  "candidate_id": "REF-MRVN07-D01",
+  "family": "D",
+  "description": "Inline work_decision body into authorize.",
+  "implementation_sha256": "aa47cc6384c524c1280618758ed652e6abf84ed8c417099c244bb496313cef77",
+  "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+  "intent_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+  "proof": {
+    "canonical": "absent",
+    "reproof": "absent",
+    "canonical_sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+    "reproof_sha256": null
+  },
+  "behavior": {
+    "cells": 0,
+    "diff_count": 0,
+    "diffs": []
+  },
+  "intent_status": "NOT_CHECKED",
+  "artifact": {
+    "present": false,
+    "verify": "absent",
+    "artifact_id": null,
+    "failures": 0
+  },
+  "classification": "BEHAVIOR_EVIDENCE_MISMATCH",
+  "rationale": [
+    "Bend dump failed: exit=1\nError:\n- expected : 'def', 'type' or 'law'\n- observed : 'm'\nLocation:\n196 |   match capability:\n197>|     match actor:\n198 |       case Actor.Agent{}:\n"
+  ]
+}

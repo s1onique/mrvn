@@ -1,0 +1,7 @@
+{
+  "candidate_id": "AGENT-MRVN07-002",
+  "family": "AGENT",
+  "description": "Whitespace-only: insert blank line before each `def`.",
+  "parameters": {},
+  "agent_generated": true
+}

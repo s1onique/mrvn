@@ -1,0 +1,39 @@
+{
+  "candidate_id": "REF-MRVN07-CTRL-NEG",
+  "family": "NEGATIVE_SEMANTIC",
+  "description": "Negative semantic control: must classify SEMANTIC_DRIFT.",
+  "implementation_sha256": "9d4cc31ddc26a2de0a224852ba49f6b438cc4baea8a0a8502361983186967420",
+  "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+  "intent_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+  "proof": {
+    "canonical": "absent",
+    "reproof": "absent",
+    "canonical_sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+    "reproof_sha256": null
+  },
+  "behavior": {
+    "cells": 180,
+    "diff_count": 1,
+    "diffs": [
+      {
+        "actor": "Reviewer",
+        "capability": "Close",
+        "lifecycle": "Frozen",
+        "evidence": "Replay",
+        "expected": "Deny{InsufficientEvidence}",
+        "observed": "Deny{Terminal}"
+      }
+    ]
+  },
+  "intent_status": "DIVERGENT",
+  "artifact": {
+    "present": false,
+    "verify": "absent",
+    "artifact_id": null,
+    "failures": 0
+  },
+  "classification": "SEMANTIC_DRIFT",
+  "rationale": [
+    "behavior divergence: 1 cell(s)"
+  ]
+}

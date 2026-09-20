@@ -1,0 +1,11 @@
+{
+  "candidate_id": "REF-MRVN07-J01",
+  "family": "J",
+  "description": "Swap order: close_decision before work_decision.",
+  "parameters": {
+    "swap_order": [
+      "work_decision",
+      "close_decision"
+    ]
+  }
+}

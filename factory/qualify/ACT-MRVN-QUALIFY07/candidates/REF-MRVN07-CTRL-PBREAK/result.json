@@ -1,0 +1,30 @@
+{
+  "candidate_id": "REF-MRVN07-CTRL-PBREAK",
+  "family": "CONTROL_PBREAK",
+  "description": "CONTROL-03 (interface-binding control): rename `authorize` -> `do_authorize`.  Per ACT-MRVN-07-CORRECTION02, this control demonstrates INTERFACE_BINDING_RENAME: LAWS.bend references the renamed symbol by name, so the refactor simultaneously breaks the LAWS.  It is NOT a proof-shape specimen.",
+  "implementation_sha256": "f8d2b1eca9ef25d5d8cd1d4f0dc0cacce96e720663fb019c76d8ba4644a5a4ae",
+  "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+  "intent_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+  "proof": {
+    "canonical": "absent",
+    "reproof": "absent",
+    "canonical_sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+    "reproof_sha256": null
+  },
+  "behavior": {
+    "cells": 0,
+    "diff_count": 0,
+    "diffs": []
+  },
+  "intent_status": "NOT_CHECKED",
+  "artifact": {
+    "present": false,
+    "verify": "absent",
+    "artifact_id": null,
+    "failures": 0
+  },
+  "classification": "BEHAVIOR_EVIDENCE_MISMATCH",
+  "rationale": [
+    "Bend dump failed: exit=1\nError:\n- expected : a defined name\n- observed : Gate.authorize\nContext:\n- as_ : String\n- cs  : String\n- ls  : String\n- es  : String\n- a   : /Volumes/UserData/Users/chistyakov/Projects/SPbNIX/mrvn/factory/qualify/ACT-MRVN-QUALIFY07/candidates/REF-MRVN07-CTRL-PBREAK/main.Actor\n- c   : /Volumes/UserData/Users/chistyakov/Projects/SPbNIX/mrvn/factory/qualify/ACT-MRVN-QUALIFY07/candidates/REF-MRVN07-CTRL-PBREAK/main.Capability\n- l   : /Volumes/UserData/Users/chistyakov/Projects/SPbNIX/mrvn/factory/qualify/ACT-MRVN-QUALIFY07/candidates/REF-MRVN07-CTRL-PBREAK/main.Lifecycle\n- e   : /Volumes/UserData/Users/chistyakov/Projects/SPbNIX/mrvn/factory/qualify/ACT-MRVN-QUALIFY07/candidates/REF-MRVN07-CTRL-PBREAK/main.Evidence\nLocation: row\n22 |           a: Gate.Actor, c: Gate.Capability, l: Gate.Lifecycle, e: Gate.Evidence) -> String:\n23>|   as_ ++ \"|\" ++ cs ++ \"|\" ++ ls ++ \"|\" ++ es ++ \"=\" ++ decision_tag(Gate.authorize(a, c, l, e))\n24 | \n"
+  ]
+}

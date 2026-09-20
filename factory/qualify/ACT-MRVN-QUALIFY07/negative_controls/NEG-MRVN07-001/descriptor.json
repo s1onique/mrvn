@@ -1,0 +1,6 @@
+{
+  "candidate_id": "NEG-MRVN07-001",
+  "family": "NEGATIVE_SEMANTIC",
+  "description": "Agent+Work+Active+None: change Allow to Deny{WrongActor}.",
+  "negative_control": true
+}

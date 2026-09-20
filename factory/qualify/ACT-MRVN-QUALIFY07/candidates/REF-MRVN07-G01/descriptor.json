@@ -1,0 +1,8 @@
+{
+  "candidate_id": "REF-MRVN07-G01",
+  "family": "G",
+  "description": "Add is_terminal_lc(Lifecycle) helper (def-only).",
+  "parameters": {
+    "helper": "is_terminal"
+  }
+}

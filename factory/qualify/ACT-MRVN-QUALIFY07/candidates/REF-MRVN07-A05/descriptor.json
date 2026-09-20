@@ -1,0 +1,13 @@
+{
+  "candidate_id": "REF-MRVN07-A05",
+  "family": "A",
+  "description": "Branch reorder: work_decision actor arms Agent, Automation, Reviewer.",
+  "parameters": {
+    "function": "work_decision",
+    "permutation": [
+      "Agent",
+      "Automation",
+      "Reviewer"
+    ]
+  }
+}

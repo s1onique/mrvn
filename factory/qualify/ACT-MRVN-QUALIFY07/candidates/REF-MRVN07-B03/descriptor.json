@@ -1,0 +1,9 @@
+{
+  "candidate_id": "REF-MRVN07-B03",
+  "family": "B",
+  "description": "Catchall contract: work_decision Automation arm Draft+Active+Halted -> case _: Deny{WrongActor} (pre-validate).",
+  "parameters": {
+    "function": "work_decision",
+    "target": "contract_automation_allow"
+  }
+}

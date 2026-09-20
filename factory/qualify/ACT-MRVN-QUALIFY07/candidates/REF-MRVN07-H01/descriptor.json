@@ -1,0 +1,12 @@
+{
+  "candidate_id": "REF-MRVN07-H01",
+  "family": "H",
+  "description": "Merge Lifecycle.Draft | Halted in work_decision.",
+  "parameters": {
+    "function": "work_decision",
+    "merge": [
+      "Draft",
+      "Halted"
+    ]
+  }
+}

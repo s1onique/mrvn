@@ -1,0 +1,22 @@
+{
+  "act": "ACT-MRVN-QUALIFY07",
+  "timestamp": "2026-09-20T19:59:58.009Z",
+  "prior_dirs": [
+    "factory/qualify/ACT-MRVN-QUALIFY04/lab",
+    "factory/qualify/ACT-MRVN-QUALIFY05/lab",
+    "factory/qualify/ACT-MRVN-QUALIFY06/lab"
+  ],
+  "regression_tasks": [
+    {
+      "name": "MRVN-04 verify",
+      "exit": 0
+    },
+    {
+      "name": "MRVN-06 classify (CTRL-IDENT)",
+      "exit": 0
+    }
+  ],
+  "drift_count": 0,
+  "drifts": [],
+  "summary": "PASS: 0 drifts, all regression tasks non-mutating"
+}

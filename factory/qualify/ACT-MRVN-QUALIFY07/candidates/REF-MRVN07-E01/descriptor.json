@@ -1,0 +1,6 @@
+{
+  "candidate_id": "REF-MRVN07-E01",
+  "family": "E",
+  "description": "Introduce authorize_wrapped(...) identity wrapper.",
+  "parameters": {}
+}

@@ -1,0 +1,8 @@
+{
+  "candidate_id": "AGENT-MRVN07-006",
+  "cells": 180,
+  "diff_count": 0,
+  "diffs": [],
+  "behavior_dump_sha256": "7e621371c76d0bbbc12d9523ccd1a5001c35db83cc7427f8ae80f9f8264ca21e",
+  "behavior_dump_path": "_behavior/_dump.bend"
+}
