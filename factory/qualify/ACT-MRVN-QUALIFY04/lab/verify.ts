@@ -33,6 +33,23 @@ const FACTORY = resolve(QUALIFY, "..");
 const REPO = resolve(FACTORY, "..");
 const BEND = resolve(REPO, "bend2/main.ts");
 
+interface CliArgs {
+  output: string | null;     // --output <path>: write summary here instead of lab/results.json
+  noWrite: boolean;          // --no-write: run but never write any durable evidence
+}
+function parseVerifyArgs(argv: string[]): CliArgs {
+  const out: CliArgs = { output: null, noWrite: false };
+  for (let i = 0; i < argv.length; i++) {
+    const a = argv[i];
+    const next = (): string => { const v = argv[++i]; if (v === undefined) throw new Error("missing value after " + a); return v; };
+    if (a === "--output") out.output = next();
+    else if (a === "--no-write") out.noWrite = true;
+    else if (a === "--cases" || a === "--help") { /* forward compat */ }
+    else throw new Error("unknown verify flag: " + a);
+  }
+  return out;
+}
+
 interface Mutation {
   id: string;
   description: string;
@@ -385,9 +402,24 @@ async function main() {
   };
 
   const outPath = resolve(ROOT, "lab/results.json");
-  writeFileSync(outPath, JSON.stringify(summary, null, 2));
+  // ACT-MRVN-06-CORRECTION01: regression hygiene.  Re-running verify.ts
+  // must NEVER overwrite the frozen durable evidence under lab/ unless
+  // the caller explicitly opted in via --output.  Default behaviour: no
+  // durable write at all.  Use --output <path> to redirect.
+  const cliArgs = parseVerifyArgs(process.argv.slice(2));
+  let writeTarget: string | null = null;
+  if (cliArgs.noWrite) {
+    writeTarget = null;
+  } else if (cliArgs.output) {
+    writeTarget = resolve(cliArgs.output);
+  } else {
+    writeTarget = null;  // default: no durable write; stdout only
+  }
+  if (writeTarget !== null) {
+    writeFileSync(writeTarget, JSON.stringify(summary, null, 2));
+  }
   console.log("=== ACT-MRVN-QUALIFY04-CORRECTION03 Mutation Classifier ===");
-  console.log(`Output: ${outPath}`);
+  console.log(`Output: ${writeTarget ?? "(none, --no-write / default)"}`);
   console.log("");
   console.log("Law book sha256:    ", lawBookSha);
   console.log("Canonical proof sha:", canonicalProofSha);
