@@ -1,0 +1,36 @@
+{
+  "gap_id": "GAP-MRVN06-015",
+  "candidate_id": "CAND-MRVN06-D03",
+  "classification": "SPECIFICATION_GAP",
+  "intent_oracle_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+  "candidate_laws_sha256": "2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9",
+  "candidate_implementation_sha256": "264f19633f22ed994deeb71c32799f2c37ceb7d3a90874d899666bb59dc6dc57",
+  "candidate_artifact_id": "sha256:2c332aa7db37e8e810a90c0f447dce012929fbfd5d1bc1b32b548f3f861fbddf",
+  "diff_count": 3,
+  "diffs": [
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "lifecycle": "Draft",
+      "evidence": "None",
+      "expected": "Deny{WrongLifecycle}",
+      "observed": "Deny{InsufficientEvidence}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "lifecycle": "Draft",
+      "evidence": "Replay",
+      "expected": "Deny{WrongLifecycle}",
+      "observed": "Deny{InsufficientEvidence}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "lifecycle": "Draft",
+      "evidence": "Live",
+      "expected": "Deny{WrongLifecycle}",
+      "observed": "Deny{InsufficientEvidence}"
+    }
+  ]
+}

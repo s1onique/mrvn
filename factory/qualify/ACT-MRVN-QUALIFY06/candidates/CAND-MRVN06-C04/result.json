@@ -1,0 +1,56 @@
+{
+  "candidate_id": "CAND-MRVN06-C04",
+  "implementation_sha256": "6512b02fa537c01a0cb9fae2bf2e0e12f119ff52a19e7dee6337a4a944798d84",
+  "laws_sha256": "2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9",
+  "intent_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+  "proof": {
+    "canonical": "pass",
+    "reproof": "absent",
+    "counterexample": "absent",
+    "canonical_sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+    "reproof_sha256": null,
+    "counterexample_sha256": null
+  },
+  "law_status": "SATISFIED",
+  "behavior": {
+    "cells": 180,
+    "diff_count": 3,
+    "diffs": [
+      {
+        "actor": "Automation",
+        "capability": "Close",
+        "lifecycle": "Frozen",
+        "evidence": "None",
+        "expected": "Deny{WrongActor}",
+        "observed": "Deny{WrongLifecycle}"
+      },
+      {
+        "actor": "Automation",
+        "capability": "Close",
+        "lifecycle": "Frozen",
+        "evidence": "Replay",
+        "expected": "Deny{WrongActor}",
+        "observed": "Deny{WrongLifecycle}"
+      },
+      {
+        "actor": "Automation",
+        "capability": "Close",
+        "lifecycle": "Frozen",
+        "evidence": "Live",
+        "expected": "Deny{WrongActor}",
+        "observed": "Deny{WrongLifecycle}"
+      }
+    ]
+  },
+  "intent_status": "DIVERGENT",
+  "artifact": {
+    "present": true,
+    "verify": "pass",
+    "artifact_id": "sha256:f100408f127c79a0b2983fa4ebeb6d74447aeb861de44d11b836a51089f5a3b6",
+    "failures": 0
+  },
+  "classification": "SPECIFICATION_GAP",
+  "rationale": [
+    "canonical PROOF passes"
+  ]
+}

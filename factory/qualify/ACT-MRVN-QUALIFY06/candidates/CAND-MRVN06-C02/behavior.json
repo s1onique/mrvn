@@ -1,0 +1,33 @@
+{
+  "candidate_id": "CAND-MRVN06-C02",
+  "cells": 180,
+  "diff_count": 3,
+  "diffs": [
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "lifecycle": "Active",
+      "evidence": "None",
+      "expected": "Deny{WrongActor}",
+      "observed": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "lifecycle": "Active",
+      "evidence": "Replay",
+      "expected": "Deny{WrongActor}",
+      "observed": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "lifecycle": "Active",
+      "evidence": "Live",
+      "expected": "Deny{WrongActor}",
+      "observed": "Deny{WrongLifecycle}"
+    }
+  ],
+  "behavior_dump_sha256": "e11ac48c93cca301f843f29ffc82ca05797e82724d21b8baca3df9472b2c1e8b",
+  "behavior_dump_path": "_behavior/_dump.bend"
+}

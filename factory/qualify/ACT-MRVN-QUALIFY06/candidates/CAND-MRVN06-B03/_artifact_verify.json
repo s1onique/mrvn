@@ -1,0 +1,67 @@
+{
+  "artifact_id": "sha256:7a95fd57dcb860afb38c28027ccb95f0ec7d7a153ac7fa35c5e4355b4db81437",
+  "claims": [{
+      "claim_id": "formal-law-satisfaction",
+      "reasons": ["all machine fields present and equal to recomputed reality; live proof replay PASS"
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "claim_id": "observed-tool-execution",
+      "reasons": ["historical fact; recorded but not re-verifiable as a live check"
+      ],
+      "status": "CAPTURED"
+    },
+    {
+      "claim_id": "qualification-result-mrvn-04",
+      "reasons": ["historical qualification verdict; recorded but not re-exercised"
+      ],
+      "status": "CAPTURED"
+    }
+  ],
+  "failures": [],
+  "integrity": "pass",
+  "mode": "full",
+  "proof": "pass",
+  "supplemental_evidence": "pass",
+  "timing_ms": {
+    "integrity": 2,
+    "proof": 63,
+    "supplemental": 0
+  },
+  "verifier": {
+    "artifact_id_algorithm": "sha256:canonical_manifest_minus_id:v1",
+    "canonical_json_algorithm": "mrvn-canonical-json-v1",
+    "toolchain": {
+      "bend_runner_sha256": "34a8a791b02ce92f247bda4cabcd3ff4eabe500002fedbec4867b5db77ee1feb",
+      "toolchain_checked": true,
+      "toolchain_match": true
+    },
+    "toolchain_closure": [{
+        "local_path": "/Volumes/UserData/Users/chistyakov/Projects/SPbNIX/mrvn/bend2/main.ts",
+        "logical_path": "main.ts",
+        "role": "cli",
+        "sha256": "34a8a791b02ce92f247bda4cabcd3ff4eabe500002fedbec4867b5db77ee1feb"
+      },
+      {
+        "local_path": "/Volumes/UserData/Users/chistyakov/Projects/SPbNIX/mrvn/bend2/bend.ts",
+        "logical_path": "bend.ts",
+        "role": "trusted_kernel",
+        "sha256": "fe3c2b0b306fccbe44efec349d8f339b6efdaceb090b3d3049c74a1a6015c859"
+      },
+      {
+        "local_path": "/Volumes/UserData/Users/chistyakov/Projects/SPbNIX/mrvn/bend2/comp.ts",
+        "logical_path": "comp.ts",
+        "role": "compiler_runtime",
+        "sha256": "c181ac038d7f7d4ed0e1bb81c513e64285347627e0b3a13a98cb86a1d1568f54"
+      },
+      {
+        "local_path": "/Volumes/UserData/Users/chistyakov/Projects/SPbNIX/mrvn/bend2/base.bend",
+        "logical_path": "base.bend",
+        "role": "prelude",
+        "sha256": "b2d53bbd83639c3ae27260b318efa09de9df6006a556ac6ef41c104ea164917a"
+      }
+    ],
+    "version": "MRVN-05.verify_artifact.v1"
+  }
+}

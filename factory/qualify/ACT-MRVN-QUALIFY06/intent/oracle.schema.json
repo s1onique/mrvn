@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "mrvn.intent-oracle-v1",
+  "title": "ACT-MRVN-QUALIFY06 intent oracle",
+  "type": "object",
+  "required": [
+    "act",
+    "intent_file",
+    "intent_text_sha256",
+    "cell_count",
+    "allow_count",
+    "deny_count",
+    "deny_by_reason",
+    "rows"
+  ],
+  "properties": {
+    "act": { "const": "ACT-MRVN-QUALIFY06" },
+    "intent_file": { "type": "string", "pattern": "^INTENT\\.md$" },
+    "intent_text_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "cell_count": { "const": 180 },
+    "allow_count": { "type": "integer", "minimum": 0, "maximum": 180 },
+    "deny_count": { "type": "integer", "minimum": 0, "maximum": 180 },
+    "deny_by_reason": {
+      "type": "object",
+      "required": ["Terminal", "WrongActor", "WrongLifecycle", "InsufficientEvidence"],
+      "properties": {
+        "Terminal": { "type": "integer", "minimum": 0 },
+        "WrongActor": { "type": "integer", "minimum": 0 },
+        "WrongLifecycle": { "type": "integer", "minimum": 0 },
+        "InsufficientEvidence": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "rows": {
+      "type": "array",
+      "minItems": 180,
+      "maxItems": 180,
+      "items": {
+        "type": "object",
+        "required": ["actor", "capability", "lifecycle", "evidence", "decision"],
+        "properties": {
+          "actor": { "enum": ["Agent", "Reviewer", "Automation"] },
+          "capability": { "enum": ["Work", "Halt", "Freeze", "Close"] },
+          "lifecycle": { "enum": ["Closed", "Active", "Halted", "Draft", "Frozen"] },
+          "evidence": { "enum": ["None", "Replay", "Live"] },
+          "decision": {
+            "type": "string",
+            "pattern": "^(Allow|Deny\\{(Terminal|WrongActor|WrongLifecycle|InsufficientEvidence)\\})$"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,46 @@
+{
+  "act": "ACT-MRVN-QUALIFY06",
+  "timestamp": "2026-09-20T10:38:37.413Z",
+  "tests": [
+    {
+      "name": "intent_tamper",
+      "expected": "tampered_sha != canonical_sha (audit detects drift)",
+      "actual": "tampered_sha=460358ad6f15... (differs from canonical)",
+      "pass": true
+    },
+    {
+      "name": "law_tamper",
+      "expected": "DIFFERENT_SPECIFICATION",
+      "actual": "DIFFERENT_SPECIFICATION",
+      "pass": true
+    },
+    {
+      "name": "fake_artifact",
+      "expected": "NO_GAP_CLASSIFICATION (artifact FULL verify FAIL, exit=1)",
+      "actual": "NO_GAP_CLASSIFICATION (exit=1)",
+      "pass": true
+    },
+    {
+      "name": "behavior_tamper",
+      "expected": "recomputed behavior diff_count=0 (classifier overwrites tampered behavior.json)",
+      "actual": "diff_count=0",
+      "pass": true
+    },
+    {
+      "name": "oracle_contamination",
+      "expected": "SPECIFICATION_GAP (expected_class=LAW_REFUTED must NOT influence classification)",
+      "actual": "class=SPECIFICATION_GAP expected_mismatch=true",
+      "pass": true
+    },
+    {
+      "name": "toolchain_tamper",
+      "expected": "NO_GAP_CLASSIFICATION (artifact FULL verify TOOLCHAIN_MISMATCH, exit=1)",
+      "actual": "class=NO_GAP_CLASSIFICATION artifact.verify=fail failures=-1 exit=1",
+      "pass": true
+    }
+  ],
+  "summary": {
+    "pass": 6,
+    "fail": 0
+  }
+}

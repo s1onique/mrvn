@@ -1,0 +1,17 @@
+{
+  "candidate_id": "CAND-MRVN06-A06",
+  "cells": 180,
+  "diff_count": 1,
+  "diffs": [
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "lifecycle": "Active",
+      "evidence": "None",
+      "expected": "Deny{InsufficientEvidence}",
+      "observed": "Deny{WrongActor}"
+    }
+  ],
+  "behavior_dump_sha256": "0f9c5d35286ddc5ebb24c1dc3cfac4b0f99adc77bd27a7ef5d11468ec51bbc78",
+  "behavior_dump_path": "_behavior/_dump.bend"
+}

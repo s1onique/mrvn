@@ -1,0 +1,15 @@
+{
+  "candidate_id": "CAND-MRVN06-CTRL-NEG",
+  "family": "CONTROL",
+  "mutations": [
+    {
+      "type": "DENY_TO_ALLOW",
+      "function": "freeze_decision",
+      "actor": "Agent",
+      "lifecycle": "Active",
+      "evidence": "Live"
+    }
+  ],
+  "law_refutation_witness": "Agent,Freeze,Active,Live",
+  "law_refutation_expected": "Deny{WrongActor}"
+}

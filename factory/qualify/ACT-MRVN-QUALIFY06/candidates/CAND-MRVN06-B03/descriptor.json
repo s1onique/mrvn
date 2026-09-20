@@ -1,0 +1,15 @@
+{
+  "candidate_id": "CAND-MRVN06-B03",
+  "family": "EVIDENCE",
+  "mutations": [
+    {
+      "type": "DENY_REASON_SUBSTITUTE",
+      "function": "freeze_decision",
+      "actor": "Reviewer",
+      "lifecycle": "Active",
+      "evidence": "None",
+      "from_reason": "InsufficientEvidence",
+      "to_reason": "WrongLifecycle"
+    }
+  ]
+}

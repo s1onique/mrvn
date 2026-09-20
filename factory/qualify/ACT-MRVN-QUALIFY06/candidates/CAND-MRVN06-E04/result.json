@@ -1,0 +1,42 @@
+{
+  "candidate_id": "CAND-MRVN06-E04",
+  "implementation_sha256": "44dbc64fffd0123c7c98d26ffada536d2abb8edffe4513526532de4f85d344a6",
+  "laws_sha256": "2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9",
+  "intent_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+  "proof": {
+    "canonical": "fail",
+    "reproof": "absent",
+    "counterexample": "pass",
+    "canonical_sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+    "reproof_sha256": null,
+    "counterexample_sha256": "e6f874608779d4fc14d674821878b75c6f150311568dee24378f96b46f4c6437"
+  },
+  "law_status": "REFUTED",
+  "behavior": {
+    "cells": 180,
+    "diff_count": 1,
+    "diffs": [
+      {
+        "actor": "Reviewer",
+        "capability": "Close",
+        "lifecycle": "Frozen",
+        "evidence": "Replay",
+        "expected": "Deny{InsufficientEvidence}",
+        "observed": "Allow"
+      }
+    ]
+  },
+  "intent_status": "DIVERGENT",
+  "artifact": {
+    "present": false,
+    "verify": "absent",
+    "artifact_id": null,
+    "failures": 0
+  },
+  "classification": "LAW_REFUTED",
+  "rationale": [
+    "canonical PROOF fails; COUNTEREXAMPLE proves violation"
+  ],
+  "expected_class": "LAW_REFUTED",
+  "expected_mismatch": false
+}

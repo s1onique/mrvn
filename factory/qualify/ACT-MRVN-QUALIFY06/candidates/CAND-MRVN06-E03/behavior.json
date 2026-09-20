@@ -1,0 +1,33 @@
+{
+  "candidate_id": "CAND-MRVN06-E03",
+  "cells": 180,
+  "diff_count": 3,
+  "diffs": [
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "lifecycle": "Frozen",
+      "evidence": "None",
+      "expected": "Deny{WrongLifecycle}",
+      "observed": "Allow"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "lifecycle": "Frozen",
+      "evidence": "Replay",
+      "expected": "Deny{WrongLifecycle}",
+      "observed": "Allow"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "lifecycle": "Frozen",
+      "evidence": "Live",
+      "expected": "Deny{WrongLifecycle}",
+      "observed": "Allow"
+    }
+  ],
+  "behavior_dump_sha256": "05d9a516deecdb3226839ec165b57fd19683840137a28d4276410ba98495f1e6",
+  "behavior_dump_path": "_behavior/_dump.bend"
+}

@@ -1,0 +1,33 @@
+{
+  "candidate_id": "CAND-MRVN06-A02",
+  "cells": 180,
+  "diff_count": 3,
+  "diffs": [
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "lifecycle": "Active",
+      "evidence": "None",
+      "expected": "Deny{WrongActor}",
+      "observed": "Deny{InsufficientEvidence}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "lifecycle": "Active",
+      "evidence": "Replay",
+      "expected": "Deny{WrongActor}",
+      "observed": "Deny{InsufficientEvidence}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "lifecycle": "Active",
+      "evidence": "Live",
+      "expected": "Deny{WrongActor}",
+      "observed": "Deny{InsufficientEvidence}"
+    }
+  ],
+  "behavior_dump_sha256": "7fe0110b15151593655448b26a8997f6a16aace1ca1685193e8d5abe15bcdc9c",
+  "behavior_dump_path": "_behavior/_dump.bend"
+}

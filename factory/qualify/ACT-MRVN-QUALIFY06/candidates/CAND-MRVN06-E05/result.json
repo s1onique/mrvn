@@ -1,0 +1,58 @@
+{
+  "candidate_id": "CAND-MRVN06-E05",
+  "implementation_sha256": "3b4f2f18efeb162343756877a68d3f6b4e13fd570976a298659f02d35437827b",
+  "laws_sha256": "2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9",
+  "intent_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+  "proof": {
+    "canonical": "fail",
+    "reproof": "absent",
+    "counterexample": "pass",
+    "canonical_sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+    "reproof_sha256": null,
+    "counterexample_sha256": "85fbfc6abff197d78910d6db86958c12844ef6d432d118f43cb5ef90a0a2866c"
+  },
+  "law_status": "REFUTED",
+  "behavior": {
+    "cells": 180,
+    "diff_count": 3,
+    "diffs": [
+      {
+        "actor": "Agent",
+        "capability": "Work",
+        "lifecycle": "Active",
+        "evidence": "None",
+        "expected": "Allow",
+        "observed": "Deny{WrongLifecycle}"
+      },
+      {
+        "actor": "Agent",
+        "capability": "Work",
+        "lifecycle": "Active",
+        "evidence": "Replay",
+        "expected": "Allow",
+        "observed": "Deny{WrongLifecycle}"
+      },
+      {
+        "actor": "Agent",
+        "capability": "Work",
+        "lifecycle": "Active",
+        "evidence": "Live",
+        "expected": "Allow",
+        "observed": "Deny{WrongLifecycle}"
+      }
+    ]
+  },
+  "intent_status": "DIVERGENT",
+  "artifact": {
+    "present": false,
+    "verify": "absent",
+    "artifact_id": null,
+    "failures": 0
+  },
+  "classification": "LAW_REFUTED",
+  "rationale": [
+    "canonical PROOF fails; COUNTEREXAMPLE proves violation"
+  ],
+  "expected_class": "LAW_REFUTED",
+  "expected_mismatch": false
+}

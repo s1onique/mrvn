@@ -1,0 +1,20 @@
+{
+  "gap_id": "GAP-MRVN06-007",
+  "candidate_id": "CAND-MRVN06-B01",
+  "classification": "SPECIFICATION_GAP",
+  "intent_oracle_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+  "candidate_laws_sha256": "2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9",
+  "candidate_implementation_sha256": "fd84a52dc73cfb7b40a1cc4e4d72f4da8ead15d766db4599070b90c477746049",
+  "candidate_artifact_id": "sha256:5d19bd5a2ace0804f3241e0c77b94b3536867ca57f233ea5e3b4e35e8676a30b",
+  "diff_count": 1,
+  "diffs": [
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "lifecycle": "Frozen",
+      "evidence": "Replay",
+      "expected": "Deny{InsufficientEvidence}",
+      "observed": "Deny{WrongActor}"
+    }
+  ]
+}

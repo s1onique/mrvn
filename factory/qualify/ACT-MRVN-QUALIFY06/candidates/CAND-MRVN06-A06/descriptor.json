@@ -1,0 +1,15 @@
+{
+  "candidate_id": "CAND-MRVN06-A06",
+  "family": "DENY_REASON",
+  "mutations": [
+    {
+      "type": "DENY_REASON_SUBSTITUTE",
+      "function": "halt_decision",
+      "actor": "Automation",
+      "lifecycle": "Active",
+      "evidence": "None",
+      "from_reason": "InsufficientEvidence",
+      "to_reason": "WrongActor"
+    }
+  ]
+}

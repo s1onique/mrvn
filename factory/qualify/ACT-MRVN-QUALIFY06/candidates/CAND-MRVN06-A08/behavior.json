@@ -1,0 +1,8 @@
+{
+  "candidate_id": "CAND-MRVN06-A08",
+  "cells": 180,
+  "diff_count": 0,
+  "diffs": [],
+  "behavior_dump_sha256": "e150204f48ce7e0a1aa1632323aec416f78b246fa008e7345b3ebb6a9e3b7214",
+  "behavior_dump_path": "_behavior/_dump.bend"
+}

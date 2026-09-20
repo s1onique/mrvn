@@ -1,0 +1,16 @@
+{
+  "artifact_payload_hashes": {
+    "payload/LAWS.bend": "2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9",
+    "payload/PROOF.bend": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+    "payload/main.bend": "ffed574b60c3a8580921963ba48896e18a8e55bfbc459c0ce11f6597c55f9ce7"
+  },
+  "command": "bun <bend_runner> payload/PROOF.bend",
+  "exit_code": 0,
+  "proof": "payload/PROOF.bend",
+  "schema": "mrvn.proof-run.v1",
+  "stdout_contract": "All terms check.",
+  "stdout_match": true,
+  "toolchain": {
+    "bend_runner_sha256": "34a8a791b02ce92f247bda4cabcd3ff4eabe500002fedbec4867b5db77ee1feb"
+  }
+}

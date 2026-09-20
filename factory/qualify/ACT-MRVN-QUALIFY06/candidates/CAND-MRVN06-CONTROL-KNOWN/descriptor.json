@@ -1,0 +1,15 @@
+{
+  "candidate_id": "CAND-MRVN06-CONTROL-KNOWN",
+  "family": "KNOWN_GAP_CONTROL",
+  "mutations": [
+    {
+      "type": "DENY_REASON_SUBSTITUTE",
+      "function": "close_decision",
+      "actor": "Reviewer",
+      "lifecycle": "Frozen",
+      "evidence": "Replay",
+      "from_reason": "InsufficientEvidence",
+      "to_reason": "Terminal"
+    }
+  ]
+}

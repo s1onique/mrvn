@@ -1,0 +1,36 @@
+{
+  "gap_id": "GAP-MRVN06-004",
+  "candidate_id": "CAND-MRVN06-A05",
+  "classification": "SPECIFICATION_GAP",
+  "intent_oracle_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+  "candidate_laws_sha256": "2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9",
+  "candidate_implementation_sha256": "2debebbd69ad99c5150df92e0ec46fb9c2385f996778d3415af707bc342435c8",
+  "candidate_artifact_id": "sha256:e429925a9218814edbb1ce4bd6d7a02a7e67c0fce0944722b88570bfd6908db2",
+  "diff_count": 3,
+  "diffs": [
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "lifecycle": "Frozen",
+      "evidence": "None",
+      "expected": "Deny{WrongActor}",
+      "observed": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "lifecycle": "Frozen",
+      "evidence": "Replay",
+      "expected": "Deny{WrongActor}",
+      "observed": "Deny{WrongLifecycle}"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "lifecycle": "Frozen",
+      "evidence": "Live",
+      "expected": "Deny{WrongActor}",
+      "observed": "Deny{WrongLifecycle}"
+    }
+  ]
+}

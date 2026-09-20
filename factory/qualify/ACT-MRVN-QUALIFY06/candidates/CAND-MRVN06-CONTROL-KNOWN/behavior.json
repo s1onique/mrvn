@@ -1,0 +1,17 @@
+{
+  "candidate_id": "CAND-MRVN06-CONTROL-KNOWN",
+  "cells": 180,
+  "diff_count": 1,
+  "diffs": [
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "lifecycle": "Frozen",
+      "evidence": "Replay",
+      "expected": "Deny{InsufficientEvidence}",
+      "observed": "Deny{Terminal}"
+    }
+  ],
+  "behavior_dump_sha256": "e2c8bc57f77a548039fc8d2c8c600a2295e9da5d31e9613071966ed1f031375a",
+  "behavior_dump_path": "_behavior/_dump.bend"
+}

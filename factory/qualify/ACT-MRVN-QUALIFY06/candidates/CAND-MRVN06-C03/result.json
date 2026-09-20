@@ -1,0 +1,56 @@
+{
+  "candidate_id": "CAND-MRVN06-C03",
+  "implementation_sha256": "41584ae0f30690db8a18e53aba510bf65f367250fbd2c33277e836a69165d970",
+  "laws_sha256": "2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9",
+  "intent_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+  "proof": {
+    "canonical": "pass",
+    "reproof": "absent",
+    "counterexample": "absent",
+    "canonical_sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+    "reproof_sha256": null,
+    "counterexample_sha256": null
+  },
+  "law_status": "SATISFIED",
+  "behavior": {
+    "cells": 180,
+    "diff_count": 3,
+    "diffs": [
+      {
+        "actor": "Agent",
+        "capability": "Freeze",
+        "lifecycle": "Halted",
+        "evidence": "None",
+        "expected": "Deny{WrongActor}",
+        "observed": "Deny{WrongLifecycle}"
+      },
+      {
+        "actor": "Agent",
+        "capability": "Freeze",
+        "lifecycle": "Halted",
+        "evidence": "Replay",
+        "expected": "Deny{WrongActor}",
+        "observed": "Deny{WrongLifecycle}"
+      },
+      {
+        "actor": "Agent",
+        "capability": "Freeze",
+        "lifecycle": "Halted",
+        "evidence": "Live",
+        "expected": "Deny{WrongActor}",
+        "observed": "Deny{WrongLifecycle}"
+      }
+    ]
+  },
+  "intent_status": "DIVERGENT",
+  "artifact": {
+    "present": true,
+    "verify": "pass",
+    "artifact_id": "sha256:7d603d30375b6ffe1c64eb10e624eb4e12e3a7c512d8d033ac6076b3d3d20156",
+    "failures": 0
+  },
+  "classification": "SPECIFICATION_GAP",
+  "rationale": [
+    "canonical PROOF passes"
+  ]
+}

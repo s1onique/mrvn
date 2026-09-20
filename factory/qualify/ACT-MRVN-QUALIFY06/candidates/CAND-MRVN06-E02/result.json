@@ -1,0 +1,58 @@
+{
+  "candidate_id": "CAND-MRVN06-E02",
+  "implementation_sha256": "e4270b8c4b7a8b5fed7e1d43c1bb6c21585849613124742a184576b65b5e37ea",
+  "laws_sha256": "2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9",
+  "intent_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+  "proof": {
+    "canonical": "fail",
+    "reproof": "absent",
+    "counterexample": "pass",
+    "canonical_sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+    "reproof_sha256": null,
+    "counterexample_sha256": "90d34530c69b048f410f84c3e999d918b73108181b788b9bbeaab32022cb2561"
+  },
+  "law_status": "REFUTED",
+  "behavior": {
+    "cells": 180,
+    "diff_count": 3,
+    "diffs": [
+      {
+        "actor": "Agent",
+        "capability": "Halt",
+        "lifecycle": "Active",
+        "evidence": "None",
+        "expected": "Deny{WrongActor}",
+        "observed": "Allow"
+      },
+      {
+        "actor": "Agent",
+        "capability": "Halt",
+        "lifecycle": "Active",
+        "evidence": "Replay",
+        "expected": "Deny{WrongActor}",
+        "observed": "Allow"
+      },
+      {
+        "actor": "Agent",
+        "capability": "Halt",
+        "lifecycle": "Active",
+        "evidence": "Live",
+        "expected": "Deny{WrongActor}",
+        "observed": "Allow"
+      }
+    ]
+  },
+  "intent_status": "DIVERGENT",
+  "artifact": {
+    "present": false,
+    "verify": "absent",
+    "artifact_id": null,
+    "failures": 0
+  },
+  "classification": "LAW_REFUTED",
+  "rationale": [
+    "canonical PROOF fails; COUNTEREXAMPLE proves violation"
+  ],
+  "expected_class": "LAW_REFUTED",
+  "expected_mismatch": false
+}

@@ -1,0 +1,8 @@
+{
+  "candidate_id": "CAND-MRVN06-CTRL-IDENT",
+  "cells": 180,
+  "diff_count": 0,
+  "diffs": [],
+  "behavior_dump_sha256": "0f30af145640c062c3627bd5311964f8f264871332c2976cb1da35a3b4ea3a84",
+  "behavior_dump_path": "_behavior/_dump.bend"
+}

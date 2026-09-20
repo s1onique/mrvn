@@ -1,0 +1,17 @@
+{
+  "candidate_id": "CAND-MRVN06-A01",
+  "cells": 180,
+  "diff_count": 1,
+  "diffs": [
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "lifecycle": "Active",
+      "evidence": "None",
+      "expected": "Deny{InsufficientEvidence}",
+      "observed": "Deny{WrongActor}"
+    }
+  ],
+  "behavior_dump_sha256": "48940fec1b003a9ac305627a30b2e4576227513d51a615d778d8cf81e62246cf",
+  "behavior_dump_path": "_behavior/_dump.bend"
+}

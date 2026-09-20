@@ -1,0 +1,22 @@
+{
+  "act": "ACT-MRVN-QUALIFY06",
+  "total_artifacts": 1,
+  "verify_pass": 1,
+  "verify_fail": 0,
+  "artifacts": [
+    {
+      "candidate_id": "CAND-MRVN06-D04",
+      "family": "",
+      "classification": "SPECIFICATION_GAP",
+      "diff_count": 3,
+      "artifact_id": "sha256:ae5e8edbb107b660267e2dab272a0c23ca2fc664153cc8d1a4e0e16cdba670b8",
+      "artifact_dir": "candidates/CAND-MRVN06-D04/artifact",
+      "verify_exit": 0,
+      "verify_pass": true,
+      "implementation_sha256": "1cae9466b49ef04b73b3afc1237740d8f4c1e344ebe16c9ca83cb43c198e32fe",
+      "laws_sha256": "2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9",
+      "intent_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+      "proof_kind": "CANONICAL_PROOF"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "candidate_id": "CAND-MRVN06-A08",
+  "family": "DENY_REASON",
+  "mutations": [
+    {
+      "type": "DENY_REASON_SUBSTITUTE",
+      "function": "freeze_decision",
+      "actor": "Reviewer",
+      "lifecycle": "Frozen",
+      "evidence": "Live",
+      "from_reason": "WrongLifecycle",
+      "to_reason": "WrongLifecycle"
+    }
+  ]
+}

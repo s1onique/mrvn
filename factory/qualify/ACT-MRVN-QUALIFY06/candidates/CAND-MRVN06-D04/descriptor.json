@@ -1,0 +1,15 @@
+{
+  "candidate_id": "CAND-MRVN06-D04",
+  "family": "LIFECYCLE",
+  "mutations": [
+    {
+      "type": "DENY_REASON_SUBSTITUTE",
+      "function": "halt_decision",
+      "actor": "Agent",
+      "lifecycle": "Halted",
+      "evidence": "Live",
+      "from_reason": "WrongLifecycle",
+      "to_reason": "InsufficientEvidence"
+    }
+  ]
+}

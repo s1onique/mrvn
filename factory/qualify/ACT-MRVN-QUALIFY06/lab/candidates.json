@@ -1,0 +1,578 @@
+{
+  "act": "ACT-MRVN-QUALIFY06",
+  "canonical_laws_sha256": "2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9",
+  "intent_oracle_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+  "notes": [
+    "Every candidate uses LAWS.bend byte-identical to the canonical MRVN-04 law book.",
+    "The manifest declares only mutation intent, NOT expected outcome (per ACT §20).",
+    "Controls (CTRL-*) and the known-gap control carry expected_class.  Blind-search candidates do NOT."
+  ],
+  "candidates": [
+    {
+      "candidate_id": "CAND-MRVN06-CTRL-IDENT",
+      "family": "CONTROL",
+      "description": "Identical-implementation control.",
+      "expected_class": "EQUIVALENT_SURVIVOR",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-CTRL-IDENT",
+        "family": "CONTROL",
+        "mutations": []
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-CTRL-NEG",
+      "family": "CONTROL",
+      "description": "Negative control: Agent + Freeze + Active + Live -> Allow (must be LAW_REFUTED).",
+      "expected_class": "LAW_REFUTED",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-CTRL-NEG",
+        "family": "CONTROL",
+        "mutations": [
+          {
+            "type": "DENY_TO_ALLOW",
+            "function": "freeze_decision",
+            "actor": "Agent",
+            "lifecycle": "Active",
+            "evidence": "Live"
+          }
+        ],
+        "law_refutation_witness": "Agent,Freeze,Active,Live",
+        "law_refutation_expected": "Deny{WrongActor}"
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-CONTROL-KNOWN",
+      "family": "KNOWN_GAP_CONTROL",
+      "description": "Known-gap positive control (MRVN-04 MUT-08 shape).",
+      "expected_class": "SPECIFICATION_GAP",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-CONTROL-KNOWN",
+        "family": "KNOWN_GAP_CONTROL",
+        "mutations": [
+          {
+            "type": "DENY_REASON_SUBSTITUTE",
+            "function": "close_decision",
+            "actor": "Reviewer",
+            "lifecycle": "Frozen",
+            "evidence": "Replay",
+            "from_reason": "InsufficientEvidence",
+            "to_reason": "Terminal"
+          }
+        ]
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-A01",
+      "family": "DENY_REASON",
+      "description": "A.01: Reviewer + Halt + Active + None -> WrongActor.  Catches LAW-012 (halt_active_reviewer_none_yields_insufficient_evidence) — MUST be LAW_REFUTED.",
+      "expected_class": "LAW_REFUTED",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-A01",
+        "family": "DENY_REASON",
+        "mutations": [
+          {
+            "type": "DENY_REASON_SUBSTITUTE",
+            "function": "halt_decision",
+            "actor": "Reviewer",
+            "lifecycle": "Active",
+            "evidence": "None",
+            "from_reason": "InsufficientEvidence",
+            "to_reason": "WrongActor"
+          }
+        ],
+        "law_refutation_witness": "Reviewer,Halt,Active,None",
+        "law_refutation_expected": "Deny{InsufficientEvidence}"
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-A02",
+      "family": "DENY_REASON",
+      "description": "A.02: Agent + Halt + Active + None -> InsufficientEvidence.  MUST be LAW_REFUTED.",
+      "expected_class": "LAW_REFUTED",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-A02",
+        "family": "DENY_REASON",
+        "mutations": [
+          {
+            "type": "DENY_REASON_SUBSTITUTE",
+            "function": "halt_decision",
+            "actor": "Agent",
+            "lifecycle": "Active",
+            "evidence": "None",
+            "from_reason": "WrongActor",
+            "to_reason": "InsufficientEvidence"
+          }
+        ],
+        "law_refutation_witness": "Agent,Halt,Active,None",
+        "law_refutation_expected": "Deny{WrongActor}"
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-A03",
+      "family": "DENY_REASON",
+      "description": "A.03: Reviewer + Close + Frozen + None -> WrongLifecycle.",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-A03",
+        "family": "DENY_REASON",
+        "mutations": [
+          {
+            "type": "DENY_REASON_SUBSTITUTE",
+            "function": "close_decision",
+            "actor": "Reviewer",
+            "lifecycle": "Frozen",
+            "evidence": "None",
+            "from_reason": "InsufficientEvidence",
+            "to_reason": "WrongLifecycle"
+          }
+        ]
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-A04",
+      "family": "DENY_REASON",
+      "description": "A.04: Reviewer + Freeze + Active + Replay -> WrongActor.",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-A04",
+        "family": "DENY_REASON",
+        "mutations": [
+          {
+            "type": "DENY_REASON_SUBSTITUTE",
+            "function": "freeze_decision",
+            "actor": "Reviewer",
+            "lifecycle": "Active",
+            "evidence": "Replay",
+            "from_reason": "InsufficientEvidence",
+            "to_reason": "WrongActor"
+          }
+        ]
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-A05",
+      "family": "DENY_REASON",
+      "description": "A.05: Agent + Close + Frozen + Live -> WrongLifecycle.",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-A05",
+        "family": "DENY_REASON",
+        "mutations": [
+          {
+            "type": "DENY_REASON_SUBSTITUTE",
+            "function": "close_decision",
+            "actor": "Agent",
+            "lifecycle": "Frozen",
+            "evidence": "Live",
+            "from_reason": "WrongActor",
+            "to_reason": "WrongLifecycle"
+          }
+        ]
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-A06",
+      "family": "DENY_REASON",
+      "description": "A.06: Automation + Halt + Active + None -> WrongActor.",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-A06",
+        "family": "DENY_REASON",
+        "mutations": [
+          {
+            "type": "DENY_REASON_SUBSTITUTE",
+            "function": "halt_decision",
+            "actor": "Automation",
+            "lifecycle": "Active",
+            "evidence": "None",
+            "from_reason": "InsufficientEvidence",
+            "to_reason": "WrongActor"
+          }
+        ]
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-A07",
+      "family": "DENY_REASON",
+      "description": "A.07: Agent + Work + Frozen + Live -> WrongActor.",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-A07",
+        "family": "DENY_REASON",
+        "mutations": [
+          {
+            "type": "DENY_REASON_SUBSTITUTE",
+            "function": "work_decision",
+            "actor": "Agent",
+            "lifecycle": "Frozen",
+            "evidence": "Live",
+            "from_reason": "WrongLifecycle",
+            "to_reason": "WrongActor"
+          }
+        ]
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-A08",
+      "family": "DENY_REASON",
+      "description": "A.08: Reviewer + Freeze + Frozen + Live -> WrongLifecycle (no-op substitute).",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-A08",
+        "family": "DENY_REASON",
+        "mutations": [
+          {
+            "type": "DENY_REASON_SUBSTITUTE",
+            "function": "freeze_decision",
+            "actor": "Reviewer",
+            "lifecycle": "Frozen",
+            "evidence": "Live",
+            "from_reason": "WrongLifecycle",
+            "to_reason": "WrongLifecycle"
+          }
+        ]
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-B01",
+      "family": "EVIDENCE",
+      "description": "B.01: Reviewer + Close + Frozen + Replay -> WrongActor.",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-B01",
+        "family": "EVIDENCE",
+        "mutations": [
+          {
+            "type": "DENY_REASON_SUBSTITUTE",
+            "function": "close_decision",
+            "actor": "Reviewer",
+            "lifecycle": "Frozen",
+            "evidence": "Replay",
+            "from_reason": "InsufficientEvidence",
+            "to_reason": "WrongActor"
+          }
+        ]
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-B02",
+      "family": "EVIDENCE",
+      "description": "B.02: Reviewer + Close + Frozen + None -> WrongActor.",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-B02",
+        "family": "EVIDENCE",
+        "mutations": [
+          {
+            "type": "DENY_REASON_SUBSTITUTE",
+            "function": "close_decision",
+            "actor": "Reviewer",
+            "lifecycle": "Frozen",
+            "evidence": "None",
+            "from_reason": "InsufficientEvidence",
+            "to_reason": "WrongActor"
+          }
+        ]
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-B03",
+      "family": "EVIDENCE",
+      "description": "B.03: Reviewer + Freeze + Active + None -> WrongLifecycle.",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-B03",
+        "family": "EVIDENCE",
+        "mutations": [
+          {
+            "type": "DENY_REASON_SUBSTITUTE",
+            "function": "freeze_decision",
+            "actor": "Reviewer",
+            "lifecycle": "Active",
+            "evidence": "None",
+            "from_reason": "InsufficientEvidence",
+            "to_reason": "WrongLifecycle"
+          }
+        ]
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-B04",
+      "family": "EVIDENCE",
+      "description": "B.04: Reviewer + Freeze + Halted + None -> WrongLifecycle.",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-B04",
+        "family": "EVIDENCE",
+        "mutations": [
+          {
+            "type": "DENY_REASON_SUBSTITUTE",
+            "function": "freeze_decision",
+            "actor": "Reviewer",
+            "lifecycle": "Halted",
+            "evidence": "None",
+            "from_reason": "InsufficientEvidence",
+            "to_reason": "WrongLifecycle"
+          }
+        ]
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-C01",
+      "family": "ACTOR",
+      "description": "C.01: Agent + Close + Frozen + Live -> WrongLifecycle.",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-C01",
+        "family": "ACTOR",
+        "mutations": [
+          {
+            "type": "DENY_REASON_SUBSTITUTE",
+            "function": "close_decision",
+            "actor": "Agent",
+            "lifecycle": "Frozen",
+            "evidence": "Live",
+            "from_reason": "WrongActor",
+            "to_reason": "WrongLifecycle"
+          }
+        ]
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-C02",
+      "family": "ACTOR",
+      "description": "C.02: Automation + Freeze + Active + Live -> WrongLifecycle.",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-C02",
+        "family": "ACTOR",
+        "mutations": [
+          {
+            "type": "DENY_REASON_SUBSTITUTE",
+            "function": "freeze_decision",
+            "actor": "Automation",
+            "lifecycle": "Active",
+            "evidence": "Live",
+            "from_reason": "WrongActor",
+            "to_reason": "WrongLifecycle"
+          }
+        ]
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-C03",
+      "family": "ACTOR",
+      "description": "C.03: Agent + Freeze + Halted + Live -> WrongLifecycle.",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-C03",
+        "family": "ACTOR",
+        "mutations": [
+          {
+            "type": "DENY_REASON_SUBSTITUTE",
+            "function": "freeze_decision",
+            "actor": "Agent",
+            "lifecycle": "Halted",
+            "evidence": "Live",
+            "from_reason": "WrongActor",
+            "to_reason": "WrongLifecycle"
+          }
+        ]
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-C04",
+      "family": "ACTOR",
+      "description": "C.04: Automation + Close + Frozen + Live -> WrongLifecycle.",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-C04",
+        "family": "ACTOR",
+        "mutations": [
+          {
+            "type": "DENY_REASON_SUBSTITUTE",
+            "function": "close_decision",
+            "actor": "Automation",
+            "lifecycle": "Frozen",
+            "evidence": "Live",
+            "from_reason": "WrongActor",
+            "to_reason": "WrongLifecycle"
+          }
+        ]
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-D01",
+      "family": "LIFECYCLE",
+      "description": "D.01: Agent + Work + Frozen + Live -> WrongActor.",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-D01",
+        "family": "LIFECYCLE",
+        "mutations": [
+          {
+            "type": "DENY_REASON_SUBSTITUTE",
+            "function": "work_decision",
+            "actor": "Agent",
+            "lifecycle": "Frozen",
+            "evidence": "Live",
+            "from_reason": "WrongLifecycle",
+            "to_reason": "WrongActor"
+          }
+        ]
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-D02",
+      "family": "LIFECYCLE",
+      "description": "D.02: Reviewer + Halt + Halted + Live -> InsufficientEvidence.",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-D02",
+        "family": "LIFECYCLE",
+        "mutations": [
+          {
+            "type": "DENY_REASON_SUBSTITUTE",
+            "function": "halt_decision",
+            "actor": "Reviewer",
+            "lifecycle": "Halted",
+            "evidence": "Live",
+            "from_reason": "WrongLifecycle",
+            "to_reason": "InsufficientEvidence"
+          }
+        ]
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-D03",
+      "family": "LIFECYCLE",
+      "description": "D.03: Automation + Halt + Draft + Live -> InsufficientEvidence.",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-D03",
+        "family": "LIFECYCLE",
+        "mutations": [
+          {
+            "type": "DENY_REASON_SUBSTITUTE",
+            "function": "halt_decision",
+            "actor": "Automation",
+            "lifecycle": "Draft",
+            "evidence": "Live",
+            "from_reason": "WrongLifecycle",
+            "to_reason": "InsufficientEvidence"
+          }
+        ]
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-D04",
+      "family": "LIFECYCLE",
+      "description": "D.04: Agent + Halt + Halted + Live -> InsufficientEvidence.",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-D04",
+        "family": "LIFECYCLE",
+        "mutations": [
+          {
+            "type": "DENY_REASON_SUBSTITUTE",
+            "function": "halt_decision",
+            "actor": "Agent",
+            "lifecycle": "Halted",
+            "evidence": "Live",
+            "from_reason": "WrongLifecycle",
+            "to_reason": "InsufficientEvidence"
+          }
+        ]
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-E01",
+      "family": "PRECEDENCE",
+      "description": "E.01: Reviewer + Halt + Active + Live -> Deny{WrongActor}.  MUST be LAW_REFUTED.",
+      "expected_class": "LAW_REFUTED",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-E01",
+        "family": "PRECEDENCE",
+        "mutations": [
+          {
+            "type": "ALLOW_TO_DENY",
+            "function": "halt_decision",
+            "actor": "Reviewer",
+            "lifecycle": "Active",
+            "evidence": "Live",
+            "to_reason": "WrongActor"
+          }
+        ],
+        "law_refutation_witness": "Reviewer,Halt,Active,Live",
+        "law_refutation_expected": "Allow"
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-E02",
+      "family": "PRECEDENCE",
+      "description": "E.02: Agent + Halt + Active + Live -> Allow.  MUST be LAW_REFUTED.",
+      "expected_class": "LAW_REFUTED",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-E02",
+        "family": "PRECEDENCE",
+        "mutations": [
+          {
+            "type": "DENY_TO_ALLOW",
+            "function": "halt_decision",
+            "actor": "Agent",
+            "lifecycle": "Active",
+            "evidence": "Live"
+          }
+        ],
+        "law_refutation_witness": "Agent,Halt,Active,Live",
+        "law_refutation_expected": "Deny{WrongActor}"
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-E03",
+      "family": "PRECEDENCE",
+      "description": "E.03: Reviewer + Work + Frozen + Live -> Allow.  MUST be LAW_REFUTED.",
+      "expected_class": "LAW_REFUTED",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-E03",
+        "family": "PRECEDENCE",
+        "mutations": [
+          {
+            "type": "DENY_TO_ALLOW",
+            "function": "work_decision",
+            "actor": "Reviewer",
+            "lifecycle": "Frozen",
+            "evidence": "Live"
+          }
+        ],
+        "law_refutation_witness": "Reviewer,Work,Frozen,Live",
+        "law_refutation_expected": "Deny{WrongLifecycle}"
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-E04",
+      "family": "PRECEDENCE",
+      "description": "E.04: Reviewer + Close + Frozen + Replay -> Allow.  MUST be LAW_REFUTED.",
+      "expected_class": "LAW_REFUTED",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-E04",
+        "family": "PRECEDENCE",
+        "mutations": [
+          {
+            "type": "DENY_TO_ALLOW",
+            "function": "close_decision",
+            "actor": "Reviewer",
+            "lifecycle": "Frozen",
+            "evidence": "Replay"
+          }
+        ],
+        "law_refutation_witness": "Reviewer,Close,Frozen,Replay",
+        "law_refutation_expected": "Deny{InsufficientEvidence}"
+      }
+    },
+    {
+      "candidate_id": "CAND-MRVN06-E05",
+      "family": "PRECEDENCE",
+      "description": "E.05: Agent + Work + Active + Live -> Deny{WrongLifecycle}.  MUST be LAW_REFUTED.",
+      "expected_class": "LAW_REFUTED",
+      "descriptor": {
+        "candidate_id": "CAND-MRVN06-E05",
+        "family": "PRECEDENCE",
+        "mutations": [
+          {
+            "type": "ALLOW_TO_DENY",
+            "function": "work_decision",
+            "actor": "Agent",
+            "lifecycle": "Active",
+            "evidence": "Live",
+            "to_reason": "WrongLifecycle"
+          }
+        ],
+        "law_refutation_witness": "Agent,Work,Active,Live",
+        "law_refutation_expected": "Allow"
+      }
+    }
+  ]
+}

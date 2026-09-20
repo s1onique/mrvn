@@ -1,0 +1,40 @@
+{
+  "candidate_id": "CAND-MRVN06-B03",
+  "implementation_sha256": "e01c698a669082a7b0da1dc13681074db403f5d018e7d40091008cb674ff0be0",
+  "laws_sha256": "2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9",
+  "intent_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+  "proof": {
+    "canonical": "pass",
+    "reproof": "absent",
+    "counterexample": "absent",
+    "canonical_sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+    "reproof_sha256": null,
+    "counterexample_sha256": null
+  },
+  "law_status": "SATISFIED",
+  "behavior": {
+    "cells": 180,
+    "diff_count": 1,
+    "diffs": [
+      {
+        "actor": "Reviewer",
+        "capability": "Freeze",
+        "lifecycle": "Active",
+        "evidence": "None",
+        "expected": "Deny{InsufficientEvidence}",
+        "observed": "Deny{WrongLifecycle}"
+      }
+    ]
+  },
+  "intent_status": "DIVERGENT",
+  "artifact": {
+    "present": true,
+    "verify": "pass",
+    "artifact_id": "sha256:7a95fd57dcb860afb38c28027ccb95f0ec7d7a153ac7fa35c5e4355b4db81437",
+    "failures": 0
+  },
+  "classification": "SPECIFICATION_GAP",
+  "rationale": [
+    "canonical PROOF passes"
+  ]
+}

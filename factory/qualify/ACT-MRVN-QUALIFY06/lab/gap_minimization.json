@@ -1,0 +1,294 @@
+{
+  "act": "ACT-MRVN-QUALIFY06",
+  "total_records": 18,
+  "records": [
+    {
+      "gap_id": "CAND-MRVN06-CONTROL-KNOWN",
+      "candidate_id": "CAND-MRVN06-CONTROL-KNOWN",
+      "family": "KNOWN_GAP_CONTROL",
+      "original_diff_count": 1,
+      "minimized_diff_count": 1,
+      "minimized_witness": {
+        "actor": "Reviewer",
+        "capability": "Close",
+        "lifecycle": "Frozen",
+        "evidence": "Replay",
+        "expected": "Deny{InsufficientEvidence}",
+        "observed": "Deny{Terminal}"
+      },
+      "rationale": "Single-cell mutation: no further minimization possible."
+    },
+    {
+      "gap_id": "CAND-MRVN06-A03",
+      "candidate_id": "CAND-MRVN06-A03",
+      "family": "DENY_REASON",
+      "original_diff_count": 1,
+      "minimized_diff_count": 1,
+      "minimized_witness": {
+        "actor": "Reviewer",
+        "capability": "Close",
+        "lifecycle": "Frozen",
+        "evidence": "None",
+        "expected": "Deny{InsufficientEvidence}",
+        "observed": "Deny{WrongLifecycle}"
+      },
+      "rationale": "Single-cell mutation: no further minimization possible."
+    },
+    {
+      "gap_id": "CAND-MRVN06-A04",
+      "candidate_id": "CAND-MRVN06-A04",
+      "family": "DENY_REASON",
+      "original_diff_count": 1,
+      "minimized_diff_count": 1,
+      "minimized_witness": {
+        "actor": "Reviewer",
+        "capability": "Freeze",
+        "lifecycle": "Active",
+        "evidence": "Replay",
+        "expected": "Deny{InsufficientEvidence}",
+        "observed": "Deny{WrongActor}"
+      },
+      "rationale": "Single-cell mutation: no further minimization possible."
+    },
+    {
+      "gap_id": "CAND-MRVN06-A05",
+      "candidate_id": "CAND-MRVN06-A05",
+      "family": "DENY_REASON",
+      "original_diff_count": 3,
+      "minimized_diff_count": 3,
+      "minimized_witness": {
+        "actor": "Agent",
+        "capability": "Close",
+        "lifecycle": "Frozen",
+        "evidence": "None",
+        "expected": "Deny{WrongActor}",
+        "observed": "Deny{WrongLifecycle}"
+      },
+      "rationale": "Implementation's lifecycle case has no nested evidence match; a single-case substitution affects all 3 evidence variants. This is the natural minimum semantic surface."
+    },
+    {
+      "gap_id": "CAND-MRVN06-A06",
+      "candidate_id": "CAND-MRVN06-A06",
+      "family": "DENY_REASON",
+      "original_diff_count": 1,
+      "minimized_diff_count": 1,
+      "minimized_witness": {
+        "actor": "Automation",
+        "capability": "Halt",
+        "lifecycle": "Active",
+        "evidence": "None",
+        "expected": "Deny{InsufficientEvidence}",
+        "observed": "Deny{WrongActor}"
+      },
+      "rationale": "Single-cell mutation: no further minimization possible."
+    },
+    {
+      "gap_id": "CAND-MRVN06-A07",
+      "candidate_id": "CAND-MRVN06-A07",
+      "family": "DENY_REASON",
+      "original_diff_count": 3,
+      "minimized_diff_count": 3,
+      "minimized_witness": {
+        "actor": "Agent",
+        "capability": "Work",
+        "lifecycle": "Frozen",
+        "evidence": "None",
+        "expected": "Deny{WrongLifecycle}",
+        "observed": "Deny{WrongActor}"
+      },
+      "rationale": "Implementation's lifecycle case has no nested evidence match; a single-case substitution affects all 3 evidence variants. This is the natural minimum semantic surface."
+    },
+    {
+      "gap_id": "CAND-MRVN06-B01",
+      "candidate_id": "CAND-MRVN06-B01",
+      "family": "EVIDENCE",
+      "original_diff_count": 1,
+      "minimized_diff_count": 1,
+      "minimized_witness": {
+        "actor": "Reviewer",
+        "capability": "Close",
+        "lifecycle": "Frozen",
+        "evidence": "Replay",
+        "expected": "Deny{InsufficientEvidence}",
+        "observed": "Deny{WrongActor}"
+      },
+      "rationale": "Single-cell mutation: no further minimization possible."
+    },
+    {
+      "gap_id": "CAND-MRVN06-B02",
+      "candidate_id": "CAND-MRVN06-B02",
+      "family": "EVIDENCE",
+      "original_diff_count": 1,
+      "minimized_diff_count": 1,
+      "minimized_witness": {
+        "actor": "Reviewer",
+        "capability": "Close",
+        "lifecycle": "Frozen",
+        "evidence": "None",
+        "expected": "Deny{InsufficientEvidence}",
+        "observed": "Deny{WrongActor}"
+      },
+      "rationale": "Single-cell mutation: no further minimization possible."
+    },
+    {
+      "gap_id": "CAND-MRVN06-B03",
+      "candidate_id": "CAND-MRVN06-B03",
+      "family": "EVIDENCE",
+      "original_diff_count": 1,
+      "minimized_diff_count": 1,
+      "minimized_witness": {
+        "actor": "Reviewer",
+        "capability": "Freeze",
+        "lifecycle": "Active",
+        "evidence": "None",
+        "expected": "Deny{InsufficientEvidence}",
+        "observed": "Deny{WrongLifecycle}"
+      },
+      "rationale": "Single-cell mutation: no further minimization possible."
+    },
+    {
+      "gap_id": "CAND-MRVN06-B04",
+      "candidate_id": "CAND-MRVN06-B04",
+      "family": "EVIDENCE",
+      "original_diff_count": 1,
+      "minimized_diff_count": 1,
+      "minimized_witness": {
+        "actor": "Reviewer",
+        "capability": "Freeze",
+        "lifecycle": "Halted",
+        "evidence": "None",
+        "expected": "Deny{InsufficientEvidence}",
+        "observed": "Deny{WrongLifecycle}"
+      },
+      "rationale": "Single-cell mutation: no further minimization possible."
+    },
+    {
+      "gap_id": "CAND-MRVN06-C01",
+      "candidate_id": "CAND-MRVN06-C01",
+      "family": "ACTOR",
+      "original_diff_count": 3,
+      "minimized_diff_count": 3,
+      "minimized_witness": {
+        "actor": "Agent",
+        "capability": "Close",
+        "lifecycle": "Frozen",
+        "evidence": "None",
+        "expected": "Deny{WrongActor}",
+        "observed": "Deny{WrongLifecycle}"
+      },
+      "rationale": "Implementation's lifecycle case has no nested evidence match; a single-case substitution affects all 3 evidence variants. This is the natural minimum semantic surface."
+    },
+    {
+      "gap_id": "CAND-MRVN06-C02",
+      "candidate_id": "CAND-MRVN06-C02",
+      "family": "ACTOR",
+      "original_diff_count": 3,
+      "minimized_diff_count": 3,
+      "minimized_witness": {
+        "actor": "Automation",
+        "capability": "Freeze",
+        "lifecycle": "Active",
+        "evidence": "None",
+        "expected": "Deny{WrongActor}",
+        "observed": "Deny{WrongLifecycle}"
+      },
+      "rationale": "Implementation's lifecycle case has no nested evidence match; a single-case substitution affects all 3 evidence variants. This is the natural minimum semantic surface."
+    },
+    {
+      "gap_id": "CAND-MRVN06-C03",
+      "candidate_id": "CAND-MRVN06-C03",
+      "family": "ACTOR",
+      "original_diff_count": 3,
+      "minimized_diff_count": 3,
+      "minimized_witness": {
+        "actor": "Agent",
+        "capability": "Freeze",
+        "lifecycle": "Halted",
+        "evidence": "None",
+        "expected": "Deny{WrongActor}",
+        "observed": "Deny{WrongLifecycle}"
+      },
+      "rationale": "Implementation's lifecycle case has no nested evidence match; a single-case substitution affects all 3 evidence variants. This is the natural minimum semantic surface."
+    },
+    {
+      "gap_id": "CAND-MRVN06-C04",
+      "candidate_id": "CAND-MRVN06-C04",
+      "family": "ACTOR",
+      "original_diff_count": 3,
+      "minimized_diff_count": 3,
+      "minimized_witness": {
+        "actor": "Automation",
+        "capability": "Close",
+        "lifecycle": "Frozen",
+        "evidence": "None",
+        "expected": "Deny{WrongActor}",
+        "observed": "Deny{WrongLifecycle}"
+      },
+      "rationale": "Implementation's lifecycle case has no nested evidence match; a single-case substitution affects all 3 evidence variants. This is the natural minimum semantic surface."
+    },
+    {
+      "gap_id": "CAND-MRVN06-D01",
+      "candidate_id": "CAND-MRVN06-D01",
+      "family": "LIFECYCLE",
+      "original_diff_count": 3,
+      "minimized_diff_count": 3,
+      "minimized_witness": {
+        "actor": "Agent",
+        "capability": "Work",
+        "lifecycle": "Frozen",
+        "evidence": "None",
+        "expected": "Deny{WrongLifecycle}",
+        "observed": "Deny{WrongActor}"
+      },
+      "rationale": "Implementation's lifecycle case has no nested evidence match; a single-case substitution affects all 3 evidence variants. This is the natural minimum semantic surface."
+    },
+    {
+      "gap_id": "CAND-MRVN06-D02",
+      "candidate_id": "CAND-MRVN06-D02",
+      "family": "LIFECYCLE",
+      "original_diff_count": 3,
+      "minimized_diff_count": 3,
+      "minimized_witness": {
+        "actor": "Reviewer",
+        "capability": "Halt",
+        "lifecycle": "Halted",
+        "evidence": "None",
+        "expected": "Deny{WrongLifecycle}",
+        "observed": "Deny{InsufficientEvidence}"
+      },
+      "rationale": "Implementation's lifecycle case has no nested evidence match; a single-case substitution affects all 3 evidence variants. This is the natural minimum semantic surface."
+    },
+    {
+      "gap_id": "CAND-MRVN06-D03",
+      "candidate_id": "CAND-MRVN06-D03",
+      "family": "LIFECYCLE",
+      "original_diff_count": 3,
+      "minimized_diff_count": 3,
+      "minimized_witness": {
+        "actor": "Automation",
+        "capability": "Halt",
+        "lifecycle": "Draft",
+        "evidence": "None",
+        "expected": "Deny{WrongLifecycle}",
+        "observed": "Deny{InsufficientEvidence}"
+      },
+      "rationale": "Implementation's lifecycle case has no nested evidence match; a single-case substitution affects all 3 evidence variants. This is the natural minimum semantic surface."
+    },
+    {
+      "gap_id": "CAND-MRVN06-D04",
+      "candidate_id": "CAND-MRVN06-D04",
+      "family": "LIFECYCLE",
+      "original_diff_count": 3,
+      "minimized_diff_count": 3,
+      "minimized_witness": {
+        "actor": "Agent",
+        "capability": "Halt",
+        "lifecycle": "Halted",
+        "evidence": "None",
+        "expected": "Deny{WrongLifecycle}",
+        "observed": "Deny{InsufficientEvidence}"
+      },
+      "rationale": "Implementation's lifecycle case has no nested evidence match; a single-case substitution affects all 3 evidence variants. This is the natural minimum semantic surface."
+    }
+  ]
+}

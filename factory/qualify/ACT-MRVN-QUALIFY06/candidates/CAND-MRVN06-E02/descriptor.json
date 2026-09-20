@@ -1,0 +1,15 @@
+{
+  "candidate_id": "CAND-MRVN06-E02",
+  "family": "PRECEDENCE",
+  "mutations": [
+    {
+      "type": "DENY_TO_ALLOW",
+      "function": "halt_decision",
+      "actor": "Agent",
+      "lifecycle": "Active",
+      "evidence": "Live"
+    }
+  ],
+  "law_refutation_witness": "Agent,Halt,Active,Live",
+  "law_refutation_expected": "Deny{WrongActor}"
+}
