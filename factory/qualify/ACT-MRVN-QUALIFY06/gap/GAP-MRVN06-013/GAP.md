@@ -8,8 +8,8 @@
 
 ## Authority chain
 
-* canonical_laws_sha256: 2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9
-* candidate_laws_sha256: 2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9
+* canonical_laws_sha256: 0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8
+* candidate_laws_sha256: 0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8
 * SAME_LAW_BOOK: true
 * intent_oracle_sha256: a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9
 * candidate_proof: CANONICAL_PROOF_PASS
@@ -33,14 +33,14 @@ Witness cell:
 
 SPECIFICATION_GAP holds because:
 
-1. SAME_LAW_BOOK: candidate_laws_sha256 == canonical_laws_sha256 == 2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9
+1. SAME_LAW_BOOK: candidate_laws_sha256 == canonical_laws_sha256 == 0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8
 2. LAW_SATISFACTION_VERIFIED: canonical PROOF passes against the candidate implementation
 3. INTENT_ORACLE_IDENTITY_BOUND: intent_oracle_sha256 == a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9 (matches frozen oracle on disk)
 4. BEHAVIORAL_DIVERGENCE_VERIFIED: 3 cell(s) of 180 differ from the intent oracle, including the witness above
 
 ## Portable artifact
 
-* artifact_id: sha256:f100408f127c79a0b2983fa4ebeb6d74447aeb861de44d11b836a51089f5a3b6
+* artifact_id: sha256:e094a81231f7917db5f6beeaede245c7a4202f7759d8f6abd5002aed5fe340ec
 * artifact_path: GAP-MRVN06-013/candidate-artifact
 
 ## Taxonomy

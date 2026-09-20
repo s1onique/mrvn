@@ -3,12 +3,24 @@
 //
 // Generates lab/candidates.json from a compact inline spec.
 
-import { writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { resolve } from "node:path";
 
 const ROOT = resolve(import.meta.dir, "..");
-const CANONICAL_LAWS_SHA = "2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9";
-const INTENT_ORACLE_SHA = "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9";
+
+// ACT-MRVN-06-CORRECTION03 (patch hygiene): compute the canonical
+// law hash and intent oracle hash from the actual files on disk,
+// not from hardcoded constants.  This way, any byte-level change to
+// the canonical LAWS.bend (e.g. whitespace normalization) is
+// reflected automatically in the generated candidates.json and the
+// downstream artifact identity chain.
+function sha256File(path: string): string {
+  return createHash("sha256").update(readFileSync(path)).digest("hex");
+}
+
+const CANONICAL_LAWS_SHA = sha256File(resolve(ROOT, "authority-kernel/LAWS.bend"));
+const INTENT_ORACLE_SHA = sha256File(resolve(ROOT, "intent/oracle.json"));
 
 function sub(fn: string, a: string, lc: string, ev: string, from: string, to: string) {
   return { type: "DENY_REASON_SUBSTITUTE", function: fn, actor: a, lifecycle: lc, evidence: ev, from_reason: from, to_reason: to };

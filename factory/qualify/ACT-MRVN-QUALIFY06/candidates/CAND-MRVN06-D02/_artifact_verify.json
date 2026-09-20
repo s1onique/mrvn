@@ -1,5 +1,5 @@
 {
-  "artifact_id": "sha256:6785ebe9097848da05d938cda6c576ccf9f607e7b4f27239d7da9d006126cf6f",
+  "artifact_id": "sha256:f8dd318c74b2d898586cf91ad45948d2f6ef7b8e27c4226372e677ae365363d5",
   "claims": [{
       "claim_id": "formal-law-satisfaction",
       "reasons": ["all machine fields present and equal to recomputed reality; live proof replay PASS"

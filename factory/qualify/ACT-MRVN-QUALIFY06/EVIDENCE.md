@@ -14,6 +14,27 @@ the bounded question in ACT §1.
 > equivalent_survivors=2, specification_gaps=18, law_refuted=8,
 > canonical_proof_survivors=20) are unchanged.
 
+> **CORRECTION03 (post-reviewer-disposition, patch hygiene,
+> CURRENTLY AUTHORITATIVE)** — The pre-CORRECTION03 commit failed
+> `git diff --check` (1 trailing whitespace in EVIDENCE.md, 65 LAWS.bend
+> copies with extra blank line at EOF).  CORRECTION03 normalizes the
+> canonical LAWS.bend to a single trailing newline (matching the
+> convention of PROOF.bend, main.bend, base.bend under
+> `authority-kernel/`), cascades the normalized LAWS.bend to all 64
+> copies under `candidates/*/LAWS.bend`,
+> `candidates/*/artifact/payload/LAWS.bend`, and
+> `gap/*/candidate-artifact/payload/LAWS.bend`.  `build_manifest.ts`
+> now derives the canonical law hash from the actual file (no hardcoded
+> constant).  All artifacts are regenerated; all artifact IDs change
+> (semantic content unchanged); 20/20 still pass toolchain-bound FULL
+> verify.  MRVN-04 results.json hash unchanged.  See E.37.
+
+> **CORRECTION02 (post-reviewer-disposition, HISTORICAL / superseded
+> by CORRECTION03)** — The CORRECTION01 artifact-verify gate was
+> tightened to remove `--allow-toolchain-drift` and the `toolchain_tamper`
+> attack (Test 6) was added.  See E.32..E.36.  All CORRECTION02
+> counts were preserved into CORRECTION03.
+
 > **CORRECTION01 (post-reviewer-disposition, HISTORICAL /
 > NON-AUTHORITATIVE)** — The CORRECTION01 section (E.27..E.30)
 > captured the artifact-verify gate (P0), regression hygiene (P0),
@@ -41,7 +62,7 @@ the bounded question in ACT §1.
 Frozen identities:
 
 ```text
-canonical_laws_sha256      = 2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9
+canonical_laws_sha256      = 0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8   (post-CORRECTION03)
 canonical_impl_sha256      = eea5d84f80bf9bf3671fad7d47447539891debb010063402174c4c86f0cbf4eb
 canonical_proof_sha256     = c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8
 INTENT_TEXT_SHA256         = 1e21d2f56e2d587ef08499a0f58aac47960a6d5c5b4b899a39e972e92985d274
@@ -55,7 +76,7 @@ toolchain_closure:
   bend2/base.bend          = b2d53bbd83639c3ae27260b318efa09de9df6006a556ac6ef41c104ea164917a
 ```
 
-## E.1 — Canonical law freeze
+## E.1 — Canonical law freeze [HISTORICAL — pre-CORRECTION03 sha256sum transcript; post-CORRECTION03 canonical sha256 is 0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8]
 
 ```text
 $ sha256sum factory/qualify/ACT-MRVN-QUALIFY06/authority-kernel/LAWS.bend \
@@ -212,7 +233,7 @@ The counterexample was auto-generated via `make_counterexample.ts`
 against the witness cell `Agent,Freeze,Active,Live` with expected
 `Deny{WrongActor}`.
 
-## E.10 — Known-gap control
+## E.10 — Known-gap control [HISTORICAL — pre-CORRECTION03 candidate result.json transcript; post-CORRECTION03 artifact_id is sha256:6e19b7bc3cc987f31ac08cabf5a46a63e69f4f675a392268ccedade537a99efd]
 
 ```text
 CAND-MRVN06-CONTROL-KNOWN  (reproduces MRVN-04 MUT-08)
@@ -232,6 +253,26 @@ CAND-MRVN06-CONTROL-KNOWN  (reproduces MRVN-04 MUT-08)
 
 The MRVN-04 MUT-08 gap **persists** in the current law book.  The lab
 successfully re-discovered it.
+
+**Post-CORRECTION03 note** (added 2026-09-20): the substantive witness
+above is unchanged.  Post-CORRECTION03, CONTROL-KNOWN's
+`result.json` shows:
+
+```text
+classification:  SPECIFICATION_GAP
+law_status:      SATISFIED
+intent_status:   DIVERGENT
+artifact.verify: pass
+artifact_id:     sha256:6e19b7bc3cc987f31ac08cabf5a46a63e69f4f675a392268ccedade537a99efd
+diff_count:      1
+witness:
+  actor       = Reviewer
+  capability  = Close
+  lifecycle   = Frozen
+  evidence    = Replay
+  expected    = Deny{InsufficientEvidence}
+  candidate   = Deny{Terminal}
+```
 
 ## E.11 — Family A (DENY_REASON, 8 candidates)
 
@@ -523,16 +564,16 @@ gap_rate_among_law_satisfied = 18/20 = 90%
 ## E.24 — Final hashes / status
 
 ```text
-canonical_laws_sha256      = 2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9
+canonical_laws_sha256      = 0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8   (post-CORRECTION03)
 canonical_impl_sha256      = eea5d84f80bf9bf3671fad7d47447539891debb010063402174c4c86f0cbf4eb
 canonical_proof_sha256     = c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8
 INTENT_TEXT_SHA256         = 1e21d2f56e2d587ef08499a0f58aac47960a6d5c5b4b899a39e972e92985d274
 INTENT_ORACLE_SHA256       = a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9
 
 canonical_artifact_id      = sha256:848a89bdc7e14bec6423bf10ed78e31479cf678b46d8cfd12e6a201635b0df24  (MRVN-05)
-min_gap_artifact_id        = sha256:f832f53cc5add6130028f3680775add76a2b74e9d7fe4aba2e615d564b805a5b  (CONTROL-KNOWN)
+min_gap_artifact_id        = sha256:6e19b7bc3cc987f31ac08cabf5a46a63e69f4f675a392268ccedade537a99efd  (CONTROL-KNOWN, post-CORRECTION03)
 
-candidate_law_sha256       = ALL 28 candidates == 2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9
+candidate_law_sha256       = ALL 28 candidates == 0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8   (post-CORRECTION03)
 candidate_intent_sha256    = ALL 28 candidates == a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9
 
 candidate_proof_sha256 (canonical) = c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8 (ALL 20 law-satisfied)
@@ -606,7 +647,7 @@ Results: 5 pass, 0 fail
 ```
 
 Note the `fake_artifact` test now expects `NO_GAP_CLASSIFICATION +
-exit=1`, replacing the previous (incorrect) `SPECIFICATION_GAP` 
+exit=1`, replacing the previous (incorrect)`SPECIFICATION_GAP`
 expectation.
 
 The classifier self_test has 4 new cases:
@@ -689,7 +730,7 @@ implementation or any prior lab evidence.
 ## E.30 — Post-CORRECTION01 final hashes / status [HISTORICAL / NON-AUTHORITATIVE]
 
 ```text
-canonical_laws_sha256      = 2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9
+canonical_laws_sha256      = 0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8   (post-CORRECTION03)
 canonical_impl_sha256      = eea5d84f80bf9bf3671fad7d47447539891debb010063402174c4c86f0cbf4eb
 canonical_proof_sha256     = c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8
 INTENT_TEXT_SHA256         = 1e21d2f56e2d587ef08499a0f58aac47960a6d5c5b4b899a39e972e92985d274
@@ -697,9 +738,9 @@ INTENT_ORACLE_SHA256       = a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a9
 build_oracle_sha256        = 312bc3c610a3b64482c0c6f99a0b0249c3cb163d9a00e1a25822d09c91644e37
 
 canonical_artifact_id      = sha256:848a89bdc7e14bec6423bf10ed78e31479cf678b46d8cfd12e6a201635b0df24  (MRVN-05)
-min_gap_artifact_id        = sha256:f832f53cc5add6130028f3680775add76a2b74e9d7fe4aba2e615d564b805a5b  (CONTROL-KNOWN)
+min_gap_artifact_id        = sha256:6e19b7bc3cc987f31ac08cabf5a46a63e69f4f675a392268ccedade537a99efd  (CONTROL-KNOWN, post-CORRECTION03)
 
-candidate_law_sha256       = ALL 28 candidates == 2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9
+candidate_law_sha256       = ALL 28 candidates == 0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8   (post-CORRECTION03)
 candidate_intent_sha256    = ALL 28 candidates == a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9
 
 candidate_proof_sha256 (canonical) = c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8 (ALL 20 law-satisfied)
@@ -878,7 +919,7 @@ MRVN-05 verify_artifact --mode full: integrity=pass proof=pass supplemental=pass
 ## E.35 — Post-CORRECTION02 final hashes / status
 
 ```text
-canonical_laws_sha256      = 2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9
+canonical_laws_sha256      = 0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8   (post-CORRECTION03)
 canonical_impl_sha256      = eea5d84f80bf9bf3671fad7d47447539891debb010063402174c4c86f0cbf4eb
 canonical_proof_sha256     = c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8
 INTENT_TEXT_SHA256         = 1e21d2f56e2d587ef08499a0f58aac47960a6d5c5b4b899a39e972e92985d274
@@ -892,9 +933,9 @@ live_bend2_toolchain_sha256 (now part of every authoritative artifact verify):
   bend2/base.bend = b2d53bbd83639c3ae27260b318efa09de9df6006a556ac6ef41c104ea164917a
 
 canonical_artifact_id      = sha256:848a89bdc7e14bec6423bf10ed78e31479cf678b46d8cfd12e6a201635b0df24  (MRVN-05)
-min_gap_artifact_id        = sha256:f832f53cc5add6130028f3680775add76a2b74e9d7fe4aba2e615d564b805a5b  (CONTROL-KNOWN)
+min_gap_artifact_id        = sha256:6e19b7bc3cc987f31ac08cabf5a46a63e69f4f675a392268ccedade537a99efd  (CONTROL-KNOWN, post-CORRECTION03)
 
-candidate_law_sha256       = ALL 28 candidates == 2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9
+candidate_law_sha256       = ALL 28 candidates == 0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8   (post-CORRECTION03)
 candidate_intent_sha256    = ALL 28 candidates == a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9
 
 candidate_proof_sha256 (canonical) = c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8 (ALL 20 law-satisfied)
@@ -937,3 +978,226 @@ No regression to MRVN-01..05.
 ---
 
 Generated 2026-09-20 by ACT-MRVN-QUALIFY06 lab machinery (CORRECTION02 applied).
+
+## E.37 — ACT-MRVN-06-CORRECTION03: patch hygiene (P0)
+
+The pre-CORRECTION03 committed patch failed `git diff --check`:
+
+```text
+git_diff_check=fail
+whitespace_errors=20
+```
+
+including 1 actual trailing-space defect in `EVIDENCE.md` and
+65 `LAWS.bend` copies with extra blank line at EOF.  The reviewer
+correctly flagged that the patch hygiene is part of the freeze
+contract: a falsification lab cannot claim authoritative
+verdict-status while its own committed patch fails basic hygiene
+checks.
+
+### E.37.a — Trailing whitespace in EVIDENCE.md
+
+The single offending line (line 609 in the pre-CORRECTION03 file):
+
+```text
++exit=1`, replacing the previous (incorrect) `SPECIFICATION_GAP` $
+```
+
+(trailing space after the closing backtick on line 609).  Removed.
+
+### E.37.b — Canonical LAWS.bend EOF normalization
+
+The pre-CORRECTION03 canonical LAWS.bend ended with three trailing
+blank lines:
+
+```text
+: Gate.Decision}\n\n\n\n
+```
+
+The sibling Bend source files under the same authority-kernel
+directory (`PROOF.bend`, `main.bend`, `base.bend`) all end with a
+single trailing newline.  CORRECTION03 normalizes LAWS.bend to
+match that convention:
+
+```text
+: Gate.Decision}\n
+```
+
+This is a **byte-only** change: the 15 law declarations and all
+their bodies (including comments) are byte-identical; only the
+3 trailing blank lines were removed.
+
+### E.37.c — Cascade and re-build
+
+```text
+$ for f in $(find factory/qualify/ACT-MRVN-QUALIFY06 -name 'LAWS.bend' -type f); do
+    perl -i -0pe 's/\n+\z/\n/' "$f"
+  done
+
+$ find factory/qualify/ACT-MRVN-QUALIFY06 -name 'LAWS.bend' -type f \
+    | xargs sha256sum | awk '{print $1}' | sort -u
+0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8
+```
+
+All 65 LAWS.bend copies are now byte-identical with hash
+`0feed5f8...` (vs the pre-CORRECTION03 hash `2d380496...`).
+
+### E.37.d — `build_manifest.ts` derives canonical hash from file
+
+The pre-CORRECTION03 manifest builder hardcoded `CANONICAL_LAWS_SHA`
+as a literal string.  This is a latent drift hazard: any byte change
+to the canonical LAWS.bend (whitespace, comment, anything) silently
+diverged the generated manifest from the actual file.  CORRECTION03
+replaces the hardcoded literal with an on-disk hash:
+
+```diff
+- import { writeFileSync } from "node:fs";
++ import { readFileSync, writeFileSync } from "node:fs";
++ import { createHash } from "node:crypto";
+  ...
+- const CANONICAL_LAWS_SHA = "2d380496...e500dd9";
+- const INTENT_ORACLE_SHA = "a9c2df5a...2c59033";
++ function sha256File(path: string): string {
++   return createHash("sha256").update(readFileSync(path)).digest("hex");
++ }
++ const CANONICAL_LAWS_SHA = sha256File(resolve(ROOT, "authority-kernel/LAWS.bend"));
++ const INTENT_ORACLE_SHA = sha256File(resolve(ROOT, "intent/oracle.json"));
+```
+
+This eliminates the drift class entirely for the canonical identity.
+
+### E.37.e — Artifacts regenerated with new IDs
+
+Because LAWS.bend participates in artifact hashing
+(`payload.files[].sha256` and `claims[].binds.laws_sha256`), the
+canonical LAWS.bend normalization legitimately changes every
+artifact's `artifact_id` and the `claims[].binds.laws_sha256`
+field.  The reviewer explicitly authorized this rebuild:
+
+> One subtlety: because LAWS.bend participates in artifact hashing,
+> fixing an EOF byte may legitimately change artifact IDs even though
+> semantics are unchanged.  That is fine.  **Rebuild; don't preserve
+> old IDs artificially.**
+
+Rebuild command:
+
+```text
+$ rm -rf factory/qualify/ACT-MRVN-QUALIFY06/candidates/*/
+$ rm -rf factory/qualify/ACT-MRVN-QUALIFY06/gap/*/
+$ bun factory/qualify/ACT-MRVN-QUALIFY06/lab/build_manifest.ts
+$ bun factory/qualify/ACT-MRVN-QUALIFY06/lab/run_all.ts \
+    --verify-artifact-full --artifact-required
+$ bun factory/qualify/ACT-MRVN-QUALIFY06/lab/build_gap_certificates.ts
+$ bun factory/qualify/ACT-MRVN-QUALIFY06/lab/build_candidate_artifacts.ts
+```
+
+New artifact IDs (sample, post-CORRECTION03):
+
+```text
+CAND-MRVN06-CTRL-IDENT       sha256:abe259e933b9de92687ca70beb632878d111390e91289b203a71c65e844dbc37
+CAND-MRVN06-CONTROL-KNOWN    sha256:6e19b7bc3cc987f31ac08cabf5a46a63e69f4f675a392268ccedade537a99efd
+CAND-MRVN06-A03              sha256:e4a03c1e5259e9b565cf5929263cf4f7d121cc4da9f2e4f88a498fa12d3c650f
+CAND-MRVN06-A04              sha256:7dae4b4f5d6a398bf90c125d881ba5ead3d70941ae0827bb07ec191ba500c09b
+...
+```
+
+Old artifact IDs (pre-CORRECTION03) for the same candidates:
+
+```text
+CAND-MRVN06-CONTROL-KNOWN    sha256:f832f53cc5add6130028f3680775add76a2b74e9d7fe4aba2e615d564b805a5b
+CAND-MRVN06-A03              sha256:8cfbd1bcc7910ebfc4e3c23245a78a6f53b593fc0f34b48198e631a196439c8a
+```
+
+### E.37.f — Required invariants after CORRECTION03
+
+| Invariant | Status |
+| --- | --- |
+| semantic counts unchanged | PASS — law_satisfied=20, equivalent=2, gaps=18, refuted=8, unresolved=0, different_specification=0, canonical_proof_survivors=20, reproof_survivors=0 |
+| CONTROL-KNOWN witness unchanged semantically | PASS — same actor/capability/lifecycle/evidence, same `Deny{InsufficientEvidence}` vs `Deny{Terminal}`, same diff_count=1 |
+| 20/20 survivor artifacts FULL-verify | PASS — `build_candidate_artifacts` reports `total: 20, verify PASS: 20` |
+| MRVN-04 frozen results hash unchanged | PASS — `aa2d06058643e64bf8ad7cb32cc21c594dd5c075cdbbb2fbb590b86e307750c8` (verified pre- and post- CORRECTION03) |
+| `git diff --check` clean | PASS — 0 whitespace errors (verified post-CORRECTION03) |
+| `canonical_compare` PASS | PASS — 180/180 cells agree |
+| `self_test` PASS | PASS — 19/19 |
+| `authority_attacks` PASS | PASS — 6/6 (incl. toolchain_tamper) |
+| `intent_provenance` PASS | PASS — 0 violations |
+| `regression_hygiene --run` PASS | PASS — pre/post hashes stable, 0 drift |
+
+### E.37.g — Do not amend f8eeb8d7; this section is the corrective commit
+
+Per the reviewer's instruction, this is a corrective commit on
+top of the pre-CORRECTION03 commit (f8eeb8d7).  The pre-CORRECTION03
+commit and its broad content are NOT amended — only patch hygiene
+defects are fixed.  The substantive scientific conclusion of MRVN-06
+(SUBJECT classification SPECIFICATION_GAP_FOUND) is preserved
+byte-for-byte at the witness level.
+
+## E.38 — Post-CORRECTION03 final hashes / status [CURRENTLY AUTHORITATIVE]
+
+```text
+canonical_laws_sha256      = 0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8
+canonical_impl_sha256      = eea5d84f80bf9bf3671fad7d47447539891debb010063402174c4c86f0cbf4eb
+canonical_proof_sha256     = c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8
+INTENT_TEXT_SHA256         = 1e21d2f56e2d587ef08499a0f58aac47960a6d5c5b4b899a39e972e92985d274
+INTENT_ORACLE_SHA256       = a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9
+build_oracle_sha256        = 312bc3c610a3b64482c0c6f99a0b0249c3cb163d9a00e1a25822d09c91644e37
+
+live_bend2_toolchain_sha256 (every authoritative artifact verify):
+  bend2/main.ts   = 34a8a791b02ce92f247bda4cabcd3ff4eabe500002fedbec4867b5db77ee1feb   (cli)
+  bend2/bend.ts   = fe3c2b0b306fccbe44efec349d8f339b6efdaceb090b3d3049c74a1a6015c859   (trusted_kernel)
+  bend2/comp.ts   = c181ac038d7f7d4ed0e1bb81c513e64285347627e0b3a13a98cb86a1d1568f54   (compiler_runtime)
+  bend2/base.bend = b2d53bbd83639c3ae27260b318efa09de9df6006a556ac6ef41c104ea164917a   (prelude)
+
+canonical_artifact_id (MRVN-05, pre-CORRECTION03): sha256:848a89bdc7e14bec6423bf10ed78e31479cf678b46d8cfd12e6a201635b0df24
+canonical_artifact_id (MRVN-05, post-CORRECTION03): sha256:848a89bdc7e14bec6423bf10ed78e31479cf678b46d8cfd12e6a201635b0df24
+  (UNCHANGED — MRVN-05's authority-kernel was already normalized.)
+
+min_gap_artifact_id (CONTROL-KNOWN, post-CORRECTION03):
+  sha256:6e19b7bc3cc987f31ac08cabf5a46a63e69f4f675a392268ccedade537a99efd
+  (was sha256:f832f53cc5add6130028f3680775add76a2b74e9d7fe4aba2e615d564b805a5b pre-CORRECTION03)
+
+candidate_law_sha256       = ALL 28 candidates == 0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8
+candidate_intent_sha256    = ALL 28 candidates == a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9
+
+candidate_proof_sha256 (canonical) = c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8 (ALL 20 law-satisfied)
+candidate_reproof_sha256            = (none; no REPROOF was required)
+candidate_artifact_verify           = (20/20) pass (FULL, toolchain-bound, no drift waiver)
+
+mrvn04_results_sha256 (frozen, post-CORRECTION03) = aa2d06058643e64bf8ad7cb32cc21c594dd5c075cdbbb2fbb590b86e307750c8
+```
+
+## E.39 — Post-CORRECTION03 closing
+
+```text
+ACT-MRVN-06 VERDICT: FULL_QUALIFICATION_WITH_SPECIFICATION_GAP_FOUND
+                    / CORRECTION03 APPLIED (CURRENTLY AUTHORITATIVE)
+                    / PATCH HYGIENE CLEAN
+
+The MRVN-04 law book is incomplete as a behavioral characterization
+of the 180-cell authority policy.  The gap is concrete, reproducible,
+artifactual, and minimized.
+
+The 16 unique gap classes share the same taxonomy: DENY_REASON_GAP.
+The 18 specification-gap candidates each carry a portable proof-
+carrying artifact (MRVN-05 substrate) with full toolchain-bound
+verification PASS.
+
+The lab is now closed under its own authority gates AND its own
+patch-hygiene gates:
+  * artifact FULL verification is mandatory for any
+    SPECIFICATION_GAP / EQUIVALENT_SURVIVOR verdict,
+  * artifact verification is hash-bound to the live bend2 toolchain,
+  * the intent oracle is statically proven independent of the
+    canonical implementation,
+  * no regression run can mutate prior-ACT durable evidence,
+  * all 6 authority attack tests pass (incl. toolchain_tamper),
+  * git diff --check is clean (0 whitespace errors),
+  * every authoritative verdict is reproducible from the same
+    inputs in the same order.
+
+No regression to MRVN-01..05.
+```
+
+---
+
+Generated 2026-09-20 by ACT-MRVN-QUALIFY06 lab machinery (CORRECTION03 applied).

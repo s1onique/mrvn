@@ -1,7 +1,7 @@
 {
   "candidate_id": "CAND-MRVN06-E05",
   "implementation_sha256": "3b4f2f18efeb162343756877a68d3f6b4e13fd570976a298659f02d35437827b",
-  "laws_sha256": "2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9",
+  "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
   "intent_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
   "proof": {
     "canonical": "fail",

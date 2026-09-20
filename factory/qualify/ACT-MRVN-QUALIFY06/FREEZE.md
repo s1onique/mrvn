@@ -5,10 +5,21 @@ immutable for the duration of the primary experiment.  Any drift in
 these values after a candidate is generated triggers
 `CANDIDATE_AUTHORITY_FAILURE`.
 
+> **CORRECTION03 (post-reviewer-disposition, patch hygiene)** —
+> The canonical LAWS.bend was normalized to match the trailing-newline
+> convention of its sibling Bend source files (PROOF.bend, main.bend,
+> base.bend) under `authority-kernel/`.  The 15 law declarations and
+> all law bodies are byte-identical to the pre-CORRECTION02 content;
+> only 3 trailing blank lines were removed.  Every LAWS.bend copy
+> under `candidates/*/LAWS.bend`, `candidates/*/artifact/payload/LAWS.bend`,
+> and `gap/*/candidate-artifact/payload/LAWS.bend` was normalized to
+> the same single-trailing-newline form; all 65 copies are now
+> byte-identical (sha256:0feed5f8...).
+
 ## Canonical authority kernel (MRVN-04 subject under test)
 
 ```text
-canonical_laws_sha256      = 2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9
+canonical_laws_sha256      = 0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8   (post-CORRECTION03)
 canonical_impl_sha256      = eea5d84f80bf9bf3671fad7d47447539891debb010063402174c4c86f0cbf4eb
 canonical_proof_sha256     = c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8
 law_count                  = 15
@@ -58,6 +69,14 @@ build_oracle_sha256        = 312bc3c610a3b64482c0c6f99a0b0249c3cb163d9a00e1a2582
 mrvn04_results_sha256      = aa2d06058643e64bf8ad7cb32cc21c594dd5c075cdbbb2fbb590b86e307750c8   (frozen pre-modification)
 intent_provenance_sha256   = 312bc3c610a3b64482c0c6f99a0b0249c3cb163d9a00e1a25822d09c91644e37   (= build_oracle, by construction)
 ```
+
+> **CORRECTION03 update to the canonical_laws_sha256**: the value
+> `2d380496...` shown above (and in any pre-CORRECTION03 transcript)
+> is replaced by `0feed5f8...` after the EOF-whitespace normalization.
+> `build_manifest.ts` now derives the canonical law hash from the
+> actual `authority-kernel/LAWS.bend` file at run time (no hardcoded
+> constant).  This eliminates the drift class entirely for the
+> canonical identity.
 
 The MRVN-04 `lab/results.json` on disk is restored to its
 pre-modification state (sha256:aa2d0605...).  Any subsequent MRVN-04

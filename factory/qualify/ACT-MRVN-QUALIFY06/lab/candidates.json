@@ -1,6 +1,6 @@
 {
   "act": "ACT-MRVN-QUALIFY06",
-  "canonical_laws_sha256": "2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9",
+  "canonical_laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
   "intent_oracle_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
   "notes": [
     "Every candidate uses LAWS.bend byte-identical to the canonical MRVN-04 law book.",

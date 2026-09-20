@@ -3,9 +3,9 @@
   "candidate_id": "CAND-MRVN06-A06",
   "classification": "SPECIFICATION_GAP",
   "intent_oracle_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
-  "candidate_laws_sha256": "2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9",
+  "candidate_laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
   "candidate_implementation_sha256": "a6e8f16e9631d7481d6b3ce6fd740a90b44d0bb922deabdbd1e3c9fa5588a733",
-  "candidate_artifact_id": "sha256:92809f8cdac1bbb2b97dcc932b7fb32d9dcfacc621203704fd95508bc5a60e52",
+  "candidate_artifact_id": "sha256:6fad13d0593a952ce336902ba21c9248a4c5e0c44bac89ff7ff422afe08abb7b",
   "diff_count": 1,
   "diffs": [
     {

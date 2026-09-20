@@ -375,6 +375,3 @@ law freeze_reviewer_draft_yields_wrong_lifecycle:
        Gate.Lifecycle.Draft{}, Gate.Evidence.Live{})
      == Gate.Decision.Deny{Gate.DenyReason.WrongLifecycle{}}
    : Gate.Decision}
-
-
-

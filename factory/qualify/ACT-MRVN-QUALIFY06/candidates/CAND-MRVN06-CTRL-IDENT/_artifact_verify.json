@@ -1,5 +1,5 @@
 {
-  "artifact_id": "sha256:0829edeb2f3f64b28c3839ac3d8f5afc311482a88cce4bc29495ac78dd7764e9",
+  "artifact_id": "sha256:abe259e933b9de92687ca70beb632878d111390e91289b203a71c65e844dbc37",
   "claims": [{
       "claim_id": "formal-law-satisfaction",
       "reasons": ["all machine fields present and equal to recomputed reality; live proof replay PASS"
@@ -26,7 +26,7 @@
   "supplemental_evidence": "pass",
   "timing_ms": {
     "integrity": 2,
-    "proof": 61,
+    "proof": 64,
     "supplemental": 0
   },
   "verifier": {

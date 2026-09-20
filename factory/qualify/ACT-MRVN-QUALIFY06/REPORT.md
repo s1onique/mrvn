@@ -57,7 +57,9 @@ candidate (proof-valid):
 This is one cell of 180 (diff_count = 1).  The candidate satisfies the
 canonical PROOF against the byte-identical canonical LAWS.bend.  The
 candidate carries a portable proof-carrying artifact
-(`sha256:f832f53cc5add6130028f3680775add76a2b74e9d7fe4aba2e615d564b805a5b`)
+(`sha256:6e19b7bc3cc987f31ac08cabf5a46a63e69f4f675a392268ccedade537a99efd`,
+post-CORRECTION03; the pre-CORRECTION03 ID was
+`sha256:f832f53cc5add6130028f3680775add76a2b74e9d7fe4aba2e615d564b805a5b`)
 that verifies independently under MRVN-05 --mode full.
 
 **18 of 28 candidates** (64%) — across families A, B, C, D — found
@@ -132,7 +134,7 @@ waiver was the bug.  CORRECTION02 closes it.
 ## Baseline
 
 ```text
-canonical_laws_sha256      = 2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9
+canonical_laws_sha256      = 0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8   (post-CORRECTION03)
 canonical_impl_sha256      = eea5d84f80bf9bf3671fad7d47447539891debb010063402174c4c86f0cbf4eb
 canonical_proof_sha256     = c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8
 INTENT_TEXT_SHA256         = 1e21d2f56e2d587ef08499a0f58aac47960a6d5c5b4b899a39e972e92985d274
@@ -194,7 +196,7 @@ CAND-MRVN06-CONTROL-KNOWN  (reproduces MRVN-04 MUT-08 shape)
   diff_count          = 1
   law_status          = SATISFIED  (canonical PROOF passes)
   intent_status       = DIVERGENT
-  artifact_id         = sha256:f832f53cc5add6130028f3680775add76a2b74e9d7fe4aba2e615d564b805a5b
+  artifact_id         = sha256:6e19b7bc3cc987f31ac08cabf5a46a63e69f4f675a392268ccedade537a99efd   (post-CORRECTION03)
   artifact_verified   = PASS
 ```
 
@@ -207,9 +209,9 @@ re-discovered it.
 ```text
 candidate_id          = CAND-MRVN06-CONTROL-KNOWN
 family                = KNOWN_GAP_CONTROL
-artifact_id           = sha256:f832f53cc5add6130028f3680775add76a2b74e9d7fe4aba2e615d564b805a5b
+artifact_id           = sha256:6e19b7bc3cc987f31ac08cabf5a46a63e69f4f675a392268ccedade537a99efd   (post-CORRECTION03)
 implementation_sha256 = 9d4cc31ddc26a2de0a224852ba49f6b438cc4baea8a0a8502361983186967420
-laws_sha256           = 2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9  (matches canonical)
+laws_sha256           = 0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8  (matches canonical)
 proof_sha256          = c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8  (canonical)
 intent_sha256         = a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9
 diff_count            = 1

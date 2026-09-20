@@ -1,7 +1,7 @@
 {
   "candidate_id": "CAND-MRVN06-D04",
   "implementation_sha256": "1cae9466b49ef04b73b3afc1237740d8f4c1e344ebe16c9ca83cb43c198e32fe",
-  "laws_sha256": "2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9",
+  "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
   "intent_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
   "proof": {
     "canonical": "pass",
@@ -46,7 +46,7 @@
   "artifact": {
     "present": true,
     "verify": "pass",
-    "artifact_id": "sha256:ae5e8edbb107b660267e2dab272a0c23ca2fc664153cc8d1a4e0e16cdba670b8",
+    "artifact_id": "sha256:c93e80d207eaeed94404fa5b141198c7667d59e2b76087881d1defdfeed8a0e2",
     "failures": 0
   },
   "classification": "SPECIFICATION_GAP",

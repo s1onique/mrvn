@@ -1,7 +1,7 @@
 {
   "candidate_id": "CAND-MRVN06-CTRL-NEG",
   "implementation_sha256": "ef83a275b5aa41140d2cb3772c9c173e2f1a72f706b136fd320d37493828ab61",
-  "laws_sha256": "2d380496421c5965819d2668f75e1b486fdf4a9d242cbf9b07185179be500dd9",
+  "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
   "intent_sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
   "proof": {
     "canonical": "fail",
