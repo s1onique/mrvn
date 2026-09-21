@@ -1,0 +1,12 @@
+{
+  "candidate_id": "IND-MRVN09-004",
+  "agent_instance": "MiniMax-M3",
+  "agent_model": "MiniMax-M3",
+  "agent_provider": "MiniMax",
+  "attempt": 4,
+  "description": "Strategy 004: see descriptor below",
+  "files_created": ["main.bend", "LAWS.bend", "PROOF.bend", "descriptor.json", "PROMPT.md", "TRANSCRIPT.md"],
+  "implementation_sha256": "c0cff56af5e900db9055661d697673654072fc8264f29872b3a383f80ffc3af9",
+  "classification": "CANONICAL_PROOF_SURVIVED",
+  "artifact_id": "sha256:b9c2ee07829625d5ac576cd369b944f45d87eb77b2d7466562004cc59d681075"
+}

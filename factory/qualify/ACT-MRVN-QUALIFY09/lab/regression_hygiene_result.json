@@ -1,0 +1,36 @@
+{
+  "act": "ACT-MRVN-QUALIFY09",
+  "correction": "CORRECTION02",
+  "timestamp": "2026-09-21T06:23:55.191Z",
+  "prior_dirs": [
+    "factory/qualify/ACT-MRVN-QUALIFY04",
+    "factory/qualify/ACT-MRVN-QUALIFY05",
+    "factory/qualify/ACT-MRVN-QUALIFY06",
+    "factory/qualify/ACT-MRVN-QUALIFY07",
+    "factory/qualify/ACT-MRVN-QUALIFY08"
+  ],
+  "durable_file_count": 2282,
+  "regression_tasks": [
+    {
+      "name": "MRVN-04 verify --no-write",
+      "exit": 0
+    },
+    {
+      "name": "MRVN-06 classify (CTRL-IDENT, --results-out /tmp)",
+      "exit": 0
+    },
+    {
+      "name": "MRVN-07 frozen-evidence read",
+      "exit": 0
+    },
+    {
+      "name": "MRVN-08 frozen-evidence read",
+      "exit": 0
+    }
+  ],
+  "drift_count": 1,
+  "drifts": [
+    "factory/qualify/ACT-MRVN-QUALIFY08/REPORT.md: HEAD=3ea8fd06a7147cd7 WT=2c154449f072b2f8"
+  ],
+  "summary": "FAIL: REGRESSION_AUTHORITY_DRIFT or task failure"
+}

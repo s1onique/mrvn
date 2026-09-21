@@ -1,0 +1,1971 @@
+{
+  "act": "ACT-MRVN-QUALIFY06",
+  "allow_count": 25,
+  "cell_count": 180,
+  "deny_by_reason": {
+    "InsufficientEvidence": 8,
+    "Terminal": 36,
+    "WrongActor": 30,
+    "WrongLifecycle": 81
+  },
+  "deny_count": 155,
+  "intent_file": "INTENT.md",
+  "intent_text_sha256": "1e21d2f56e2d587ef08499a0f58aac47960a6d5c5b4b899a39e972e92985d274",
+  "rows": [
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "None",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Live",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "None",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "Live",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "None",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "Live",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "None",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "Live",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Work",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "None",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Live",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "None",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "Live",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "None",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Live",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "None",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "Live",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "None",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "Live",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Freeze",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "None",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Live",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "None",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Agent",
+      "capability": "Close",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "Live",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "None",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Live",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "None",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "Live",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "None",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "Live",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "None",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "Live",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Work",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "None",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Live",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "decision": "Deny{InsufficientEvidence}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "InsufficientEvidence"
+      },
+      "evidence": "None",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "Live",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "None",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Live",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "decision": "Deny{InsufficientEvidence}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "InsufficientEvidence"
+      },
+      "evidence": "None",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "decision": "Deny{InsufficientEvidence}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "InsufficientEvidence"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "Live",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "decision": "Deny{InsufficientEvidence}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "InsufficientEvidence"
+      },
+      "evidence": "None",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "decision": "Deny{InsufficientEvidence}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "InsufficientEvidence"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "Live",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Freeze",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "None",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Live",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "decision": "Deny{InsufficientEvidence}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "InsufficientEvidence"
+      },
+      "evidence": "None",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "decision": "Deny{InsufficientEvidence}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "InsufficientEvidence"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Reviewer",
+      "capability": "Close",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "Live",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "None",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Live",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "None",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "Live",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "None",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "Live",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "None",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "Live",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Work",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "None",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Live",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "decision": "Deny{InsufficientEvidence}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "InsufficientEvidence"
+      },
+      "evidence": "None",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "decision": "Allow",
+      "decision_struct": {
+        "kind": "Allow"
+      },
+      "evidence": "Live",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Halt",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "None",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Live",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "None",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "Live",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "None",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "Live",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Freeze",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "None",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "decision": "Deny{Terminal}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "Terminal"
+      },
+      "evidence": "Live",
+      "lifecycle": "Closed"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Active"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Halted"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "None",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "decision": "Deny{WrongLifecycle}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongLifecycle"
+      },
+      "evidence": "Live",
+      "lifecycle": "Draft"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "None",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "Replay",
+      "lifecycle": "Frozen"
+    },
+    {
+      "actor": "Automation",
+      "capability": "Close",
+      "decision": "Deny{WrongActor}",
+      "decision_struct": {
+        "kind": "Deny",
+        "reason": "WrongActor"
+      },
+      "evidence": "Live",
+      "lifecycle": "Frozen"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "agent_input_files": [
+    "/tmp/mrvn09_attack/PROOF.bend",
+    "/tmp/mrvn09_attack/LAWS.bend",
+    "/tmp/mrvn09_attack/oracle.json",
+    "/tmp/mrvn09_attack/main.bend",
+    "/tmp/mrvn09_attack/INTENT.md",
+    "/tmp/mrvn09_attack/guide_index.md",
+    "/tmp/mrvn09_attack/INSTRUCTIONS.md"
+  ],
+  "agent_input_sha256": {
+    "/tmp/mrvn09_attack/PROOF.bend": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+    "/tmp/mrvn09_attack/LAWS.bend": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+    "/tmp/mrvn09_attack/oracle.json": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+    "/tmp/mrvn09_attack/main.bend": "eea5d84f80bf9bf3671fad7d47447539891debb010063402174c4c86f0cbf4eb",
+    "/tmp/mrvn09_attack/INTENT.md": "1e21d2f56e2d587ef08499a0f58aac47960a6d5c5b4b899a39e972e92985d274",
+    "/tmp/mrvn09_attack/guide_index.md": "c81fbe991725f4845fee43777234498981e4d69b036a25d61eb2cf67335c90e4",
+    "/tmp/mrvn09_attack/INSTRUCTIONS.md": "32e2adeaeb54e5a2a828f67f9b82f846daba3af8814ff6c8aeb28c4ad6bc0c09"
+  },
+  "forbidden_paths_present": [
+    "ACT-MRVN-QUALIFY08/candidates/K-"
+  ],
+  "prior_candidate_ids_found": [],
+  "prior_candidate_exposure": 1,
+  "pass": false,
+  "exit_code": 1,
+  "rationale": []
+}

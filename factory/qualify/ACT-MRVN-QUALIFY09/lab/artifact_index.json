@@ -1,0 +1,129 @@
+{
+  "act": "ACT-MRVN-QUALIFY09",
+  "timestamp": "2026-09-21T06:23:55.236Z",
+  "total_artifacts": 12,
+  "verify_pass": 12,
+  "verify_fail": 0,
+  "artifacts": [
+    {
+      "candidate_id": "IND-MRVN09-002",
+      "family": "",
+      "artifact_id": "sha256:9f86929cc5a83e59b9fdbd4b754d1309b95c952737b7e7ec2600005106e66329",
+      "verify_pass": true,
+      "verify_exit": 0,
+      "implementation_sha256": "44efb759e1467d71d1db4b66309bc3fbdc789de15ea05a640f483d616b46e3c6",
+      "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "proof_kind": "CANONICAL_PROOF"
+    },
+    {
+      "candidate_id": "IND-MRVN09-005",
+      "family": "",
+      "artifact_id": "sha256:274433486d25d7c817991021b827fae7be3d8f24aef663737831385b4ce59b73",
+      "verify_pass": true,
+      "verify_exit": 0,
+      "implementation_sha256": "476f69dd1f091af784cb313bfd2c67861b77fb0377c3952f4f6db3e1a47a3502",
+      "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "proof_kind": "CANONICAL_PROOF"
+    },
+    {
+      "candidate_id": "IND-MRVN09-004",
+      "family": "",
+      "artifact_id": "sha256:b9c2ee07829625d5ac576cd369b944f45d87eb77b2d7466562004cc59d681075",
+      "verify_pass": true,
+      "verify_exit": 0,
+      "implementation_sha256": "c0cff56af5e900db9055661d697673654072fc8264f29872b3a383f80ffc3af9",
+      "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "proof_kind": "CANONICAL_PROOF"
+    },
+    {
+      "candidate_id": "IND-MRVN09-003",
+      "family": "",
+      "artifact_id": "sha256:6f5763cb00841dbca33ef86c418f54e80373e6ceab475984bbdf73b13f21a4ee",
+      "verify_pass": true,
+      "verify_exit": 0,
+      "implementation_sha256": "08dd8cfde4c4227276dc0d7876bb4b54d05f040f2490d315a5b38955bfb40dee",
+      "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "proof_kind": "CANONICAL_PROOF"
+    },
+    {
+      "candidate_id": "IND-MRVN09-010",
+      "family": "",
+      "artifact_id": "sha256:7b3ca1e34606cb057d7e29c31d5906c160b8ebbbf302f121ff1a7fe7286b2597",
+      "verify_pass": true,
+      "verify_exit": 0,
+      "implementation_sha256": "027e5363781914b407e4b3ac78df66d2ac5e0eb7b2e0509f6744408583dbbcde",
+      "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "proof_kind": "CANONICAL_PROOF"
+    },
+    {
+      "candidate_id": "IND-MRVN09-011",
+      "family": "",
+      "artifact_id": "sha256:1a10ddf6a50f473a521fef1e5a140ddba01c1707e5bb79748b1d17173d4762ed",
+      "verify_pass": true,
+      "verify_exit": 0,
+      "implementation_sha256": "a9bde58dec4dbc8f3b25b516c98273d9e3dc192d19c429e9d3f80fd334dcff6c",
+      "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "proof_kind": "CANONICAL_PROOF"
+    },
+    {
+      "candidate_id": "IND-MRVN09-006",
+      "family": "",
+      "artifact_id": "sha256:04673c4c19b2ed872d90f6e71e9e5b0788a6735fcaaaeddef9f80f63281a66cf",
+      "verify_pass": true,
+      "verify_exit": 0,
+      "implementation_sha256": "166f9907874c120bb37adc885307624b46928494c51a6427d19d72cadd8173ee",
+      "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "proof_kind": "CANONICAL_PROOF"
+    },
+    {
+      "candidate_id": "IND-MRVN09-001",
+      "family": "",
+      "artifact_id": "sha256:7867610100e43de8b74ea1f15891d4f12a5247b33fb5320722300e9c90ab7d79",
+      "verify_pass": true,
+      "verify_exit": 0,
+      "implementation_sha256": "eea5d84f80bf9bf3671fad7d47447539891debb010063402174c4c86f0cbf4eb",
+      "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "proof_kind": "CANONICAL_PROOF"
+    },
+    {
+      "candidate_id": "IND-MRVN09-008",
+      "family": "",
+      "artifact_id": "sha256:7865cdbcf9b2b1efe508bae85c0627a15e41fd76151025655cd152a9a927a12c",
+      "verify_pass": true,
+      "verify_exit": 0,
+      "implementation_sha256": "0b5b4c18ae8ff173b1af43c18a66841fbc0aef80dd0fd107d4a9eb2f7575bb86",
+      "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "proof_kind": "CANONICAL_PROOF"
+    },
+    {
+      "candidate_id": "IND-MRVN09-009",
+      "family": "",
+      "artifact_id": "sha256:9cc934d125c2f817949655cde53e5db76496820edb28efb1fa5fdd12e46c84bd",
+      "verify_pass": true,
+      "verify_exit": 0,
+      "implementation_sha256": "3167a8a96660b2727e5aac8afb39f56e9610e14b0acedad158050f57c87e0178",
+      "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "proof_kind": "CANONICAL_PROOF"
+    },
+    {
+      "candidate_id": "IND-MRVN09-007",
+      "family": "",
+      "artifact_id": "sha256:a881c744671231031938f009f485b736a840699bc1c48997298f0a14d2efa0b5",
+      "verify_pass": true,
+      "verify_exit": 0,
+      "implementation_sha256": "bc0d9456c61bd7b19477632a78dd91554ccb2a068e0b8a19d077156f597008e2",
+      "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "proof_kind": "CANONICAL_PROOF"
+    },
+    {
+      "candidate_id": "IND-MRVN09-012",
+      "family": "",
+      "artifact_id": "sha256:8abaafb55a31235a6502fd0ce5222cea46e81f23db2068edb23dc2e20dbd73ea",
+      "verify_pass": true,
+      "verify_exit": 0,
+      "implementation_sha256": "d48ebf4618100094d84b13d276cf011076729947e8e53db3cc38b1c8d5663a82",
+      "laws_sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "proof_kind": "CANONICAL_PROOF"
+    }
+  ]
+}

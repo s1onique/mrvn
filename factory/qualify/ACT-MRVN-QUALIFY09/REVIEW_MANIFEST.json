@@ -1,0 +1,1065 @@
+{
+  "act": "ACT-MRVN-QUALIFY09",
+  "source_commit": "dbd326046af422823477646c2cb76f9daf622a6a",
+  "manifest_algorithm": "sha256:file-bytes:v1",
+  "manifest_excludes_self": true,
+  "manifest_excludes_reason": "The manifest enumerates every durable file in MRVN-09 except itself (it would require a self-referential sha256).",
+  "total_files": 211,
+  "files": [
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/CORRECTIONS.md",
+      "sha256": "315c6c7fb1e110e14bc153c372fbb940b33c2eeb4aadc75338b51ccaa7d2319c",
+      "size": 8932
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/EVIDENCE.md",
+      "sha256": "b1d67c2ea350a7b1096fd92051c791ffae0910da83071c43db71cefb3cd9eb0b",
+      "size": 11132
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/FREEZE.md",
+      "sha256": "1a818b11decb7f334d5d1bd737d1e283c7cac0aca08c77648dd4d336051573ab",
+      "size": 6316
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/REPORT.md",
+      "sha256": "495810b4403e969abae35c64ddd78daea2ffd2627fc100517d82b19657ab529d",
+      "size": 12659
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/REVIEW_PACKAGE.md",
+      "sha256": "4d18ed6dc37ea42d34c4380ddf8dae0bda5185c9d91a163ec1acaec2e88aad34",
+      "size": 3221
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/agent_input/INSTRUCTIONS.md",
+      "sha256": "9828004662838ac56c8a9ec16810c0ae934ba59aa3708c387ff50900483fd381",
+      "size": 5506
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/agent_input/INTENT.md",
+      "sha256": "1e21d2f56e2d587ef08499a0f58aac47960a6d5c5b4b899a39e972e92985d274",
+      "size": 5063
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/agent_input/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/agent_input/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/agent_input/bundle.sha256",
+      "sha256": "45555fd49f10ea52ce848ec0b8586eb9a42d21123c0fdc078658639f681a0c97",
+      "size": 546
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/agent_input/guide_index.md",
+      "sha256": "c81fbe991725f4845fee43777234498981e4d69b036a25d61eb2cf67335c90e4",
+      "size": 3628
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/agent_input/main.bend",
+      "sha256": "eea5d84f80bf9bf3671fad7d47447539891debb010063402174c4c86f0cbf4eb",
+      "size": 10576
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/agent_input/oracle.json",
+      "sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+      "size": 45313
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/baseline/INTENT.md",
+      "sha256": "1e21d2f56e2d587ef08499a0f58aac47960a6d5c5b4b899a39e972e92985d274",
+      "size": 5063
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/baseline/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/baseline/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/baseline/_behavior_dump.bend",
+      "sha256": "c2d0ac338843d2e9d0a11cf48b01f8deb0ce69a65dbe631a1d79fe69157ebddc",
+      "size": 28288
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/baseline/_canonical_behavior.txt",
+      "sha256": "e44f37c531a7e6893445e1ff2e640f3e320ebec9f811fb52628c1b430f8f69c7",
+      "size": 8139
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/baseline/main.bend",
+      "sha256": "eea5d84f80bf9bf3671fad7d47447539891debb010063402174c4c86f0cbf4eb",
+      "size": 10576
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/baseline/oracle.json",
+      "sha256": "a9c2df5ad4dc40a180bdcf8ca4645c74103cbf312cb5a33c5a973dd87cf852c9",
+      "size": 45313
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/evidence/metrics.json",
+      "sha256": "65bdedb19c9df9cf1d094f887b230402171e7153aa8e7dbfc83b1cbeb8a36c4f",
+      "size": 662
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/evidence/search_metrics.json",
+      "sha256": "192bebc855adc751ccb7cf4ad6e1179c62fa692ee5c77988898636b44441b52b",
+      "size": 629
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/evidence/source_commit.txt",
+      "sha256": "40926bccff9509fe156ad4895c9b1e2ad222827fd4b3e55e5f4d3b7fb65ec34b",
+      "size": 40
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/evidence/start_timestamp.txt",
+      "sha256": "c0f6f60beb3233b79ee568cf27a959f53c92ca00e2b18df9b5ac5569a8a47c16",
+      "size": 21
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-001/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-001/PROMPT.md",
+      "sha256": "e89e17d47824edaa8decc6a93879776162c15a3a6610c68148a8467ce818eb9a",
+      "size": 1612
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-001/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-001/TRANSCRIPT.md",
+      "sha256": "78da0bd27eaf2ac20b3755220146a7c6bca94ff7692f8842f85a2e159d16b42f",
+      "size": 1749
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-001/_behavior/_dump.bend",
+      "sha256": "563386fd4cceb6628409df24cf6b1a315d340844ed8718440a86a6dc090562f1",
+      "size": 28324
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-001/artifact/evidence/proof-run.json",
+      "sha256": "1f7ceb62dcc33ec914d060285dba8381aba119653e426f006c19678df14c09d1",
+      "size": 634
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-001/artifact/evidence/proof-stdout.txt",
+      "sha256": "3155557f2fa6b6fe55b661347e56893dc0b52fa1977b6800a8d26dbff1d3db84",
+      "size": 17
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-001/artifact/manifest.json",
+      "sha256": "7373a8d4972d8355f175524e0adeabe07081fef3bcbd60f87afa44e25fd7cca9",
+      "size": 6332
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-001/artifact/payload/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-001/artifact/payload/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-001/artifact/payload/main.bend",
+      "sha256": "eea5d84f80bf9bf3671fad7d47447539891debb010063402174c4c86f0cbf4eb",
+      "size": 10576
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-001/descriptor.json",
+      "sha256": "d30773ec91311e38630da076a91f5a7b33be48268a3733651bd5b75ee7726c09",
+      "size": 551
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-001/main.bend",
+      "sha256": "eea5d84f80bf9bf3671fad7d47447539891debb010063402174c4c86f0cbf4eb",
+      "size": 10576
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-001/result.json",
+      "sha256": "40d8863d9d51587786e91b9c149705a55e51e5546ae148f4132c13aa690bc2d4",
+      "size": 1388
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-002/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-002/PROMPT.md",
+      "sha256": "ace644326a234089cc4cf4fc682b431ea6a4766771b0438a18dfe547e4cc9ef7",
+      "size": 1626
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-002/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-002/TRANSCRIPT.md",
+      "sha256": "3ee0e4c324588c6cedf18443ee8289a6dfcf8d1b46c207776c90c3cbe1547ba0",
+      "size": 1749
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-002/_behavior/_dump.bend",
+      "sha256": "301bfdd9984a3212fa564cce776497c774c67715dc81c8c30eb617b103fa29fe",
+      "size": 28324
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-002/artifact/evidence/proof-run.json",
+      "sha256": "a2d89b5b8964fe81103adaecb367f5b8daf965f248b0d22c39cd149222dda080",
+      "size": 634
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-002/artifact/evidence/proof-stdout.txt",
+      "sha256": "3155557f2fa6b6fe55b661347e56893dc0b52fa1977b6800a8d26dbff1d3db84",
+      "size": 17
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-002/artifact/manifest.json",
+      "sha256": "557298d568f923dbd67eeec838588814a6bf46b4bc46846c0bfb0fc82e1fef89",
+      "size": 6332
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-002/artifact/payload/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-002/artifact/payload/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-002/artifact/payload/main.bend",
+      "sha256": "44efb759e1467d71d1db4b66309bc3fbdc789de15ea05a640f483d616b46e3c6",
+      "size": 10576
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-002/descriptor.json",
+      "sha256": "d0d29bf2a752f4709043fcc65ac8be1f7a7b23bbe41a4f9e824adb1aaa65b781",
+      "size": 551
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-002/main.bend",
+      "sha256": "44efb759e1467d71d1db4b66309bc3fbdc789de15ea05a640f483d616b46e3c6",
+      "size": 10576
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-002/result.json",
+      "sha256": "7e389e07eabf6ef7ecb37faa7776fb062a075797eaa1119240c94cfdb8aa5c84",
+      "size": 1388
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-003/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-003/PROMPT.md",
+      "sha256": "0e7924601052ab59c11d2583fab3bb9e7e80536daf501e4621468f4e314ac51b",
+      "size": 1646
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-003/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-003/TRANSCRIPT.md",
+      "sha256": "31c2d33be33e75cc70466c0b048b985c67026973c94e6c3d3ba822fd0a373850",
+      "size": 1749
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-003/_behavior/_dump.bend",
+      "sha256": "39ccafccccdb2668bd0b4abe8823c11b61c05ff02f2c55a4c6d283a9871cba0d",
+      "size": 28324
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-003/artifact/evidence/proof-run.json",
+      "sha256": "5200e7469097bd8605c45802d0026c4c2ed87777dc43bdd2d406812d5174ec01",
+      "size": 634
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-003/artifact/evidence/proof-stdout.txt",
+      "sha256": "3155557f2fa6b6fe55b661347e56893dc0b52fa1977b6800a8d26dbff1d3db84",
+      "size": 17
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-003/artifact/manifest.json",
+      "sha256": "0c91bed699548e2abd013332051dab2217be54df69374cdcd1a62972828fbbed",
+      "size": 6332
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-003/artifact/payload/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-003/artifact/payload/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-003/artifact/payload/main.bend",
+      "sha256": "08dd8cfde4c4227276dc0d7876bb4b54d05f040f2490d315a5b38955bfb40dee",
+      "size": 11207
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-003/descriptor.json",
+      "sha256": "712e1eca69dcc395635859db0284ac1d8511908c21883aa4f42c413db3e6b3b7",
+      "size": 551
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-003/main.bend",
+      "sha256": "08dd8cfde4c4227276dc0d7876bb4b54d05f040f2490d315a5b38955bfb40dee",
+      "size": 11207
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-003/result.json",
+      "sha256": "20edda2b5adfc9c0fc1e32da13f358d3e46dcc4d5d199096b2b2e1db23888ed0",
+      "size": 1388
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-004/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-004/PROMPT.md",
+      "sha256": "ad0530282979ce7782ef17f0f1e2a24fbef466f5c75e4ade871e75dc4b45468d",
+      "size": 1658
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-004/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-004/TRANSCRIPT.md",
+      "sha256": "ee5bc2aa34a8910544667018c12a8638d0dd5ca6b073776391da3ef40e07b989",
+      "size": 1749
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-004/_behavior/_dump.bend",
+      "sha256": "ff93676fb2c4aa5c701b7db6d701e7b3b531a773c0bea97a89a9338bc2152383",
+      "size": 28324
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-004/artifact/evidence/proof-run.json",
+      "sha256": "cd94d06aea710055772505ed142148f0f5092152a63ba46d64ccc2f312379deb",
+      "size": 634
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-004/artifact/evidence/proof-stdout.txt",
+      "sha256": "3155557f2fa6b6fe55b661347e56893dc0b52fa1977b6800a8d26dbff1d3db84",
+      "size": 17
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-004/artifact/manifest.json",
+      "sha256": "ec7e1076e3b35125512285f90a4e27cb7865faf49628b1df6e24adf499be8587",
+      "size": 6332
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-004/artifact/payload/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-004/artifact/payload/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-004/artifact/payload/main.bend",
+      "sha256": "c0cff56af5e900db9055661d697673654072fc8264f29872b3a383f80ffc3af9",
+      "size": 10637
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-004/descriptor.json",
+      "sha256": "be066ea24210ea9ee9b76d473b3db53b96652bd6a0878752278c7e21e03fde25",
+      "size": 551
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-004/main.bend",
+      "sha256": "c0cff56af5e900db9055661d697673654072fc8264f29872b3a383f80ffc3af9",
+      "size": 10637
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-004/result.json",
+      "sha256": "81a372dbcdc0a9636e3b1b04be66a521929e1486fa057173809ce6a245da88e4",
+      "size": 1388
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-005/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-005/PROMPT.md",
+      "sha256": "e2f22f8ed584edb29bd14f5837d809ea1d4beaf79b703b3b4f729281d8e66800",
+      "size": 1522
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-005/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-005/TRANSCRIPT.md",
+      "sha256": "81c5a632db90c70a3213c2365fa43e50a8874349373233688b5a13cd314e8b0f",
+      "size": 1749
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-005/_behavior/_dump.bend",
+      "sha256": "4c3b4d178238fdf6399543d0b4ec1bef204ee52e013250084cd62599c8edfbf9",
+      "size": 28324
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-005/artifact/evidence/proof-run.json",
+      "sha256": "708e175f7836b791fa6b5b551f9da97bfe175e78425108007d862085616458bc",
+      "size": 634
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-005/artifact/evidence/proof-stdout.txt",
+      "sha256": "3155557f2fa6b6fe55b661347e56893dc0b52fa1977b6800a8d26dbff1d3db84",
+      "size": 17
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-005/artifact/manifest.json",
+      "sha256": "9fc37053b0014c4ca43025e91a417905a1ebae8c527f2acaae70e2335083883f",
+      "size": 6332
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-005/artifact/payload/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-005/artifact/payload/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-005/artifact/payload/main.bend",
+      "sha256": "476f69dd1f091af784cb313bfd2c67861b77fb0377c3952f4f6db3e1a47a3502",
+      "size": 10576
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-005/descriptor.json",
+      "sha256": "e0ab78103b1cc6e78f9750998a19f37b48359493acc648f658ec9731101f45f7",
+      "size": 551
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-005/main.bend",
+      "sha256": "476f69dd1f091af784cb313bfd2c67861b77fb0377c3952f4f6db3e1a47a3502",
+      "size": 10576
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-005/result.json",
+      "sha256": "2677ee41d5e291883123dde1fe9f744aef165e5f3ae5532e14854a53c8251895",
+      "size": 1388
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-006/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-006/PROMPT.md",
+      "sha256": "7fadee7d79dc2bf587da782474d6c5af906fcd5b80283faa9426fc022a7d2e89",
+      "size": 1522
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-006/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-006/TRANSCRIPT.md",
+      "sha256": "9d0dde970b1eb18a332762450f9836a1c918e5ea9e2353e4bde65bc7b3da0486",
+      "size": 1749
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-006/_behavior/_dump.bend",
+      "sha256": "55997ebb034b146118518be326016b69075411df6a5e9b3fc6f2e7fc77a98e5d",
+      "size": 28324
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-006/artifact/evidence/proof-run.json",
+      "sha256": "0f528de66c065ce706e9ddd1b6cf4e5514cadf45bbbccd9557a9ca564ba239f3",
+      "size": 634
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-006/artifact/evidence/proof-stdout.txt",
+      "sha256": "3155557f2fa6b6fe55b661347e56893dc0b52fa1977b6800a8d26dbff1d3db84",
+      "size": 17
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-006/artifact/manifest.json",
+      "sha256": "317ee425f1505d849540789c7c5b29b2f2d04883c2bb07c58b4bcdc712ed5f0d",
+      "size": 6332
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-006/artifact/payload/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-006/artifact/payload/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-006/artifact/payload/main.bend",
+      "sha256": "166f9907874c120bb37adc885307624b46928494c51a6427d19d72cadd8173ee",
+      "size": 10576
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-006/descriptor.json",
+      "sha256": "bb6828bd9ba1b80ccbb762aecbe42bd7736dbae4f018388283396d4d207335ba",
+      "size": 551
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-006/main.bend",
+      "sha256": "166f9907874c120bb37adc885307624b46928494c51a6427d19d72cadd8173ee",
+      "size": 10576
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-006/result.json",
+      "sha256": "a4441ca5b0117fbf56ae53f2b330196172154ec026c8630428bb1043668b24de",
+      "size": 1388
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-007/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-007/PROMPT.md",
+      "sha256": "b2c5f3dd28af0dbc6cc51c2df72155b545fdb90c06712bb164a650293f994842",
+      "size": 1635
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-007/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-007/TRANSCRIPT.md",
+      "sha256": "d0ae91d8fe28ec937cd5a5c32ea574a74846641366761cd711f54433e7eed9ab",
+      "size": 1749
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-007/_behavior/_dump.bend",
+      "sha256": "0f32676d1bbbd2442f69530d1a557644f765f3a8cd6f05e04de55bbf1f6e76f8",
+      "size": 28324
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-007/artifact/evidence/proof-run.json",
+      "sha256": "43ff39c65ec3782784da1322d2de462ce8182e5fc10b218af729f1e9e4863861",
+      "size": 634
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-007/artifact/evidence/proof-stdout.txt",
+      "sha256": "3155557f2fa6b6fe55b661347e56893dc0b52fa1977b6800a8d26dbff1d3db84",
+      "size": 17
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-007/artifact/manifest.json",
+      "sha256": "375cc874a803922254b19396bc9420e24b047e718a242e4e3e67a4f99594380e",
+      "size": 6332
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-007/artifact/payload/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-007/artifact/payload/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-007/artifact/payload/main.bend",
+      "sha256": "bc0d9456c61bd7b19477632a78dd91554ccb2a068e0b8a19d077156f597008e2",
+      "size": 10576
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-007/descriptor.json",
+      "sha256": "55346e579ee2af412452b19729ca146723dd27a01de198c54b6f0e3a6c774198",
+      "size": 551
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-007/main.bend",
+      "sha256": "bc0d9456c61bd7b19477632a78dd91554ccb2a068e0b8a19d077156f597008e2",
+      "size": 10576
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-007/result.json",
+      "sha256": "37eaad84630de3b18d8a3358a735dc33280b8f23c2a1fd3f4c35757a84f42d04",
+      "size": 1388
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-008/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-008/PROMPT.md",
+      "sha256": "1ce46bab35e813575f48a0dd27fa18e6a814ee5c8cd8f6caa3e3d870e0b583f2",
+      "size": 1573
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-008/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-008/TRANSCRIPT.md",
+      "sha256": "2652f3a71acb431c658f3111e3abf5fe7c4527000c0ca7505a2fbba321529807",
+      "size": 1749
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-008/_behavior/_dump.bend",
+      "sha256": "c8a9c4c729fb6bff2fed1d22631580cb8dd75b45c238c501760c902729afceaf",
+      "size": 28324
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-008/artifact/evidence/proof-run.json",
+      "sha256": "5b9ca58267d8bb6d41b9b20d0d29f705c0e99af396b6196580c89e672322533d",
+      "size": 634
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-008/artifact/evidence/proof-stdout.txt",
+      "sha256": "3155557f2fa6b6fe55b661347e56893dc0b52fa1977b6800a8d26dbff1d3db84",
+      "size": 17
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-008/artifact/manifest.json",
+      "sha256": "17da5bc466726c9e8cd9fcae0b2049ab2cf2651b77e228e7014e82c4cc846a83",
+      "size": 6332
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-008/artifact/payload/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-008/artifact/payload/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-008/artifact/payload/main.bend",
+      "sha256": "0b5b4c18ae8ff173b1af43c18a66841fbc0aef80dd0fd107d4a9eb2f7575bb86",
+      "size": 10576
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-008/descriptor.json",
+      "sha256": "7bd209f4f33736caa46086fe70224aad919d7ebd8a0cdd27031fe824fbd4c424",
+      "size": 551
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-008/main.bend",
+      "sha256": "0b5b4c18ae8ff173b1af43c18a66841fbc0aef80dd0fd107d4a9eb2f7575bb86",
+      "size": 10576
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-008/result.json",
+      "sha256": "42f6894860d3707ff73ff8fb2986d32a21d020189013e44e37943a1461335572",
+      "size": 1388
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-009/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-009/PROMPT.md",
+      "sha256": "3381ddb0a4c88fba9a6e7dfbbb52e54a3e4bf62cdf21396a53dbe0f00cce45ac",
+      "size": 1603
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-009/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-009/TRANSCRIPT.md",
+      "sha256": "a3fcfc3c5bd5638262e18b7ad3933e64fd4cf0be3bed97bc0e46f3683409413f",
+      "size": 1749
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-009/_behavior/_dump.bend",
+      "sha256": "4d7288837fd05a4607fe1ecb2fb6655a50b154688dbac465f6864130987f8781",
+      "size": 28324
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-009/artifact/evidence/proof-run.json",
+      "sha256": "a85b43cb78a69e60462d2544351df45436ea5b76ca23b9e151ab7cb124eac491",
+      "size": 634
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-009/artifact/evidence/proof-stdout.txt",
+      "sha256": "3155557f2fa6b6fe55b661347e56893dc0b52fa1977b6800a8d26dbff1d3db84",
+      "size": 17
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-009/artifact/manifest.json",
+      "sha256": "0763e138d163436f5f926f551b82babf6d9a56df7fc28dad1cf790c3be8590e9",
+      "size": 6332
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-009/artifact/payload/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-009/artifact/payload/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-009/artifact/payload/main.bend",
+      "sha256": "3167a8a96660b2727e5aac8afb39f56e9610e14b0acedad158050f57c87e0178",
+      "size": 10576
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-009/descriptor.json",
+      "sha256": "a70cc99d6960bd695a671f5accfb32108b10568f0f89605ccef87c460289d6ca",
+      "size": 551
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-009/main.bend",
+      "sha256": "3167a8a96660b2727e5aac8afb39f56e9610e14b0acedad158050f57c87e0178",
+      "size": 10576
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-009/result.json",
+      "sha256": "f3850b0b1cb4522ef43865308d205c047bcd04479ae379880ca11368f2141dd0",
+      "size": 1388
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-010/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-010/PROMPT.md",
+      "sha256": "b9eb225b49a0dc7ed33a5db67037d2ab979ed8af864982bf917215d28b2ade02",
+      "size": 1609
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-010/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-010/TRANSCRIPT.md",
+      "sha256": "8f74cca4742d94ac32a3c6624052bf28cd8601e0d3ade47d0a7f76f6215378fd",
+      "size": 1749
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-010/_behavior/_dump.bend",
+      "sha256": "349a5951597075e2e25f9a0a5d33a21f65f9c4b9eb48316791515d94b81bd84b",
+      "size": 28324
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-010/artifact/evidence/proof-run.json",
+      "sha256": "de2e2f6f80a937c03aa445663c2d2444b51e0df4cf44e8695ccd01915f72a681",
+      "size": 634
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-010/artifact/evidence/proof-stdout.txt",
+      "sha256": "3155557f2fa6b6fe55b661347e56893dc0b52fa1977b6800a8d26dbff1d3db84",
+      "size": 17
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-010/artifact/manifest.json",
+      "sha256": "2df4bb6ad5140d6a822ba74c6a2cf2fe2efd5c7034f6aa3103cfa2bbbe8d8cdb",
+      "size": 6332
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-010/artifact/payload/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-010/artifact/payload/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-010/artifact/payload/main.bend",
+      "sha256": "027e5363781914b407e4b3ac78df66d2ac5e0eb7b2e0509f6744408583dbbcde",
+      "size": 10576
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-010/descriptor.json",
+      "sha256": "8869d41ca55912c0aac698c6ee8c7992bbe3701f50f1d028e18f0b869bc6c8df",
+      "size": 552
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-010/main.bend",
+      "sha256": "027e5363781914b407e4b3ac78df66d2ac5e0eb7b2e0509f6744408583dbbcde",
+      "size": 10576
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-010/result.json",
+      "sha256": "b5e79922fb546a3726eb654011d191ef34a90e3efe0d663d865ebecf3f9e4cd5",
+      "size": 1388
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-011/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-011/PROMPT.md",
+      "sha256": "ee8d811ed0d518604b4ba5dd6539b8d84b6cf8ce997290b80244def2d7281935",
+      "size": 1613
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-011/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-011/TRANSCRIPT.md",
+      "sha256": "3432e6c6d36fc696dccdbfa244c4edf9f6198b18ad6d2e76a3e7a236c0ecdd76",
+      "size": 1749
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-011/_behavior/_dump.bend",
+      "sha256": "693369f7e8b62a9f2540484f49c0440378c97a4b87caaa75ddb081eae110f990",
+      "size": 28324
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-011/artifact/evidence/proof-run.json",
+      "sha256": "2da688a822113a01964449114829200bdbc6d9883b106499be79a71f2e799039",
+      "size": 634
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-011/artifact/evidence/proof-stdout.txt",
+      "sha256": "3155557f2fa6b6fe55b661347e56893dc0b52fa1977b6800a8d26dbff1d3db84",
+      "size": 17
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-011/artifact/manifest.json",
+      "sha256": "2564a31748ee7845aa5356e8fc5c052f9fb6903774ab075b700c33b4c514ef5a",
+      "size": 6332
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-011/artifact/payload/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-011/artifact/payload/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-011/artifact/payload/main.bend",
+      "sha256": "a9bde58dec4dbc8f3b25b516c98273d9e3dc192d19c429e9d3f80fd334dcff6c",
+      "size": 10576
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-011/descriptor.json",
+      "sha256": "5caa922fb080254fb6260fb843cfc38678014b066ad125084505fd88ebd4a273",
+      "size": 552
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-011/main.bend",
+      "sha256": "a9bde58dec4dbc8f3b25b516c98273d9e3dc192d19c429e9d3f80fd334dcff6c",
+      "size": 10576
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-011/result.json",
+      "sha256": "98fc01c021347ce7d6ebdca73c0a568b5baf6f1fc2349b290eaa6146cfe122b9",
+      "size": 1388
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-012/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-012/PROMPT.md",
+      "sha256": "2853298341404399d67d23136138cc81ae4b8fa8616a2f660cb8813ef41a251a",
+      "size": 1611
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-012/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-012/TRANSCRIPT.md",
+      "sha256": "bd536c364266e41f963033583053c982e8f3d0f146e6e703f3cc36b7525d0e53",
+      "size": 1749
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-012/_behavior/_dump.bend",
+      "sha256": "423449044f0fb3b6bb584852d2186cb4be95a3c229a62c08dd5612b91e90d1b6",
+      "size": 28324
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-012/artifact/evidence/proof-run.json",
+      "sha256": "01d3d6fedbd88df9ca8db23686299b2797779db0d11533ff0c45d39ed3a3b980",
+      "size": 634
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-012/artifact/evidence/proof-stdout.txt",
+      "sha256": "3155557f2fa6b6fe55b661347e56893dc0b52fa1977b6800a8d26dbff1d3db84",
+      "size": 17
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-012/artifact/manifest.json",
+      "sha256": "9b1129f826ec60d34b2829f5ec8efd34b5ffa6eccd9b3aa5ceba0c9b273a63e6",
+      "size": 6332
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-012/artifact/payload/LAWS.bend",
+      "sha256": "0feed5f8c080d2c2173fbd213f942938a37dd5ed97d99460bd33ae986d631dc8",
+      "size": 12100
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-012/artifact/payload/PROOF.bend",
+      "sha256": "c6479516767ef22206df57ff90dd51c85e110c8cacab23cfdcd1276191aa69d8",
+      "size": 20209
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-012/artifact/payload/main.bend",
+      "sha256": "d48ebf4618100094d84b13d276cf011076729947e8e53db3cc38b1c8d5663a82",
+      "size": 10576
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-012/descriptor.json",
+      "sha256": "fdfdc0d2d9c1d2cb017b2ae64e36d88bdee40ce0d8a8371436637284528285a3",
+      "size": 552
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-012/main.bend",
+      "sha256": "d48ebf4618100094d84b13d276cf011076729947e8e53db3cc38b1c8d5663a82",
+      "size": 10576
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/IND-MRVN09-012/result.json",
+      "sha256": "3f4a4e4ea55f71d1e526f96ca49d0c1f066f38064b1c1ea79e71baa4a2b4a85b",
+      "size": 1388
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/independent/_build_001.py",
+      "sha256": "c2869b901bb82c29c493fd9fa7fbdc44d5a907e7d660b748b76e09970a266537",
+      "size": 8109
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/lab/agent_results.json",
+      "sha256": "8c9a34c85a031492a3e16db5593fbc5169b1b0df405bc584bafb3abec06ed3a6",
+      "size": 9073
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/lab/artifact_index.json",
+      "sha256": "51956123c68052415b08d4f89a04083e1b83a00dac71c5c49da6f5c6b55dcfb0",
+      "size": 5516
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/lab/authority_attacks.ts",
+      "sha256": "067f74dc2786c183de61626c7f5f9d86b5bea42bf0e567ee15169365e49dfd41",
+      "size": 10665
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/lab/build_artifact_index.ts",
+      "sha256": "3bedf8b7a48d9b35a5b9c3d113795d28fd420108eed2e33a9ab77888cf0d5ea6",
+      "size": 2548
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/lab/build_independent_candidates.py",
+      "sha256": "1fac7c8b1836b42298a9596fc1002d81decc0b71069c068d71b2430b4c2cb861",
+      "size": 13363
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/lab/classify.ts",
+      "sha256": "93c047f1f5765192c10193b369cb201936d493e09abe959fa5f1b3ad3d41e3dd",
+      "size": 17556
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/lab/gen_behavior_driver.ts",
+      "sha256": "17b9fbf374622c3c500fbf135474416669b653153da8007ffd8d36900498b55e",
+      "size": 4194
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/lab/independence_attack.ts",
+      "sha256": "b9e9a7cf781f4e03ac3ad12aa51f862cb85969b023a9833a5dc8fb3f32b21cd8",
+      "size": 2276
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/lab/independence_audit.ts",
+      "sha256": "dc609f1bd0b5c8ba59f31ce9b06c558eacfda3d1ed604fef58692eec63e2c841",
+      "size": 4981
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/lab/independence_audit_result.json",
+      "sha256": "fd066e2834322c740bf8858ae8d1b1d18863090bfa3eefe201ec8afef76059d8",
+      "size": 1266
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/lab/metrics.json",
+      "sha256": "d3bc745628b99186b52af9bfa928b57f15b39a4782f650fa33b73d54e88291ee",
+      "size": 2966
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/lab/metrics.ts",
+      "sha256": "9e66293d85fd00c546d75b6fd5153a899366b575cf76486840ad86a34334c9db",
+      "size": 5817
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/lab/metrics.txt",
+      "sha256": "5c746ac443d96f2eb73e5221a8a67fed2723e956c7cde10e843e06ebb4881662",
+      "size": 298
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/lab/regression_authority_drift_test.ts",
+      "sha256": "e30973e28bb3d015cef0306caeddbbd496784b924611b67e6de9ba4a03a492ac",
+      "size": 4531
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/lab/regression_hygiene.ts",
+      "sha256": "32d23730e2bb422c1d2402eb8aa2a35055fd8f1c9497d2ae34350fa07ca7214b",
+      "size": 7717
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/lab/regression_hygiene_result.json",
+      "sha256": "891263dbf1cc20a494ca11136f46e9a4fa516f09c78a70fa6984a921db7ec378",
+      "size": 915
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/lab/results.json",
+      "sha256": "0adc473e1e78a55aa942355d21a7aed4baea6e497bfdaf3f4adbd6149c55ab33",
+      "size": 19175
+    },
+    {
+      "path": "factory/qualify/ACT-MRVN-QUALIFY09/lab/self_test.ts",
+      "sha256": "0d880f6868306c9f87a8dde1586a5ba39344f6209e5f0e23c710c25ba6ae89e8",
+      "size": 6678
+    }
+  ]
+}
