@@ -1,0 +1,18 @@
+=== ACT-MRVN-QUALIFY10 authority_attacks ===
+  PASS  1.law_tamper -- PURE_FILE_HASH_MISMATCH
+  PASS  2.proof_tamper -- PURE_FILE_HASH_MISMATCH
+  PASS  3.pure_impl_tamper -- PURE_FILE_HASH_MISMATCH
+  PASS  4.foreign_js_tamper -- FOREIGN_EFFECT_HASH_MISMATCH
+  PASS  5.foreign_c_tamper -- FOREIGN_EFFECT_HASH_MISMATCH
+  PASS  6.foreign_dependency_tamper -- FOREIGN_EFFECT_HASH_MISMATCH
+  PASS  7.runtime_oracle_tamper -- PURE_FILE_HASH_MISMATCH
+  PASS  8.effect_contract_tamper -- FOREIGN_EFFECT_CONTRACT_HASH_MISMATCH
+  PASS  9.artifact_manifest_tamper -- ARTIFACT_ID_MISMATCH,FOREIGN_EFFECT_HASH_MISMATCH
+  PASS  10.toolchain_tamper -- ARTIFACT_ID_MISMATCH,TOOLCHAIN_MISMATCH
+  PASS  11.backend_substitution -- id_diverged=true verified=true
+  PASS  12.fake_runtime_pass -- FAKE_RUNTIME_PASS
+  PASS  13.fake_proof_pass -- PURE_FILE_HASH_MISMATCH
+  PASS  14.unsafe_escape_hatch -- source contains @unsafe marker
+  PASS  15.claim_scope_inflation -- claim text present in JSON; verifier's pure_payload check is unaffected (no PROVED promotion occurs)
+
+Results: 15 pass, 0 fail

@@ -1,0 +1,2647 @@
+{
+  "act": "ACT-MRVN-QUALIFY10",
+  "host_mutation_lab": {
+    "act": "ACT-MRVN-QUALIFY10",
+    "oracle_sha256": "b49a74efc6f93d55c2f4271f0f926ace6e6b637f5f2095e2d6152d2a34e10f22",
+    "contract_sha256": "f16f2e1ec5f334e0a2abd81907ff0dc6e8909882b1f48b89f6065fe5bf91635f",
+    "canonical_js_sha256": "11dc09f64cf9605523d2513cf21808cf1d84ad2b2106778d9b94389a358b6094",
+    "canonical_c_sha256": "e32bb8944ce0046132b62542600b95a5212fe40a1b8535ea43a9f97e60e6e529",
+    "mutations": [
+      {
+        "mutation": "MUT-01",
+        "proof_status": "PROOF_PRESERVED",
+        "backend_js_match_oracle": false,
+        "backend_c_match_oracle": true,
+        "backend_divergence_detected": true,
+        "observable_side_effect_detected": false,
+        "nondeterministic_observed": false,
+        "hash_drift": true,
+        "primary_classification": "HOST_SEMANTIC_VIOLATION"
+      },
+      {
+        "mutation": "MUT-02",
+        "proof_status": "PROOF_PRESERVED",
+        "backend_js_match_oracle": true,
+        "backend_c_match_oracle": false,
+        "backend_divergence_detected": true,
+        "observable_side_effect_detected": false,
+        "nondeterministic_observed": false,
+        "hash_drift": false,
+        "primary_classification": "BACKEND_DIVERGENCE"
+      },
+      {
+        "mutation": "MUT-03",
+        "proof_status": "PROOF_PRESERVED",
+        "backend_js_match_oracle": false,
+        "backend_c_match_oracle": true,
+        "backend_divergence_detected": true,
+        "observable_side_effect_detected": false,
+        "nondeterministic_observed": false,
+        "hash_drift": false,
+        "primary_classification": "BACKEND_DIVERGENCE"
+      },
+      {
+        "mutation": "MUT-04",
+        "proof_status": "PROOF_PRESERVED",
+        "backend_js_match_oracle": true,
+        "backend_c_match_oracle": true,
+        "backend_divergence_detected": false,
+        "observable_side_effect_detected": false,
+        "nondeterministic_observed": false,
+        "hash_drift": true,
+        "primary_classification": "HOST_SEMANTIC_VIOLATION"
+      },
+      {
+        "mutation": "MUT-05",
+        "proof_status": "PROOF_PRESERVED",
+        "backend_js_match_oracle": false,
+        "backend_c_match_oracle": false,
+        "backend_divergence_detected": false,
+        "observable_side_effect_detected": false,
+        "nondeterministic_observed": false,
+        "hash_drift": true,
+        "primary_classification": "HOST_SEMANTIC_VIOLATION"
+      },
+      {
+        "mutation": "MUT-06",
+        "proof_status": "PROOF_PRESERVED",
+        "backend_js_match_oracle": true,
+        "backend_c_match_oracle": true,
+        "backend_divergence_detected": false,
+        "observable_side_effect_detected": true,
+        "nondeterministic_observed": false,
+        "hash_drift": true,
+        "primary_classification": "OBSERVABLE_SIDE_EFFECT_DRIFT"
+      },
+      {
+        "mutation": "MUT-07",
+        "proof_status": "PROOF_PRESERVED",
+        "backend_js_match_oracle": false,
+        "backend_c_match_oracle": true,
+        "backend_divergence_detected": true,
+        "observable_side_effect_detected": false,
+        "nondeterministic_observed": true,
+        "hash_drift": true,
+        "primary_classification": "NONDETERMINISTIC_EFFECT"
+      },
+      {
+        "mutation": "MUT-08",
+        "proof_status": "PROOF_PRESERVED",
+        "backend_js_match_oracle": false,
+        "backend_c_match_oracle": false,
+        "backend_divergence_detected": false,
+        "observable_side_effect_detected": false,
+        "nondeterministic_observed": false,
+        "hash_drift": true,
+        "primary_classification": "HOST_SEMANTIC_VIOLATION"
+      },
+      {
+        "mutation": "MUT-09",
+        "proof_status": "PROOF_PRESERVED",
+        "backend_js_match_oracle": false,
+        "backend_c_match_oracle": false,
+        "backend_divergence_detected": false,
+        "observable_side_effect_detected": false,
+        "nondeterministic_observed": false,
+        "hash_drift": true,
+        "primary_classification": "HOST_SEMANTIC_VIOLATION"
+      },
+      {
+        "mutation": "MUT-10",
+        "proof_status": "PROOF_PRESERVED",
+        "backend_js_match_oracle": true,
+        "backend_c_match_oracle": true,
+        "backend_divergence_detected": false,
+        "observable_side_effect_detected": true,
+        "nondeterministic_observed": false,
+        "hash_drift": true,
+        "primary_classification": "HOST_SEMANTIC_VIOLATION"
+      },
+      {
+        "mutation": "MUT-11",
+        "proof_status": "PROOF_PRESERVED",
+        "backend_js_match_oracle": false,
+        "backend_c_match_oracle": true,
+        "backend_divergence_detected": true,
+        "observable_side_effect_detected": false,
+        "nondeterministic_observed": false,
+        "hash_drift": true,
+        "primary_classification": "BACKEND_DIVERGENCE"
+      },
+      {
+        "mutation": "MUT-12",
+        "proof_status": "PROOF_PRESERVED",
+        "backend_js_match_oracle": true,
+        "backend_c_match_oracle": true,
+        "backend_divergence_detected": false,
+        "observable_side_effect_detected": false,
+        "nondeterministic_observed": false,
+        "hash_drift": false,
+        "primary_classification": "FOREIGN_BINDING_GAP"
+      }
+    ],
+    "runs": [
+      {
+        "mutation": "MUT-01",
+        "backend": "js",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "47fbabf4655cfc45abce961351a5e881f8c18604c33ad4d373d18ab87fa82a69",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-01",
+        "backend": "c",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "6a28b40a3c552a59c53cdb11d1ff8e3aa4fce5f0793bd6f62c233034805548d6",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-01",
+        "backend": "js",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "47fbabf4655cfc45abce961351a5e881f8c18604c33ad4d373d18ab87fa82a69",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-01",
+        "backend": "c",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "307e23c764d20524b98a67661e9297ee3b30e305891b4ebe2c559429dae65f6e",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-01",
+        "backend": "js",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "47fbabf4655cfc45abce961351a5e881f8c18604c33ad4d373d18ab87fa82a69",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-01",
+        "backend": "c",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "e3b20d160710e23374e1b426e71886075e34e4bd3aed04448bc7fa5f4e701726",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-01",
+        "backend": "js",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "47fbabf4655cfc45abce961351a5e881f8c18604c33ad4d373d18ab87fa82a69",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-01",
+        "backend": "c",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "436ae4e126e83765a51658c529159428cb4cdebdd45caec366fb7da401212f73",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-01",
+        "backend": "js",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "47fbabf4655cfc45abce961351a5e881f8c18604c33ad4d373d18ab87fa82a69",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-01",
+        "backend": "c",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "5803ca6e8f231c408c32b094cab593cea4bcae06b7814f5673246f0fc3e15a44",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-01",
+        "backend": "js",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "47fbabf4655cfc45abce961351a5e881f8c18604c33ad4d373d18ab87fa82a69",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-01",
+        "backend": "c",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "1842bb65eda0c3d222159b3b94fbe7b66eeb1390577dda225a776aeab8dcddc3",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-01",
+        "backend": "js",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "47fbabf4655cfc45abce961351a5e881f8c18604c33ad4d373d18ab87fa82a69",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-01",
+        "backend": "c",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "24ae5103633a64ecf6dcca07e8a7d4effd0aa0bb4b6d8b204fe738c94f9d9fc8",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-02",
+        "backend": "js",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "249f6e0ece45c1da096a8d8e2fc6cfd4deba4389baecf1a43bdad44e96cfaf60",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-02",
+        "backend": "c",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "3431e5e20e4001d3d77ac08c94b95bee731036f0b63516d3b4bcc70a18924bb7",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-02",
+        "backend": "js",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "249f6e0ece45c1da096a8d8e2fc6cfd4deba4389baecf1a43bdad44e96cfaf60",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-02",
+        "backend": "c",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "31b13e3a2324f4a26e900e23af1d19bedcc65dc1ae8002a1d54074b7fad008a2",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-02",
+        "backend": "js",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "249f6e0ece45c1da096a8d8e2fc6cfd4deba4389baecf1a43bdad44e96cfaf60",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-02",
+        "backend": "c",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "86d4a92367103343c48cadb6b34e77b32578f9684161e86e54425f483c997e97",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-02",
+        "backend": "js",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "249f6e0ece45c1da096a8d8e2fc6cfd4deba4389baecf1a43bdad44e96cfaf60",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-02",
+        "backend": "c",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "e5b94595fdd12ee1cc6bfb8e54cdacd923eebaa80eef533a73c6c4d8cc8adb91",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-02",
+        "backend": "js",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "249f6e0ece45c1da096a8d8e2fc6cfd4deba4389baecf1a43bdad44e96cfaf60",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-02",
+        "backend": "c",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "1b68eee18ea4f3ef3b4c994ddb0d07839b3a2ba25f2d83212e62b942e0a0bb4d",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-02",
+        "backend": "js",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "249f6e0ece45c1da096a8d8e2fc6cfd4deba4389baecf1a43bdad44e96cfaf60",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-02",
+        "backend": "c",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "97757a81ffd5f04f5d40269323f4613ae1e5bead84308d9542f4225c6efaae89",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-02",
+        "backend": "js",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "249f6e0ece45c1da096a8d8e2fc6cfd4deba4389baecf1a43bdad44e96cfaf60",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-02",
+        "backend": "c",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "fb00e45e902f6fb4d1a3544d761dd46b3adea40fba52a2ec6a0572bb3009536f",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-03",
+        "backend": "js",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "bde82e3340f84de3c32fa897c74f298f5fded7907a0e379ac1a0218d7e93263c",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-03",
+        "backend": "c",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "8c5eee4d6b11730c748e9e3b92146a850418e39bc9a45c8c1a523280d21522ec",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-03",
+        "backend": "js",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "bde82e3340f84de3c32fa897c74f298f5fded7907a0e379ac1a0218d7e93263c",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-03",
+        "backend": "c",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "cdafdf4f5b8e9c599fdad21234b5fa4c195d8d781b5154d4f7a2832dac6c1e0f",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-03",
+        "backend": "js",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "bde82e3340f84de3c32fa897c74f298f5fded7907a0e379ac1a0218d7e93263c",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-03",
+        "backend": "c",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "d5c70bff2d5263d4f7b471cb55b2272312281157d3d65b9cf1041141c6f5f3b5",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-03",
+        "backend": "js",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "bde82e3340f84de3c32fa897c74f298f5fded7907a0e379ac1a0218d7e93263c",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-03",
+        "backend": "c",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "6ec02ddf643eb0a9aa9620c94bc0a74a150fb02f67729066422c2cb1476d7598",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-03",
+        "backend": "js",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "bde82e3340f84de3c32fa897c74f298f5fded7907a0e379ac1a0218d7e93263c",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-03",
+        "backend": "c",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "267c8ad777cb11ad9df3913b7e8183ccce14c195f02f718e374296142a75816d",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-03",
+        "backend": "js",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "bde82e3340f84de3c32fa897c74f298f5fded7907a0e379ac1a0218d7e93263c",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-03",
+        "backend": "c",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "5fdffe32aa299958634eff420069c72e5f7d398ecff6d227a7885090b4edc1bb",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-03",
+        "backend": "js",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "bde82e3340f84de3c32fa897c74f298f5fded7907a0e379ac1a0218d7e93263c",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-03",
+        "backend": "c",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "167008a4b5633ef0c0089025e759ef2eb6627d81ba9f27e7d69744873780856a",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-04",
+        "backend": "js",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "73275cea33d1e0bb7b658441f765c554c4360367f8c60a0bbf470b9bd7af8530",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-04",
+        "backend": "c",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "081ca70a802eaf6ceac90bf6c21a93a9572b70018ca315f6c5ef0441942120b7",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-04",
+        "backend": "js",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "73275cea33d1e0bb7b658441f765c554c4360367f8c60a0bbf470b9bd7af8530",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-04",
+        "backend": "c",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "2183acbad2a3a60239980bdaf5ec55e329912fa13532e76a059a60c772e1172f",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-04",
+        "backend": "js",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "73275cea33d1e0bb7b658441f765c554c4360367f8c60a0bbf470b9bd7af8530",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-04",
+        "backend": "c",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "34a9d09fa5a75049b536fa208f40fbfb76d1f59a9bf6d0c2fea998988a7492b3",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-04",
+        "backend": "js",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "73275cea33d1e0bb7b658441f765c554c4360367f8c60a0bbf470b9bd7af8530",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-04",
+        "backend": "c",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "82dd58344111f7e14294150b8418e2a0587894b9db77a515e21ee00b295f83da",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-04",
+        "backend": "js",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "73275cea33d1e0bb7b658441f765c554c4360367f8c60a0bbf470b9bd7af8530",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-04",
+        "backend": "c",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "559ad06a6fa7cb3bfebb43b796d1e70d307a6a175cef5d04e3879072ff6125cf",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-04",
+        "backend": "js",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "73275cea33d1e0bb7b658441f765c554c4360367f8c60a0bbf470b9bd7af8530",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-04",
+        "backend": "c",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "2468f426ace15d393e300b08019b7c546ac2cde5d74f546324b2a44cc39c13c5",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-04",
+        "backend": "js",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "73275cea33d1e0bb7b658441f765c554c4360367f8c60a0bbf470b9bd7af8530",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-04",
+        "backend": "c",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "94cd32f1a8e8f8bf5591c94c6bb75b13940c6fee4c394a900e29771bf71bfaa3",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-05",
+        "backend": "js",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "bad87b51ee564eafd0e218530044995ff3763ce930f25bc0e4767f2c8e016aa9",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-05",
+        "backend": "c",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "56b8858ad9e9619793a5829d523076b6d4805c9ce649100245f0348e2a71581f",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-05",
+        "backend": "js",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "bad87b51ee564eafd0e218530044995ff3763ce930f25bc0e4767f2c8e016aa9",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-05",
+        "backend": "c",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "443611adc80241e1a39c387add4fc14d924204246f4e89094a042e79dd6b0e3c",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-05",
+        "backend": "js",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "bad87b51ee564eafd0e218530044995ff3763ce930f25bc0e4767f2c8e016aa9",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-05",
+        "backend": "c",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "603f3e1983030b050dbbc9144bfa54afd607e92dfd66af7ae1f13cd49147578a",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-05",
+        "backend": "js",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "bad87b51ee564eafd0e218530044995ff3763ce930f25bc0e4767f2c8e016aa9",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-05",
+        "backend": "c",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "28f82fcdf7d84efd3cb8c31d346b712df5bfa7f5bc572257492b31a441751bab",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-05",
+        "backend": "js",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "bad87b51ee564eafd0e218530044995ff3763ce930f25bc0e4767f2c8e016aa9",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-05",
+        "backend": "c",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "40bcc87c0683442f17dd46badec04213bf5bd3212739ee1c79df5ee46f9a7b46",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-05",
+        "backend": "js",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "bad87b51ee564eafd0e218530044995ff3763ce930f25bc0e4767f2c8e016aa9",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-05",
+        "backend": "c",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "000dd6e80f5f342853bf8ae63b214a37440e3771ae94a336995477b863c73a07",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-05",
+        "backend": "js",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "bad87b51ee564eafd0e218530044995ff3763ce930f25bc0e4767f2c8e016aa9",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-05",
+        "backend": "c",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "7327bae02fc99daad043240c25f9b7ea0109c5e1201a5c72c8d8fb0d1d80b781",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-06",
+        "backend": "js",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "1bb050cd3eb34103aa68b8f7bfff39622afc7de68c5b9053c739389c544957f4",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-06",
+        "backend": "c",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "04c78a54406084d995824910095f46f85fd0e7d9496823097e153478215db6e6",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-06",
+        "backend": "js",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "1bb050cd3eb34103aa68b8f7bfff39622afc7de68c5b9053c739389c544957f4",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-06",
+        "backend": "c",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "ca33480a3da0ae1e59ec9f460bb939387b1651800540d66f9065c5f5e516a796",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-06",
+        "backend": "js",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "1bb050cd3eb34103aa68b8f7bfff39622afc7de68c5b9053c739389c544957f4",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-06",
+        "backend": "c",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "ee817d8b5e9e70c6cfd3dbddda4d4df0f9725e0dc4b22534b4ed293946d1c194",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-06",
+        "backend": "js",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "1bb050cd3eb34103aa68b8f7bfff39622afc7de68c5b9053c739389c544957f4",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-06",
+        "backend": "c",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "29051aa9ba3efac8271aa192e3fb7a79f4dd43cf91dbd7d2b85dee24bd278657",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-06",
+        "backend": "js",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "1bb050cd3eb34103aa68b8f7bfff39622afc7de68c5b9053c739389c544957f4",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-06",
+        "backend": "c",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "8e8a2e08ca13686854b4019006d604afb9f49b9cd9e3325726687e7d4f4bbf76",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-06",
+        "backend": "js",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "1bb050cd3eb34103aa68b8f7bfff39622afc7de68c5b9053c739389c544957f4",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-06",
+        "backend": "c",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "3efe5901b21ccef4fe03df3927694c8448a538bfb6b25e9c437807a4eaf62b11",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-06",
+        "backend": "js",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "1bb050cd3eb34103aa68b8f7bfff39622afc7de68c5b9053c739389c544957f4",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-06",
+        "backend": "c",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "aee787752a465d220276bf43507a4ef8df257a1e8f3945b8e25831da83661dfc",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-07",
+        "backend": "js",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "ba07004ecc44ea1035bd434e311c9d04635ae43449e7f060db3ddca9bd79ec06",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-07",
+        "backend": "c",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "ff33f1338e527eea67e85238669a4273f2a1921c2398f7bfde9ff1e8df5f256d",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-07",
+        "backend": "js",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "ba07004ecc44ea1035bd434e311c9d04635ae43449e7f060db3ddca9bd79ec06",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-07",
+        "backend": "c",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "ae8090975958a6e4248727e873780eeee6f1da31b1b25b7f2503ce66fb2ef559",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-07",
+        "backend": "js",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "ba07004ecc44ea1035bd434e311c9d04635ae43449e7f060db3ddca9bd79ec06",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-07",
+        "backend": "c",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "b708b0a6000a03b964d7ce7fb20c261ba6a158c7abff015dcf306f15d41c7b49",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-07",
+        "backend": "js",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "ba07004ecc44ea1035bd434e311c9d04635ae43449e7f060db3ddca9bd79ec06",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-07",
+        "backend": "c",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "432ce98d0b7c68099431b659a9615f9fb883d9472f760b8424f7df5697994a4e",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-07",
+        "backend": "js",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "ba07004ecc44ea1035bd434e311c9d04635ae43449e7f060db3ddca9bd79ec06",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-07",
+        "backend": "c",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "8dbcf0c114f84a1e1245f997de928f049842317cc380279c26d0241ac4739393",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-07",
+        "backend": "js",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "ba07004ecc44ea1035bd434e311c9d04635ae43449e7f060db3ddca9bd79ec06",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-07",
+        "backend": "c",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "ff7718f134b06837cba54744cb49cfd46a05dc19479363d1a7cc7536607022f1",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-07",
+        "backend": "js",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "ba07004ecc44ea1035bd434e311c9d04635ae43449e7f060db3ddca9bd79ec06",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-07",
+        "backend": "c",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "a6cf30d820dbe32bfa0b5580ddf757918d8a23b2dd0378973ae10bb3c7d95635",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-08",
+        "backend": "js",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "ALLOW",
+        "match_oracle": false,
+        "binary_or_target_sha256": "237e5a8c6c1a233bbf352f0daa31cbdd694a600d0806ca5fddb1bcab99722fee",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-08",
+        "backend": "c",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "ALLOW",
+        "match_oracle": false,
+        "binary_or_target_sha256": "be7c80bc747949fd98a4214efa81ff9134b5b66b66c8db1ee1cb10a7a9199a5c",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-08",
+        "backend": "js",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "ALLOW",
+        "match_oracle": false,
+        "binary_or_target_sha256": "237e5a8c6c1a233bbf352f0daa31cbdd694a600d0806ca5fddb1bcab99722fee",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-08",
+        "backend": "c",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "ALLOW",
+        "match_oracle": false,
+        "binary_or_target_sha256": "36030a33c9993c3cf306b80d336cb2a4ee380087d28df8265ed0d57592a6aa67",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-08",
+        "backend": "js",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "237e5a8c6c1a233bbf352f0daa31cbdd694a600d0806ca5fddb1bcab99722fee",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-08",
+        "backend": "c",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "a2c71393e354a4798606c6e1914e01f22d1ee32fa0fc559b413ac72f0278e42a",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-08",
+        "backend": "js",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "237e5a8c6c1a233bbf352f0daa31cbdd694a600d0806ca5fddb1bcab99722fee",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-08",
+        "backend": "c",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "2ed5a740edf6c3e02a3164487f6dde589b44559a00509ca076e00cef5393bf29",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-08",
+        "backend": "js",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "237e5a8c6c1a233bbf352f0daa31cbdd694a600d0806ca5fddb1bcab99722fee",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-08",
+        "backend": "c",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "c3ce85bf76e3d0de58417015bf2ff32a60428f55b17fe0f4ec1933a778808b63",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-08",
+        "backend": "js",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "237e5a8c6c1a233bbf352f0daa31cbdd694a600d0806ca5fddb1bcab99722fee",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-08",
+        "backend": "c",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "4f2fe9443704d0af8c4304504d2744c0b574e83157f584ba1e970741dd573298",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-08",
+        "backend": "js",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "237e5a8c6c1a233bbf352f0daa31cbdd694a600d0806ca5fddb1bcab99722fee",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-08",
+        "backend": "c",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "6e77b9e535cbec4272d4a0c66aacd4a5587c535860497e8c9b9c92a3853481d9",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-09",
+        "backend": "js",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "4e757873ea190c5a72305d0c7edc0095614d287d600ed8dbae2a71bd0d2722b4",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-09",
+        "backend": "c",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "5bb095bb073404d95cd2089767674a86beedeb3758712cc1eeda8684ad30fca8",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-09",
+        "backend": "js",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "4e757873ea190c5a72305d0c7edc0095614d287d600ed8dbae2a71bd0d2722b4",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-09",
+        "backend": "c",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "f5c8be51c99e01ac299f483d319676265b29ad9312c057413b0c556483b47943",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-09",
+        "backend": "js",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "4e757873ea190c5a72305d0c7edc0095614d287d600ed8dbae2a71bd0d2722b4",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-09",
+        "backend": "c",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "37642f167e8135f17238f07c565b11bcbd6ac84e55e3b8e8a221b40f1829001a",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-09",
+        "backend": "js",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "4e757873ea190c5a72305d0c7edc0095614d287d600ed8dbae2a71bd0d2722b4",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-09",
+        "backend": "c",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "71468a2efae335a378309b8cfd8ad757134edbedf7e6ef622a8302a1810ba309",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-09",
+        "backend": "js",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "4e757873ea190c5a72305d0c7edc0095614d287d600ed8dbae2a71bd0d2722b4",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-09",
+        "backend": "c",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "af3417d9fe84423df769eb218bc3edecef5f1da44e1c31d36d944cf7edabd94f",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-09",
+        "backend": "js",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "4e757873ea190c5a72305d0c7edc0095614d287d600ed8dbae2a71bd0d2722b4",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-09",
+        "backend": "c",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "842834d5e139f30732dfcee508b7c25d5442c873b6891f5bd41314279a293fc0",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-09",
+        "backend": "js",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "4e757873ea190c5a72305d0c7edc0095614d287d600ed8dbae2a71bd0d2722b4",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-09",
+        "backend": "c",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "5d2c04018a588b3fe835966b43c45d4038faf1d5412766fc3095d9766285ac4c",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-10",
+        "backend": "js",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "b27b0c8d6c71e4198594743492695ed220b69adb1a3ee9276e9de61527185675",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-10",
+        "backend": "c",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "e407b2e47aa25509fddfc7db7d58957095a3a6ec8a0267f48a792cc995d066d6",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-10",
+        "backend": "js",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "b27b0c8d6c71e4198594743492695ed220b69adb1a3ee9276e9de61527185675",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-10",
+        "backend": "c",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "9cc61d271e0600150e5b1c07d926c122552f70903bb68f32c35cd0bc816d4fb5",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-10",
+        "backend": "js",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "b27b0c8d6c71e4198594743492695ed220b69adb1a3ee9276e9de61527185675",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-10",
+        "backend": "c",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "30f5b2f48ef0d703ff86e2ac9e525bc067b25146e0215656eea9603062ef2628",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-10",
+        "backend": "js",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "b27b0c8d6c71e4198594743492695ed220b69adb1a3ee9276e9de61527185675",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-10",
+        "backend": "c",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "7c08000ba68e72d6895355eef6b7486e92198a34a6b29f33fb8482c1129baeb4",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-10",
+        "backend": "js",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "b27b0c8d6c71e4198594743492695ed220b69adb1a3ee9276e9de61527185675",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-10",
+        "backend": "c",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "eb490ecaf4b00ec2928a0043303705192bdfd434e434ebf661fd94ce29e3ab3b",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-10",
+        "backend": "js",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "b27b0c8d6c71e4198594743492695ed220b69adb1a3ee9276e9de61527185675",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-10",
+        "backend": "c",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "d085d899d1f0096c4e5a3a6716201573d3e8c636bca2373dd1cea8b731daf770",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-10",
+        "backend": "js",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "b27b0c8d6c71e4198594743492695ed220b69adb1a3ee9276e9de61527185675",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-10",
+        "backend": "c",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "4b90773acc8fe4c57826d94c65297566d8abc7945763b2f0389ca8bd25eff8bf",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-11",
+        "backend": "js",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "90505f5042a3eac4160931e0ab31de222725feb386e28b7f5596903f905ce3d8",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-11",
+        "backend": "c",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "c6f4218bcd3d3c3acc4260f992e24d0adb0fe62556c6680c09e003a3e5eabd90",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-11",
+        "backend": "js",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "90505f5042a3eac4160931e0ab31de222725feb386e28b7f5596903f905ce3d8",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-11",
+        "backend": "c",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "5c1c5e2a8fcba5ea9635d9903a2b9688311948b3d73e3f1584ab48e733c1451c",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-11",
+        "backend": "js",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "90505f5042a3eac4160931e0ab31de222725feb386e28b7f5596903f905ce3d8",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-11",
+        "backend": "c",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "4316a6234537a763725dec3dacdd2abc1e4205b1ad357dfdff9e922052c1ec7e",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-11",
+        "backend": "js",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "90505f5042a3eac4160931e0ab31de222725feb386e28b7f5596903f905ce3d8",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-11",
+        "backend": "c",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "e31a4d63485ac449cebd7bb2089d576ff79680eb2b995c001b8d84b9cc7f8328",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-11",
+        "backend": "js",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "90505f5042a3eac4160931e0ab31de222725feb386e28b7f5596903f905ce3d8",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-11",
+        "backend": "c",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "db27a38aaebf60249b21f980999452fc68e06d69b829db4a695749445cb9bfb1",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-11",
+        "backend": "js",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "90505f5042a3eac4160931e0ab31de222725feb386e28b7f5596903f905ce3d8",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-11",
+        "backend": "c",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "4af0a128adb40d73e9f8f28d19cd79116c08a1a88a3802aa5e46ecc638272e45",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-11",
+        "backend": "js",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": false,
+        "binary_or_target_sha256": "90505f5042a3eac4160931e0ab31de222725feb386e28b7f5596903f905ce3d8",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-11",
+        "backend": "c",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "f6f6b8b6cc018e3be6eca3e59ee1083fe7e95586c8cb429a3014e177a9588490",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-12",
+        "backend": "js",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "249f6e0ece45c1da096a8d8e2fc6cfd4deba4389baecf1a43bdad44e96cfaf60",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-12",
+        "backend": "c",
+        "case_id": "CASE-01",
+        "env": {
+          "ROLE": "agent"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "a3db1ed378b7c5c6dc6fbd2d61340524a517020e019329543f51279793f344fe",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-12",
+        "backend": "js",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "249f6e0ece45c1da096a8d8e2fc6cfd4deba4389baecf1a43bdad44e96cfaf60",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-12",
+        "backend": "c",
+        "case_id": "CASE-02",
+        "env": {
+          "ROLE": "reviewer"
+        },
+        "observed_label": "ALLOW",
+        "expected_label": "ALLOW",
+        "match_oracle": true,
+        "binary_or_target_sha256": "f959a3a365bf9beac1154b3e30bc3b6551d282c6c1576be741c0db2815eb64b4",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-12",
+        "backend": "js",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "249f6e0ece45c1da096a8d8e2fc6cfd4deba4389baecf1a43bdad44e96cfaf60",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-12",
+        "backend": "c",
+        "case_id": "CASE-03",
+        "env": {
+          "ROLE": "automation"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "c680dc7f0a8fd08a95d1905e735fa34164bba87a4a7427de2caf8ed7c0ea8525",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-12",
+        "backend": "js",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "249f6e0ece45c1da096a8d8e2fc6cfd4deba4389baecf1a43bdad44e96cfaf60",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-12",
+        "backend": "c",
+        "case_id": "CASE-04",
+        "env": {},
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "079a1ccaa0b6e1423cc18b28881e20541b7cba04693d216bf47b9a4a3ecd52e9",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-12",
+        "backend": "js",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "249f6e0ece45c1da096a8d8e2fc6cfd4deba4389baecf1a43bdad44e96cfaf60",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-12",
+        "backend": "c",
+        "case_id": "CASE-05",
+        "env": {
+          "ROLE": "hacker"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "6ffbe70e477cb7af85221fd55e16e30aafedc2d2c11ff465237006df6c849b35",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-12",
+        "backend": "js",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "249f6e0ece45c1da096a8d8e2fc6cfd4deba4389baecf1a43bdad44e96cfaf60",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-12",
+        "backend": "c",
+        "case_id": "CASE-06",
+        "env": {
+          "ROLE": ""
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "380d5b03b96a995a57e46cfa0203dc5babaed35d86d04bdb72bb7dd6e05ddbd4",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-12",
+        "backend": "js",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "249f6e0ece45c1da096a8d8e2fc6cfd4deba4389baecf1a43bdad44e96cfaf60",
+        "build_ok": true,
+        "run_ok": true
+      },
+      {
+        "mutation": "MUT-12",
+        "backend": "c",
+        "case_id": "CASE-07",
+        "env": {
+          "ROLE": "AGENT"
+        },
+        "observed_label": "DENY:no_automation_work",
+        "expected_label": "DENY:no_automation_work",
+        "match_oracle": true,
+        "binary_or_target_sha256": "9b40a8d05affee0a3856da383a1ecf3761d834dce2e601d89909454bf9ab4486",
+        "build_ok": true,
+        "run_ok": true
+      }
+    ],
+    "totals": {
+      "total_cases": 168,
+      "backend_divergence_count": 5,
+      "host_semantic_violation_count": 8,
+      "nondeterministic_count": 1,
+      "observable_side_effect_count": 2,
+      "proof_preserved_despite_host_semantic_drift_count": 8
+    }
+  },
+  "runtime_contract_js": {
+    "backend": "js",
+    "target_sha256": "249f6e0ece45c1da096a8d8e2fc6cfd4deba4389baecf1a43bdad44e96cfaf60",
+    "cases_run": 7,
+    "cases_pass": 7,
+    "contract_pass": true,
+    "case_results": [
+      {
+        "case_id": "CASE-01",
+        "observed": "ALLOW",
+        "expected": "ALLOW",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-02",
+        "observed": "ALLOW",
+        "expected": "ALLOW",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-03",
+        "observed": "DENY:no_automation_work",
+        "expected": "DENY:no_automation_work",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-04",
+        "observed": "DENY:no_automation_work",
+        "expected": "DENY:no_automation_work",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-05",
+        "observed": "DENY:no_automation_work",
+        "expected": "DENY:no_automation_work",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-06",
+        "observed": "DENY:no_automation_work",
+        "expected": "DENY:no_automation_work",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-07",
+        "observed": "DENY:no_automation_work",
+        "expected": "DENY:no_automation_work",
+        "pass": true
+      }
+    ]
+  },
+  "runtime_contract_c": {
+    "backend": "c",
+    "target_sha256": "7b31557f28971bf99a99cec8c6a98b69dfa6c5fd721ed4202a9f1d284977e4b1",
+    "cases_run": 7,
+    "cases_pass": 7,
+    "contract_pass": true,
+    "case_results": [
+      {
+        "case_id": "CASE-01",
+        "observed": "ALLOW",
+        "expected": "ALLOW",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-02",
+        "observed": "ALLOW",
+        "expected": "ALLOW",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-03",
+        "observed": "DENY:no_automation_work",
+        "expected": "DENY:no_automation_work",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-04",
+        "observed": "DENY:no_automation_work",
+        "expected": "DENY:no_automation_work",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-05",
+        "observed": "DENY:no_automation_work",
+        "expected": "DENY:no_automation_work",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-06",
+        "observed": "DENY:no_automation_work",
+        "expected": "DENY:no_automation_work",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-07",
+        "observed": "DENY:no_automation_work",
+        "expected": "DENY:no_automation_work",
+        "pass": true
+      }
+    ]
+  },
+  "artifact_js": {
+    "artifact_id": "sha256:3bc9a3c755dfcb17412fe26c52d6b9d4246278b3dc453c20e71247daacc492e9",
+    "manifest_path": "/Volumes/UserData/Users/chistyakov/Projects/SPbNIX/mrvn/factory/qualify/ACT-MRVN-QUALIFY10/artifact-js/manifest.json"
+  },
+  "artifact_c": {
+    "artifact_id": "sha256:bf1a21a804c0b936ea336ecf21596bfa256d95dc9462a713d74e720a93f85184",
+    "manifest_path": "/Volumes/UserData/Users/chistyakov/Projects/SPbNIX/mrvn/factory/qualify/ACT-MRVN-QUALIFY10/artifact-c/manifest.json"
+  },
+  "artifact_verify_js": {
+    "mode": "full",
+    "artifact_id": "sha256:3bc9a3c755dfcb17412fe26c52d6b9d4246278b3dc453c20e71247daacc492e9",
+    "verified": true,
+    "failures": [],
+    "checks": [
+      {
+        "name": "schema",
+        "status": "PASS"
+      },
+      {
+        "name": "artifact_id",
+        "status": "PASS"
+      },
+      {
+        "name": "pure_payload",
+        "status": "PASS"
+      },
+      {
+        "name": "foreign_bindings",
+        "status": "PASS"
+      },
+      {
+        "name": "toolchain",
+        "status": "PASS"
+      },
+      {
+        "name": "proof",
+        "status": "PASS"
+      },
+      {
+        "name": "runtime_contract",
+        "status": "PASS"
+      }
+    ]
+  },
+  "artifact_verify_c": {
+    "mode": "full",
+    "artifact_id": "sha256:bf1a21a804c0b936ea336ecf21596bfa256d95dc9462a713d74e720a93f85184",
+    "verified": true,
+    "failures": [],
+    "checks": [
+      {
+        "name": "schema",
+        "status": "PASS"
+      },
+      {
+        "name": "artifact_id",
+        "status": "PASS"
+      },
+      {
+        "name": "pure_payload",
+        "status": "PASS"
+      },
+      {
+        "name": "foreign_bindings",
+        "status": "PASS"
+      },
+      {
+        "name": "toolchain",
+        "status": "PASS"
+      },
+      {
+        "name": "proof",
+        "status": "PASS"
+      },
+      {
+        "name": "runtime_contract",
+        "status": "PASS"
+      }
+    ]
+  },
+  "backend_parity": {
+    "backend_js_cases_pass": 7,
+    "backend_c_cases_pass": 7,
+    "diff_count": 0,
+    "parity_ok": true
+  },
+  "final_verdict": "FULL_QUALIFICATION_EFFECT_BOUNDARY_EXPLICIT"
+}

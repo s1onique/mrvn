@@ -1,0 +1,36 @@
+{
+  "mode": "full",
+  "artifact_id": "sha256:3bc9a3c755dfcb17412fe26c52d6b9d4246278b3dc453c20e71247daacc492e9",
+  "verified": true,
+  "failures": [],
+  "checks": [
+    {
+      "name": "schema",
+      "status": "PASS"
+    },
+    {
+      "name": "artifact_id",
+      "status": "PASS"
+    },
+    {
+      "name": "pure_payload",
+      "status": "PASS"
+    },
+    {
+      "name": "foreign_bindings",
+      "status": "PASS"
+    },
+    {
+      "name": "toolchain",
+      "status": "PASS"
+    },
+    {
+      "name": "proof",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime_contract",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+=== ACT-MRVN-QUALIFY10 self_test ===
+  PASS  1.canonical_pure_proof_pass  -- PROOF.bend checks under bend2/main.ts
+  PASS  2.canonical_runtime_contract_pass  -- js=7/7 c=7/7
+  PASS  3.dishonest_js_runtime_fail_proof_pass  -- proof=PROOF_PRESERVED js_oracle=false
+  PASS  4.dishonest_c_runtime_fail_proof_pass  -- proof=PROOF_PRESERVED c_oracle=false
+  PASS  5.backend_divergence_detected  -- count=5
+  PASS  6.foreign_hash_mismatch_rejected  -- different=true rejected=true
+  PASS  7.missing_foreign_binding_rejected  -- FOREIGN_EFFECT_BINDING_MISSING
+  PASS  8.wrong_foreign_backend_rejected  -- ARTIFACT_ID_MISMATCH,FOREIGN_BACKEND_UNSUPPORTED
+  PASS  9.foreign_dependency_closure_failure  -- FOREIGN_EFFECT_BINDING_MISSING
+  PASS  10.changed_runtime_oracle_rejected  -- RUNTIME_CONTRACT_FAILED
+  PASS  11.changed_semantic_contract_rejected  -- FOREIGN_EFFECT_CONTRACT_HASH_MISMATCH
+  PASS  12.claim_authority_overreach_rejected  -- manifest carries CLAIM_AUTHORITY_OVERREACH phrase (the verifier logs no PROVED claim for it)
+  PASS  13.hidden_side_effect_detected  -- MUT-10 side_effect=true
+  PASS  14.nondeterminism_detected  -- MUT-07 nondet=true
+  PASS  15.integrity_only_does_not_imply_runtime_pass  -- integrity verified=true (no proof or runtime check required)
+  PASS  16.proof_only_does_not_imply_runtime_pass  -- proof verified=true; runtime_contract status logged
+  PASS  17.full_requires_all_applicable_gates  -- verified=false (must FAIL because no runtime evidence)
+  PASS  18.unsafe_rejected  -- contains_unsafe=true
+  PASS  19.dead_live_effect_to_proof_attempt_rejected  -- status=1
+  PASS  20.toolchain_mismatch_rejected  -- ARTIFACT_ID_MISMATCH,TOOLCHAIN_MISMATCH
+
+Results: 20 pass, 0 fail

@@ -1,0 +1,22 @@
+=== ACT-MRVN-QUALIFY10 artifact-v2 4-way ID reconciliation ===
+[js] manifest_path=artifact-js/manifest.json
+       id          = sha256:3bc9a3c755dfcb17412fe26c52d6b9d4246278b3dc453c20e71247daacc492e9
+       sidecar ==  : true  (sha256:3bc9a3c755dfcb17412fe26c52d6b9d4246278b3dc453c20e71247daacc492e9)
+       index   ==  : true  (sha256:3bc9a3c755dfcb17412fe26c52d6b9d4246278b3dc453c20e71247daacc492e9)
+       verify  ==  : true  (sha256:3bc9a3c755dfcb17412fe26c52d6b9d4246278b3dc453c20e71247daacc492e9)
+       target_sha256 != PENDING : true  (249f6e0ece45c1da...)
+       cases_run == 7           : true  (7)
+       contract_pass == true    : true  (true)
+       observed_at              : 2026-09-21T15:11:01.155Z
+
+[c] manifest_path=artifact-c/manifest.json
+       id          = sha256:bf1a21a804c0b936ea336ecf21596bfa256d95dc9462a713d74e720a93f85184
+       sidecar ==  : true  (sha256:bf1a21a804c0b936ea336ecf21596bfa256d95dc9462a713d74e720a93f85184)
+       index   ==  : true  (sha256:bf1a21a804c0b936ea336ecf21596bfa256d95dc9462a713d74e720a93f85184)
+       verify  ==  : true  (sha256:bf1a21a804c0b936ea336ecf21596bfa256d95dc9462a713d74e720a93f85184)
+       target_sha256 != PENDING : true  (7b31557f28971bf9...)
+       cases_run == 7           : true  (7)
+       contract_pass == true    : true  (true)
+       observed_at              : 2026-09-21T15:11:01.156Z
+
+reconciliation overall: PASS

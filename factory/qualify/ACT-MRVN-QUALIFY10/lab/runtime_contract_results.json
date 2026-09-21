@@ -1,0 +1,104 @@
+{
+  "js": {
+    "backend": "js",
+    "target_sha256": "249f6e0ece45c1da096a8d8e2fc6cfd4deba4389baecf1a43bdad44e96cfaf60",
+    "cases_run": 7,
+    "cases_pass": 7,
+    "contract_pass": true,
+    "case_results": [
+      {
+        "case_id": "CASE-01",
+        "observed": "ALLOW",
+        "expected": "ALLOW",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-02",
+        "observed": "ALLOW",
+        "expected": "ALLOW",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-03",
+        "observed": "DENY:no_automation_work",
+        "expected": "DENY:no_automation_work",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-04",
+        "observed": "DENY:no_automation_work",
+        "expected": "DENY:no_automation_work",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-05",
+        "observed": "DENY:no_automation_work",
+        "expected": "DENY:no_automation_work",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-06",
+        "observed": "DENY:no_automation_work",
+        "expected": "DENY:no_automation_work",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-07",
+        "observed": "DENY:no_automation_work",
+        "expected": "DENY:no_automation_work",
+        "pass": true
+      }
+    ]
+  },
+  "c": {
+    "backend": "c",
+    "target_sha256": "7b31557f28971bf99a99cec8c6a98b69dfa6c5fd721ed4202a9f1d284977e4b1",
+    "cases_run": 7,
+    "cases_pass": 7,
+    "contract_pass": true,
+    "case_results": [
+      {
+        "case_id": "CASE-01",
+        "observed": "ALLOW",
+        "expected": "ALLOW",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-02",
+        "observed": "ALLOW",
+        "expected": "ALLOW",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-03",
+        "observed": "DENY:no_automation_work",
+        "expected": "DENY:no_automation_work",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-04",
+        "observed": "DENY:no_automation_work",
+        "expected": "DENY:no_automation_work",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-05",
+        "observed": "DENY:no_automation_work",
+        "expected": "DENY:no_automation_work",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-06",
+        "observed": "DENY:no_automation_work",
+        "expected": "DENY:no_automation_work",
+        "pass": true
+      },
+      {
+        "case_id": "CASE-07",
+        "observed": "DENY:no_automation_work",
+        "expected": "DENY:no_automation_work",
+        "pass": true
+      }
+    ]
+  }
+}

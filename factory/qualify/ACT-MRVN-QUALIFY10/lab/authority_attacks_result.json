@@ -1,0 +1,68 @@
+{
+  "act": "ACT-MRVN-QUALIFY10",
+  "total": 15,
+  "pass": 15,
+  "fail": 0,
+  "results": [
+    {
+      "id": "1.law_tamper",
+      "outcome": "PASS"
+    },
+    {
+      "id": "2.proof_tamper",
+      "outcome": "PASS"
+    },
+    {
+      "id": "3.pure_impl_tamper",
+      "outcome": "PASS"
+    },
+    {
+      "id": "4.foreign_js_tamper",
+      "outcome": "PASS"
+    },
+    {
+      "id": "5.foreign_c_tamper",
+      "outcome": "PASS"
+    },
+    {
+      "id": "6.foreign_dependency_tamper",
+      "outcome": "PASS"
+    },
+    {
+      "id": "7.runtime_oracle_tamper",
+      "outcome": "PASS"
+    },
+    {
+      "id": "8.effect_contract_tamper",
+      "outcome": "PASS"
+    },
+    {
+      "id": "9.artifact_manifest_tamper",
+      "outcome": "PASS"
+    },
+    {
+      "id": "10.toolchain_tamper",
+      "outcome": "PASS"
+    },
+    {
+      "id": "11.backend_substitution",
+      "outcome": "PASS"
+    },
+    {
+      "id": "12.fake_runtime_pass",
+      "outcome": "PASS"
+    },
+    {
+      "id": "13.fake_proof_pass",
+      "outcome": "PASS"
+    },
+    {
+      "id": "14.unsafe_escape_hatch",
+      "outcome": "PASS"
+    },
+    {
+      "id": "15.claim_scope_inflation",
+      "outcome": "PASS"
+    }
+  ]
+}

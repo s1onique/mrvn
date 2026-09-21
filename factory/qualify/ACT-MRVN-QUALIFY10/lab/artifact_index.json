@@ -1,0 +1,33 @@
+{
+  "schema": "mrvn-artifact-index-v2",
+  "artifacts": {
+    "js": {
+      "artifact_id": "sha256:3bc9a3c755dfcb17412fe26c52d6b9d4246278b3dc453c20e71247daacc492e9",
+      "manifest": "/Volumes/UserData/Users/chistyakov/Projects/SPbNIX/mrvn/factory/qualify/ACT-MRVN-QUALIFY10/artifact-js/manifest.json",
+      "foreign_effect": {
+        "effect_name": "Host.read_role",
+        "bend_declaration": "subject/main.bend",
+        "backend": "js",
+        "logical_path": "effect/read_role.js",
+        "sha256": "11dc09f64cf9605523d2513cf21808cf1d84ad2b2106778d9b94389a358b6094",
+        "semantic_contract": "EFFECT_CONTRACT.md",
+        "contract_sha256": "f16f2e1ec5f334e0a2abd81907ff0dc6e8909882b1f48b89f6065fe5bf91635f",
+        "bytes_size": 876
+      }
+    },
+    "c": {
+      "artifact_id": "sha256:bf1a21a804c0b936ea336ecf21596bfa256d95dc9462a713d74e720a93f85184",
+      "manifest": "/Volumes/UserData/Users/chistyakov/Projects/SPbNIX/mrvn/factory/qualify/ACT-MRVN-QUALIFY10/artifact-c/manifest.json",
+      "foreign_effect": {
+        "effect_name": "Host.read_role",
+        "bend_declaration": "subject/main.bend",
+        "backend": "c",
+        "logical_path": "effect/read_role.c",
+        "sha256": "e32bb8944ce0046132b62542600b95a5212fe40a1b8535ea43a9f97e60e6e529",
+        "semantic_contract": "EFFECT_CONTRACT.md",
+        "contract_sha256": "f16f2e1ec5f334e0a2abd81907ff0dc6e8909882b1f48b89f6065fe5bf91635f",
+        "bytes_size": 1851
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+# Witness runtime-contract demonstration.
+# Same pure/main.bend + same pure/LAWS.bend + same pure/PROOF.bend.
+# Only the foreign bytes (effect/read_role.js) differ.
+#
+# Reproduce from /Volumes/UserData/Users/chistyakov/Projects/SPbNIX/mrvn:
+#
+#   cd factory/qualify/ACT-MRVN-QUALIFY10
+#   BUN=/Volumes/UserData/Users/chistyakov/Projects/SPbNIX/mrvn/bend2/main.ts
+#   for r in agent reviewer automation; do
+#     ROLE=$r bun "$BUN" WITNESS-MRVN10-001/pure/main.bend
+#   done
+#
+# Then to demonstrate the mutation, swap in the mutated bytes:
+#
+#   cp WITNESS-MRVN10-001/effect_mutated/read_role.{c,js} \
+#      WITNESS-MRVN10-001/effect/
+#
+# and re-run.
+=== CANONICAL: ROLE -> observed label (fresh run) ===
+  ROLE=agent  ALLOW
+  ROLE=reviewer  ALLOW
+  ROLE=automation  DENY:no_automation_work
+
+=== MUTATED (effect/read_role.{c,js} replaced with bytes from WITNESS-MRVN10-001/effect_mutated/ = MUT-01) ===
+  ROLE=agent  ALLOW
+  ROLE=reviewer  ALLOW
+  ROLE=automation  ALLOW
+
+=== PROOF (unchanged across canonical and mutated) ===
+All terms check.
+
+=== INTERPRETATION ===
+  - Proof: "All terms check." in BOTH cases (proof authority is on the pure side).
+  - Canonical runtime: agent=ALLOW, reviewer=ALLOW, automation=DENY (matches EFFECT_CONTRACT).
+  - Mutated runtime:   automation=ALLOW (a host lie: the foreign JS ignores ROLE and reports Reviewer).
+  - This is the central MRVN-10 fact: same proof, different foreign bytes, different runtime label.

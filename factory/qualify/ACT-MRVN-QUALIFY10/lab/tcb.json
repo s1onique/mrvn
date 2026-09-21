@@ -1,0 +1,89 @@
+{
+  "act": "ACT-MRVN-QUALIFY10",
+  "layers": [
+    {
+      "id": "bend-checker",
+      "classification": "PROOF_CHECKED+HASH_BOUND",
+      "file": "bend2/bend.ts"
+    },
+    {
+      "id": "bend-compiler-runtime",
+      "classification": "PROOF_CHECKED+HASH_BOUND",
+      "file": "bend2/comp.ts"
+    },
+    {
+      "id": "bend-cli",
+      "classification": "HASH_BOUND",
+      "file": "bend2/main.ts"
+    },
+    {
+      "id": "bend-base",
+      "classification": "HASH_BOUND",
+      "file": "bend2/base.bend"
+    },
+    {
+      "id": "base-effect-impl",
+      "classification": "HASH_BOUND (closure)",
+      "file": "bend2/effs/*"
+    },
+    {
+      "id": "custom-foreign-c",
+      "classification": "HASH_BOUND+RUNTIME_TESTED",
+      "file": "effect/read_role.c"
+    },
+    {
+      "id": "custom-foreign-js",
+      "classification": "HASH_BOUND+RUNTIME_TESTED",
+      "file": "effect/read_role.js"
+    },
+    {
+      "id": "c-compiler",
+      "classification": "ASSUMED",
+      "file": "clang (Apple clang 15.0.0)"
+    },
+    {
+      "id": "js-runtime",
+      "classification": "ASSUMED",
+      "file": "bun 1.3.14 / node v26.0.0"
+    },
+    {
+      "id": "os-apis",
+      "classification": "ASSUMED",
+      "file": "macOS 14.7.4 Darwin 23.6.0"
+    },
+    {
+      "id": "external-resources",
+      "classification": "RUNTIME_TESTED (per case)",
+      "file": "oracle/runtime_oracle.json"
+    },
+    {
+      "id": "artifact-verifier",
+      "classification": "HASH_BOUND",
+      "file": "lab/verify_artifact_v2.ts"
+    },
+    {
+      "id": "runtime-oracle",
+      "classification": "HASH_BOUND+RUNTIME_TESTED",
+      "file": "oracle/runtime_oracle.json"
+    },
+    {
+      "id": "effect-contract",
+      "classification": "HASH_BOUND+RUNTIME_TESTED",
+      "file": "EFFECT_CONTRACT.md"
+    },
+    {
+      "id": "witness",
+      "classification": "HASH_BOUND+RUNTIME_TESTED",
+      "file": "WITNESS-MRVN10-001/"
+    }
+  ],
+  "out_of_scope": [
+    "TLS implementation",
+    "Public network governance",
+    "Distributed system semantics",
+    "GPU qualification",
+    "General C verifier",
+    "General JS verifier",
+    "OS formalization"
+  ]
+}

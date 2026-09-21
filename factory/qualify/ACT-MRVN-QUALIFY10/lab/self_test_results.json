@@ -1,0 +1,88 @@
+{
+  "act": "ACT-MRVN-QUALIFY10",
+  "total": 20,
+  "pass": 20,
+  "fail": 0,
+  "results": [
+    {
+      "id": "1.canonical_pure_proof_pass",
+      "outcome": "PASS"
+    },
+    {
+      "id": "2.canonical_runtime_contract_pass",
+      "outcome": "PASS"
+    },
+    {
+      "id": "3.dishonest_js_runtime_fail_proof_pass",
+      "outcome": "PASS"
+    },
+    {
+      "id": "4.dishonest_c_runtime_fail_proof_pass",
+      "outcome": "PASS"
+    },
+    {
+      "id": "5.backend_divergence_detected",
+      "outcome": "PASS"
+    },
+    {
+      "id": "6.foreign_hash_mismatch_rejected",
+      "outcome": "PASS"
+    },
+    {
+      "id": "7.missing_foreign_binding_rejected",
+      "outcome": "PASS"
+    },
+    {
+      "id": "8.wrong_foreign_backend_rejected",
+      "outcome": "PASS"
+    },
+    {
+      "id": "9.foreign_dependency_closure_failure",
+      "outcome": "PASS"
+    },
+    {
+      "id": "10.changed_runtime_oracle_rejected",
+      "outcome": "PASS"
+    },
+    {
+      "id": "11.changed_semantic_contract_rejected",
+      "outcome": "PASS"
+    },
+    {
+      "id": "12.claim_authority_overreach_rejected",
+      "outcome": "PASS"
+    },
+    {
+      "id": "13.hidden_side_effect_detected",
+      "outcome": "PASS"
+    },
+    {
+      "id": "14.nondeterminism_detected",
+      "outcome": "PASS"
+    },
+    {
+      "id": "15.integrity_only_does_not_imply_runtime_pass",
+      "outcome": "PASS"
+    },
+    {
+      "id": "16.proof_only_does_not_imply_runtime_pass",
+      "outcome": "PASS"
+    },
+    {
+      "id": "17.full_requires_all_applicable_gates",
+      "outcome": "PASS"
+    },
+    {
+      "id": "18.unsafe_rejected",
+      "outcome": "PASS"
+    },
+    {
+      "id": "19.dead_live_effect_to_proof_attempt_rejected",
+      "outcome": "PASS"
+    },
+    {
+      "id": "20.toolchain_mismatch_rejected",
+      "outcome": "PASS"
+    }
+  ]
+}

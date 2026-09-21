@@ -1,0 +1,13 @@
+{
+  "watched_acts": 6,
+  "watched_files": 2494,
+  "drift_count": 0,
+  "drift_files": [],
+  "negative_control": {
+    "target_label": "MRVN-QUALIFY04.EVIDENCE.md",
+    "target_path": "factory/qualify/ACT-MRVN-QUALIFY04/EVIDENCE.md",
+    "tampered_sha256": "cf0c104dbba926a49def2d20ae2bae3c21312648c44ea4f163ce499604373bf3",
+    "detected": true
+  },
+  "checked_at": "2026-09-21T15:11:51.941Z"
+}

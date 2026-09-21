@@ -1,0 +1,99 @@
+{
+  "schema": "mrvn-artifact-v2",
+  "artifact_id": "sha256:3bc9a3c755dfcb17412fe26c52d6b9d4246278b3dc453c20e71247daacc492e9",
+  "pure_payload": {
+    "files": [
+      {
+        "logical_path": "subject/main.bend",
+        "sha256": "c4a8faff7fe391b5532304331a12f62c06f8890622faaf30f9e121e8e8328898",
+        "bytes_size": 3725,
+        "role": "implementation"
+      },
+      {
+        "logical_path": "subject/LAWS.bend",
+        "sha256": "c27ae193877b81284e309460a37d462556d025039294185c6d4dd3fe03c35eb5",
+        "bytes_size": 5258,
+        "role": "specification"
+      },
+      {
+        "logical_path": "subject/PROOF.bend",
+        "sha256": "95405fc828549b8dd4a999760965bf239e355667d1f103727da5ecab9942392e",
+        "bytes_size": 2258,
+        "role": "proof"
+      },
+      {
+        "logical_path": "oracle/runtime_oracle.json",
+        "sha256": "b49a74efc6f93d55c2f4271f0f926ace6e6b637f5f2095e2d6152d2a34e10f22",
+        "bytes_size": 2048,
+        "role": "runtime_oracle"
+      }
+    ],
+    "laws_sha256": "c27ae193877b81284e309460a37d462556d025039294185c6d4dd3fe03c35eb5",
+    "proof_sha256": "95405fc828549b8dd4a999760965bf239e355667d1f103727da5ecab9942392e",
+    "proof_status": "PROOF_PRESERVED",
+    "intent_path": "EFFECT_CONTRACT.md",
+    "intent_sha256": "f16f2e1ec5f334e0a2abd81907ff0dc6e8909882b1f48b89f6065fe5bf91635f"
+  },
+  "foreign_effects": [
+    {
+      "effect_name": "Host.read_role",
+      "bend_declaration": "subject/main.bend",
+      "backend": "js",
+      "logical_path": "effect/read_role.js",
+      "sha256": "11dc09f64cf9605523d2513cf21808cf1d84ad2b2106778d9b94389a358b6094",
+      "semantic_contract": "EFFECT_CONTRACT.md",
+      "contract_sha256": "f16f2e1ec5f334e0a2abd81907ff0dc6e8909882b1f48b89f6065fe5bf91635f",
+      "bytes_size": 876
+    }
+  ],
+  "runtime_assumptions": [
+    {
+      "id": "ASSUMPTION-OS-ENV",
+      "kind": "ASSUMED",
+      "description": "OS getenv returns process environment faithfully."
+    },
+    {
+      "id": "ASSUMPTION-NODE-PROCESS-ENV",
+      "kind": "ASSUMED",
+      "description": "Node/Bun process.env reflects process env at spawn."
+    },
+    {
+      "id": "ASSUMPTION-NO-EXTERNAL-NETWORK",
+      "kind": "ASSUMED",
+      "description": "Canonical foreign implementations do not initiate network."
+    },
+    {
+      "id": "ASSUMPTION-FS-STATE",
+      "kind": "ASSUMED",
+      "description": "Filesystem permissions allow reading canonical source files."
+    },
+    {
+      "id": "ASSUMPTION-CLI-INVARIANT",
+      "kind": "ASSUMED",
+      "description": "bend2/main.ts dispatches foreign effects via io_eff_rows[CID_READ_ROLE]."
+    }
+  ],
+  "runtime_evidence": [
+    {
+      "backend": "js",
+      "target_sha256": "249f6e0ece45c1da096a8d8e2fc6cfd4deba4389baecf1a43bdad44e96cfaf60",
+      "cases_run": 7,
+      "contract_pass": true,
+      "observed_at": "2026-09-21T15:11:01.155Z"
+    }
+  ],
+  "toolchain_closure": {
+    "main_ts_sha256": "34a8a791b02ce92f247bda4cabcd3ff4eabe500002fedbec4867b5db77ee1feb",
+    "bend_ts_sha256": "fe3c2b0b306fccbe44efec349d8f339b6efdaceb090b3d3049c74a1a6015c859",
+    "comp_ts_sha256": "c181ac038d7f7d4ed0e1bb81c513e64285347627e0b3a13a98cb86a1d1568f54",
+    "base_bend_sha256": "b2d53bbd83639c3ae27260b318efa09de9df6006a556ac6ef41c104ea164917a",
+    "effs_tree_sha256": "da505588885cfc17de5c735ecc6c4e0658aa3226c2dc343364f849400f51b89f",
+    "bun_version": "1.3.14",
+    "node_version": "v26.0.0",
+    "clang_version": "Apple clang 15.0.0 (clang-1500.0.40.1) arm64-apple-darwin23.6.0"
+  },
+  "provenance": {
+    "captured_at": "2026-09-21T15:11:01.155Z",
+    "build_command": "bun factory/qualify/ACT-MRVN-QUALIFY10/lab/build_artifact_v2.ts"
+  }
+}

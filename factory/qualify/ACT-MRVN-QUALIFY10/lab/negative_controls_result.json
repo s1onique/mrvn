@@ -1,0 +1,68 @@
+[
+  {
+    "id": "NC-01",
+    "description": "wrong return type (Role instead of IO(Role))",
+    "expected": "CHECKER_REJECTED",
+    "checker_status": 1,
+    "checker_stderr": "Error:\n- expected : a foreign definition returning base IO(...) directly (return type aliases are not unfolded)\n- observed : read_role\nLocation: read_role\n10 | \n11>| def read_role() -> Role:\n12 |   import \"./wrong.c\"\n",
+    "build_status": 1,
+    "build_stderr": "Error:\n- expected : a foreign definition returning base IO(...) directly (return type aliases are not unfolded)\n- observed : read_role\nLocation: read_role\n10 | \n11>| def read_role() -> Role:\n12 |   import \"./wrong.c\"\n",
+    "source_contains_unsafe": false,
+    "outcome": "PASS"
+  },
+  {
+    "id": "NC-02",
+    "description": "non-IO return type (String)",
+    "expected": "CHECKER_REJECTED",
+    "checker_status": 1,
+    "checker_stderr": "Error:\n- expected : a foreign definition returning base IO(...) directly (return type aliases are not unfolded)\n- observed : read_role\nLocation: read_role\n5 | \n6>| def read_role() -> String:\n7 |   import \"./no_io.c\"\n",
+    "build_status": 1,
+    "build_stderr": "Error:\n- expected : a foreign definition returning base IO(...) directly (return type aliases are not unfolded)\n- observed : read_role\nLocation: read_role\n5 | \n6>| def read_role() -> String:\n7 |   import \"./no_io.c\"\n",
+    "source_contains_unsafe": false,
+    "outcome": "PASS"
+  },
+  {
+    "id": "NC-03",
+    "description": "missing .c import (build -o refuses)",
+    "expected": "CHECKER_OR_BUILD_REJECTED",
+    "checker_status": 0,
+    "checker_stderr": "",
+    "build_status": 1,
+    "build_stderr": "Error: no .c import: read_role\n",
+    "source_contains_unsafe": false,
+    "outcome": "PASS"
+  },
+  {
+    "id": "NC-04",
+    "description": "missing .js import (cli refuses)",
+    "expected": "CHECKER_OR_BUILD_REJECTED",
+    "checker_status": 1,
+    "checker_stderr": "Error: a foreign def without a .js import: read_role\n",
+    "build_status": 0,
+    "build_stderr": "",
+    "source_contains_unsafe": false,
+    "outcome": "PASS"
+  },
+  {
+    "id": "NC-05",
+    "description": "@unsafe def is detected (no CHECKER_REJECTED)",
+    "expected": "CLASSIFIED_AS_UNSAFE",
+    "checker_status": 0,
+    "checker_stderr": "",
+    "build_status": 0,
+    "build_stderr": "",
+    "source_contains_unsafe": true,
+    "outcome": "PASS"
+  },
+  {
+    "id": "NC-06",
+    "description": "IO(Role) used in proof-authority Bool equality",
+    "expected": "CHECKER_REJECTED",
+    "checker_status": 1,
+    "checker_stderr": "Error:\n- expected : Bool\n- observed : @-R:Type -> @k:(@_:Role -> IO.OP<R>) -> IO.OP<R>\nContext:\n- io : @-R:Type -> @k:(@_:Role -> IO.OP<R>) -> IO.OP<R>\n- b  : Bool\nLocation: io_role_is_bool\n18 |   for b: Bool\n19>|   {io == b : Bool}\n20 | \n",
+    "build_status": 1,
+    "build_stderr": "Error:\n- expected : Bool\n- observed : @-R:Type -> @k:(@_:Role -> IO.OP<R>) -> IO.OP<R>\nContext:\n- io : @-R:Type -> @k:(@_:Role -> IO.OP<R>) -> IO.OP<R>\n- b  : Bool\nLocation: io_role_is_bool\n18 |   for b: Bool\n19>|   {io == b : Bool}\n20 | \n",
+    "source_contains_unsafe": false,
+    "outcome": "PASS"
+  }
+]
